@@ -4,8 +4,10 @@
     <title>Language Checker</title>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
-
-	
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+		launch();
+	}
     function checkLanguage() {
 	  var en = "en"; 
 	  var zh = "zh"; 
@@ -53,6 +55,6 @@
 	}
     </script>
   </head>
-  <body onload="launch()">
+  <body>
   </body>
 </html>
