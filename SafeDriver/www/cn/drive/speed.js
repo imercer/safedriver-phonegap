@@ -269,5 +269,7 @@ options = {
   timeout: 5000,
   maximumAge: 0
 };
-
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 id = navigator.geolocation.watchPosition(success, error, options);
+}

@@ -1,7 +1,10 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
   doStuff(position.coords.latitude, position.coords.longitude);
   });
+}
 }
 else {
     window.location.assign("/nearby/index.html#newzealand")

@@ -1,3 +1,5 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
   doStuff(position.coords.latitude, position.coords.longitude);
@@ -6,7 +8,7 @@ if (navigator.geolocation) {
 else {
     window.location.assign("/nearby/index.html#newzealand")
 }
-
+}
 function distance(lat1, lon1, lat2, lon2, unit) {
 	var radlat1 = Math.PI * lat1/180
 	var radlat2 = Math.PI * lat2/180
