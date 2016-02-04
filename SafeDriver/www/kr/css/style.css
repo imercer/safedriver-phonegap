@@ -1,0 +1,168 @@
+ .card-square.mdl-card {
+    width: 100%;
+    height: 180px;
+  }
+  .card-square > .mdl-card__title {
+    color: #fff;
+  }
+.mdl-layout-title {
+    color: #EEE; 
+    font-weight: bold
+}
+.ui-widget.dialog {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: .8em;
+}
+
+.ui-widget-content.dialog {
+    background: #F9F9F9;
+    border: 1px solid #90d93f;
+    color: #222222;
+}
+
+.ui-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.ui-dialog .ui-widget-header {
+    background: #fff;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    position: relative;
+    display: none;
+}
+
+#northland {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/IMG_20150119_113441.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#auckland {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/auckland.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#hamilton {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/hamilton.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#cni {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/Taupo.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#wellington {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/IMG_20140706_094213.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#westcoast {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/Punakaiki_-_looking_south.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#queenstown {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/queenstown.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#newzealand {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../images/NZ_0.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+.region-header {
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 5px;
+}
+.region-header-dark {
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 56px;
+    background-color: rgba(0,0,0,0.8);
+    padding-bottom: 5px;
+}
