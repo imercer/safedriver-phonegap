@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-55227067-5', 'auto');   ga('send', 'pageview');  </script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-55227067-5', 'auto');   ga('send', 'pageview');  </script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="../css/metro-bootstrap.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
+        <script src="../js/jquery/jquery.min.js"></script>
+        <script src="../js/jquery/jquery.widget.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <link rel="stylesheet" href="../css/jquery-ui.css">
+        <script src="../js/jquery-1.10.2.js"></script>
+        <script src="../js/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../css/card.css"/>
+        <!-- Material Design Lite -->
+        <script src="../js/material.min.js"></script>
+        <link rel="stylesheet" href="../css/material.indigo-red.min.css">
+        <!-- Material Design icon font -->
+        <link rel="stylesheet" href="../css/icon.css"><script src="../drive/speed.js"></script><script src="../js/geolocation.js"></script>
+        <style>
+            .ui-dialog {
+                position: fixed;
+            }
+        </style>
+        <script>
+        var winW = $(window).width() - 25;
+        var winH = $(window).height() - 25;
+        $(function() {
+            $( "#northlanddialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+            $( "#aucklanddialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#hamiltondialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#cnidialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#wellingtondialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#westcoastdialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+            $( "#queenstowndialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+        });
+        </script>
+    </head>
+    <body>
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
+                <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">SafeDriver</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+                  <!-- Navigation. We hide it in small screens.
+                  <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                  </nav>
+                     -->
+                </div>
+              </header>
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
+                  <span class="mdl-layout-title"><a href="../en.html" style="color: #EEE">SafeDriver</a></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="../learn/index.html" style="color: #EEE">Learn</a>
+                    <a class="mdl-navigation__link" href="../drive/status.html" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>
+                    <a class="mdl-navigation__link" href="../settings/index.html" style="color: #EEE">Settings</a>
+                </nav>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="demo-grid-1 mdl-grid">
+ <div id="northland" style="display: none">
+                <div class="region-header-dark"><h1>Northland</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150118_184250.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/Bay-of-Islands.jpg" style="width: 100%"></img><br>Bay of Islands</div>                            
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/cape-reinga-northland-novy-zeland-241.jpg" style="width: 100%"></img><br>Cape Reinga</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/Hokianga_Harbour.jpg" style="width: 100%"></img><br>Hokianga Harbour</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/350px-Kerikeri_historic_buildings.jpg" style="width: 100%"></img><br>Kerikeri</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/ninetymile.jpg" style="width: 100%"></img><br>Ninety Mile Beach</div>
+
+                        </div>
+               </div>
+                </div>
+            <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150121_131748.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">Brynderwyn Hills</div>
+                            <div class="mdl-cell mdl-cell--4-col">Ninety Mile Beach</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150121_112938.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Many Northland roads are winding and narrow</li>
+                            <li>Main Northland roads are often prone to wet conditions and may close</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Brush up on your One Way rules as many Northland bridges are one way</li>
+                            <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
+                        </ul>
+               </div>
+                </div>
+                <!--<div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/statusnorthland.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                 </div>
+               <div class="content">
+                       <i style="color: red">Road Status Unavailable</i>
+               </div>
+                </div>-->
+            </div>
+            </div>
+            <div id="auckland" style="display: none">
+                <div class="region-header"><h1>Auckland</h1></div>
+                <!--<div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Milford-Road.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Attractions</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--2-col">Tamaki Drive</div>
+                            <div class="mdl-cell mdl-cell--2-col">Arrowtown</div>
+                        </div>
+               </div>
+                </div>-->
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/aklmwy.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Motorways</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Auckland motorways have generally speed limit of 100km/h</li>
+                            <li>Some stretches of motorway have a lower speed limit in place, such as the Auckland Harbour Bridge (80km/h)</li>
+                            <li>Indicate before changing lanes</li>
+                            <li>Follow the directions of the signs</li>
+                        </ul>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/kroad.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Auckland's roads are generally well developed and travel through built-up areas</li>
+                            <li>Expect traffic and delays during peak periods</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Use motorways wherever possible</li>
+                        </ul>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/statusakl.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                 </div>
+               <div class="content">
+                       <center>
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3AAklTransport%20OR%20from%3ANZTAAkl" data-widget-id="694379472636620802">Loading Road Status</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                       </center>
+               </div>
+                </div>
+            </div>
+        <div id="hamilton" style="display: none">
+                <div class="region-header-dark"><h1>Hamilton</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Hamilton-City.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Attractions</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/GardenPlaceHamilton.jpg" style="width: 100%"></img><br>Garden Place</div>                            
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/hamiltonzoo.jpg" style="width: 100%"></img><br>Hamilton Zoo</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/waitomocaves.jpg" style="width: 100%"></img><br>Waitomo Caves</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/waikatoriver.jpg" style="width: 100%"></img><br>Waikato River</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/Ngaruawahia.jpg" style="width: 100%"></img><br>Ngaruawahia</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Fairfield_Bridge7.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Hamilton City's roads are generally well developed and travel through built-up areas</li>
+                            <li>Hamilton has many bridges to cross the Waikato River, which travells through the center of the city</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Many roads outside of Hamilton City are rural roads, often less maintained than the roads found in the built-up areas</li>
+                            <li>Watch for farm animals on rural roads</li>
+                        </ul>
+               </div>
+                </div>
+            </div>
+        <div id="cni" style="display: none">
+                <div class="region-header-dark"><h1>Rotorua & Taupo</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/thermalnz.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/ruapehu.jpg" style="width: 100%"></img><br>Mt Ruapehu</div>                            
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/Huka_Falls.jpg" style="width: 100%"></img><br>Huka Falls</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/tauranga.jpg" style="width: 100%"></img><br>Tauranga</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/bluelake.jpg" style="width: 100%"></img><br>Central Lakes</div>
+                            <div class="mdl-cell mdl-cell--2-col"><img src="../images/rotorua.jpg" style="width: 100%"></img><br>Rotorua Geothermal Activity</div>
+
+                        </div>
+               </div>
+                </div>
+            <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/napiertaupo.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col">Napier-Taupo Road</div>
+                            <div class="mdl-cell mdl-cell--3-col">Desert Road</div>
+                            <div class="mdl-cell mdl-cell--3-col">Turangi to Taumaranui Road</div>
+                            <div class="mdl-cell mdl-cell--3-col">Central Plateau</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/desert.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Many Central North Island roads are winding and narrow</li>
+                            <li>Central Plateau roads may close due to snow</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Ensure you secure your car when parking at tourist attractions</li>
+                        </ul>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Desert%20Road%20closed.JPG" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                 </div>
+               <div class="content">
+                   <center>
+                    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAwaibop%2520OR%2520from%253ANZTAcni" data-widget-id="694379831832682497">Loading Road Status</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                   </center>
+</div>
+                </div>
+            </div>
+</div>
+            <div id="wellington" style="display: none">
+                <div class="region-header-dark"><h1>Wellington</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20140706_094213.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Attractions</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/IMG_20140706_094213.jpg" style="width: 100%"></img><br>Wellington Cable Car</div>                            
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Aratere%20Oct%2011%20Feature.jpg" style="width: 100%"></img><br>Interislander</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/SIF-Beehive-3-Cropped.jpg" style="width: 100%"></img><br>Parliament</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Zealandia-58799.jpg" style="width: 100%"></img><br>Zealandia</div>
+                        </div>
+               </div>
+                </div>
+            <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/State_Highway_2_(Rimutaka_Hill_Road)_near_the_top_of_the_range.%20(1).jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">Rimutaka Hill Road</div>
+                            <div class="mdl-cell mdl-cell--4-col">Interislander</div>
+                            <div class="mdl-cell mdl-cell--4-col">Kapiti Coast Road</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Aratere%20Oct%2011%20Feature.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Most Wellington City roads are highly developed</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Your rental car agreement may prohibit you from travelling on the Interislander</li>
+                        </ul>
+               </div>
+                </div>
+            </div>
+            <div id="westcoast" style="display: none">
+                <div class="region-header"><h1>West Coast</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/abeltasman.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Torrent_Bay_3,_New_Zealand.jpg" style="width: 100%"></img><br>Abel Tasman National Park</div>                            
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/HigherPointHeaphy.jpg" style="width: 100%"></img><br>Heaphy Track</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Fox_Glacier_NZ_2.jpg" style="width: 100%"></img><br>Fox Glacier</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Franz_Josef_glacier.JPG" style="width: 100%"></img><br>Franz Josef Glacier</div>
+                        </div>
+               </div>
+                </div>
+            <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/West-Coast-Paparoas.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell---col">Haast Pass</div>
+                            <div class="mdl-cell mdl-cell---col">Arthur's Pass</div>
+                            <div class="mdl-cell mdl-cell---col">Lewis Pass</div>
+                            <div class="mdl-cell mdl-cell---col">Buller Gorge</div>
+                            <div class="mdl-cell mdl-cell---col">Coastal Road</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/westcoaststatus.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Most West Coast roads are winding, narrow and have steep terrain</li>
+                            <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                            <li>Plan your journey before driving</li>
+                        </ul>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/westcoaststatus.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                 </div>
+               <div class="content">
+                      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAcWc%20OR%20from%3ANZTATOtS" data-widget-id="694380497728774144">Loading Road Status</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+               </div>
+                </div>
+            </div>
+                <div id="queenstown" style="display: none">
+                <div class="region-header"><h1>Queenstown</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/Milford-Road.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/milfordsound.jpg" style="width: 100%"></img><br>Milford Sound</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/arrowtown.jpg" style="width: 100%"></img><br>Arrowtown</div>
+                   <div class="mdl-cell mdl-cell--3-col"><img src="../images/wanaka.jpg" style="width: 100%"></img><br>Wanaka</div>
+                   <div class="mdl-cell mdl-cell--3-col"><img src="../images/glenorchy.jpg" style="width: 100%"></img><br>Glenorchy</div>
+               </div>
+                </div>
+            </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150415_120116.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col">Crown Range Road</div>
+                        <div class="mdl-cell mdl-cell--2-col">Milford Road</div>
+                        <div class="mdl-cell mdl-cell--3-col">Queenstown to Invercargill Road</div>
+                        <div class="mdl-cell mdl-cell--2-col">Ski Field Roads</div>
+                        <div class="mdl-cell mdl-cell--2-col">Kawarau Gorge</div>
+                        </div>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150415_114743.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>Roads in this area are often narrow, winding and steep</li>
+                            <li>During winter months the roads are often subject to icy road conditions</li>
+                            <li>Avoid driving on mountain passes, if possible, during the winter months</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                        </ul>
+               </div>
+                </div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/IMG_20150415_122517.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                 </div>
+               <div class="content">
+                   <center>
+                       <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAOS" data-widget-id="694380889359282176">Loading Road Status</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                   </center>
+               </div>
+                </div>
+            </div>
+            <div id="newzealand" style="display: none">
+                <div class="region-header-dark"><h1>New Zealand</h1></div>
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/akaroa.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Locations</span>
+                 </div>
+               <div class="content">
+                        <div class="mdl-grid" style="text-align: center">
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/auckland.jpg" style="width: 100%"></img><br>Auckland</div>                            
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/Taupo.jpg" style="width: 100%"></img><br>Taupo & Rotorua</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/westcoastinfo.jpg" style="width: 100%"></img><br>West Coast</div>
+                            <div class="mdl-cell mdl-cell--3-col"><img src="../images/queenstown.jpg" style="width: 100%"></img><br>Queenstown</div>
+                        </div>
+               </div>
+                </div>
+
+                <div class="card" style="width: 99%;">
+                <div class="image">
+                    <img src="../images/westcoastinfo.jpg" style="width: 100%"></img>
+                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                 </div>
+               <div class="content">
+                        <ul>
+                            <li>In New Zealand we drive on the left-hand side of the road</li>
+                            <li>Built up areas generally have speed limits of 50km/h however lower limits may apply.</li>
+                            <li>Many New Zealand roads are winding, narrow and have steep terrain</li>
+                            <li>Many south-island roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                            <li>Give yourself plenty of time to arrive at your destination and assume it will take longer than anticipated.</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                            <li>Plan your journey before driving</li>
+                        </ul>
+               </div>
+                </div>
+            </div>
+    </div>
+</div>
+<div id="northlanddialog" title="Northland">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image">
+                    <img src="../images/IMG_20150119_113441.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Northland</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Northland:</p>
+                        <ul>
+                            <li>Many Northland roads are winding and narrow</li>
+                            <li>Main Northland roads are often prone to wet conditions and may close</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Brush up on your One Way rules as many Northland bridges are one way</li>
+                            <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="aucklanddialog" title="Auckland">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/auckland.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Auckland</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Auckland:</p>
+                        <ul>
+                            <li>Auckland's roads are generally well developed and travel through built-up areas</li>
+                            <li>Expect traffic and delays during peak periods</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Use motorways wherever possible</li>
+                        </ul>
+                   <p>If you're going to drive on the motorways this information will also come in handy:</p>
+                        <ul>
+                            <li>Auckland motorways have generally speed limit of 100km/h</li>
+                            <li>Some stretches of motorway have a lower speed limit in place, such as the Auckland Harbour Bridge (80km/h)</li>
+                            <li>Indicate before changing lanes</li>
+                            <li>Follow the directions of the signs</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="hamiltondialog" title="Hamilton">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/Hamilton-City.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Hamilton</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Hamilton:</p>
+                        <ul>
+                            <li>Hamilton City's roads are generally well developed and travel through built-up areas</li>
+                            <li>Hamilton has many bridges to cross the Waikato River, which travells through the center of the city</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Many roads outside of Hamilton City are rural roads, often less maintained than the roads found in the built-up areas</li>
+                            <li>Watch for farm animals on rural roads</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="cnidialog" title="Central North Island">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/Taupo.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the Central North Island</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in the Central North Island:</p>
+                        <ul>
+                            <li>Many Central North Island roads are winding and narrow</li>
+                            <li>Central Plateau roads may close due to snow</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Ensure you secure your car when parking at tourist attractions</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="wellingtondialog" title="Wellington">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/Wellington_City_at_dusk.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Wellington</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Wellington:</p>
+                        <ul>
+                            <li>Most Wellington City roads are highly developed</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Your rental car agreement may prohibit you from travelling on the Interislander</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="westcoastdialog" title="West Coast">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/Punakaiki_-_looking_south.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the West Coast</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in the West Coast:</p>
+                        <ul>
+                            <li>Most West Coast roads are winding, narrow and have steep terrain</li>
+                            <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                            <li>Plan your journey before driving</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="queenstowndialog" title="Queenstown">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="../images/queenstown.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Queenstown</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Queenstown:</p>
+                        <ul>
+                            <li>Roads in this area are often narrow, winding and steep</li>
+                            <li>During winter months the roads are often subject to icy road conditions</li>
+                            <li>Avoid driving on mountain passes, if possible, during the winter months</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+    </body>
+<script>
+$(document).ready(function() {
+    $(window.location.hash).show();
+});
+</script>
+<script src="../drive/welcome.js"></script>
