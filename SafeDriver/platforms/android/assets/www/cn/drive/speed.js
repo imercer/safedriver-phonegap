@@ -34,17 +34,22 @@ var playAudio = function (buffer) {
     sourceBuffer.start(context.currentTime);
 };
 
-var loadAudioFile = function () {
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://app.safedriver.org.nz/drive/slowdown.mp3', true);
-    request.responseType = 'arraybuffer';
-    request.onload = function () {
-        var undecodedAudio = request.response;
-        context.decodeAudioData(undecodedAudio, function (buffer) {
-            playAudio(buffer);
-        });
-    };
-    request.send();
+function loadAudioFile() {
+    console.log('loading slowdown sound');
+
+    // Play the audio file at url
+        var my_media = new Media('en/drive/slowdown.mp3',
+            // success callback
+            function () {
+                console.log("playAudio():Audio Success");
+            },
+            // error callback
+            function (err) {
+                console.log("playAudio():Audio Error: " + err);
+            }
+        );
+        // Play audio
+        my_media.play();
 };
 
 // Silent Play for iOS
@@ -274,6 +279,7 @@ options = {
 
 function onDeviceReady() {
     id = navigator.geolocation.watchPosition(success, error, options);
+    cordova.plugins.backgroundMode.enable();
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);

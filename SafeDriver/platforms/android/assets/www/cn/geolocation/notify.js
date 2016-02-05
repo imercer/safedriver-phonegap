@@ -37,19 +37,22 @@ var playAudio = function (buffer) {
     sourceBuffer.connect(context.destination);
     sourceBuffer.start(context.currentTime);
 };
-
-var loadAlert = function (audio) {
+function loadAlert(audio) {
     console.log('loading sound' + audio);
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://app.safedriver.org.nz/geolocation/audio/' + audio + '.mp3', true);
-    request.responseType = 'arraybuffer';
-    request.onload = function () {
-        var undecodedAudio = request.response;
-        context.decodeAudioData(undecodedAudio, function (buffer) {
-            playAudio(buffer);
-        });
-    };
-    request.send();
+
+    // Play the audio file at url
+        var my_media = new Media('en/geolocation/audio/' + audio + '.mp3',
+            // success callback
+            function () {
+                console.log("playAudio():Audio Success");
+            },
+            // error callback
+            function (err) {
+                console.log("playAudio():Audio Error: " + err);
+            }
+        );
+        // Play audio
+        my_media.play();
 };
 // Silent Play for iOS
 function silentPlayer() {
@@ -608,6 +611,7 @@ options = {
 
 function onDeviceReady() {
     id = navigator.geolocation.watchPosition(success, error, options);
+    cordova.plugins.backgroundMode.enable();
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);

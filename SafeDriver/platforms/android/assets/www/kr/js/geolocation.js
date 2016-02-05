@@ -38,7 +38,7 @@ var playAudio = function (buffer) {
     sourceBuffer.start(context.currentTime);
 };
 
-var loadAlert = function (audio) {
+function loadAlert(audio) {
     console.log('loading sound' + audio);
     var request = new XMLHttpRequest();
     request.open('GET', 'http://app.safedriver.org.nz/geolocation/audio/' + audio + '.mp3', true);
