@@ -1,0 +1,62 @@
+.basicpopup-overlay {
+  background: #000;
+  height: 100%;
+  left: 0;
+  opacity: .1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2000; }
+
+.basicpopup-outer {
+  display: table;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2010; }
+
+.basicpopup-inner {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  width: 100%; }
+
+.basicpopup-btn-close {
+  -webkit-box-shadow: none;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  filter: alpha(opacity=65);
+  font-family: Arial, Baskerville, monospace;
+  font-size: 28px;
+  font-style: normal;
+  height: 44px;
+  line-height: 44px;
+  opacity: 0.65;
+  outline: none;
+  overflow: visible;
+  padding: 0 0 18px 10px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  width: 44px;
+  z-index: 1046;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none; }
+  .basicpopup-btn-close:hover, .basicpopup-btn-close:focus {
+    opacity: 1; }
+
+.basicpopup-content {
+  margin: 0 auto;
+  position: relative;
+  width: auto; }

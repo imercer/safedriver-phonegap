@@ -1,12 +1,16 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+  <head>    <script src="cordova.js"></script>
     <title>Language Checker</title>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 	document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
 		launch();
+        cordova.plugins.backgroundMode.enable();
+        if (cordova.platformId == 'android') {
+          StatusBar.backgroundColorByHexString("#595959");
+        }
+        StatusBar.show();
 	}
     function checkLanguage() {
 	  var en = "en"; 
