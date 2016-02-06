@@ -34,7 +34,10 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-mauron85-background-geolocation": {
+        "at.gofg.sportscomputer.powermanagement": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },

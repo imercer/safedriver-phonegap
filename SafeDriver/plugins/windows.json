@@ -34,7 +34,10 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "SafeDriver"
         },
-        "cordova-plugin-mauron85-background-geolocation": {
+        "at.gofg.sportscomputer.powermanagement": {
+            "PACKAGE_NAME": "SafeDriver"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "SafeDriver"
         }
     },

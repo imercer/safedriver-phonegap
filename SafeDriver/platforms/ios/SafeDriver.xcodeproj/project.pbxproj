@@ -58,8 +58,9 @@
 		D66975E5253B45798A5002F0 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9BA053024A4E6FA26D8596 /* CDVConnection.m */; };
 		EC691940A7724EB2BD0780D6 /* appbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7DC4923E58964E85845ECBA3 /* appbeep.wav */; };
 		F992B910DCD84A64BEC85FBF /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD27903CDC24E6AA226E5E4 /* CDVFile.m */; };
-		460CD402ABA84842A9ACAD0D /* CDVBackgroundGeoLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E523A48F354901ADA7D6ED /* CDVBackgroundGeoLocation.m */; };
 		E31ED15610D843B298F2CB08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A12BDCC694A7BB357EF30 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DA994B90DDBB456886F1BF9D /* PowerManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 613EAC58A7C4448383FCF427 /* PowerManagement.m */; };
+		C53AE11E1C124A4A93DED4EC /* PowerManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F904B996EFC4032BA8F2CB7 /* PowerManagement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,9 +156,11 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = SafeDriver/config.xml; sourceTree = "<group>"; };
 		F9DFE1506ED540E496517B66 /* CDVLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVLocation.m; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; };
 		FA9BA053024A4E6FA26D8596 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
-		C3E523A48F354901ADA7D6ED /* CDVBackgroundGeoLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVBackgroundGeoLocation.m"; path = "cordova-plugin-mauron85-background-geolocation/CDVBackgroundGeoLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		B3582A3B0CAB4A929ADA8369 /* CDVBackgroundGeoLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVBackgroundGeoLocation.h"; path = "cordova-plugin-mauron85-background-geolocation/CDVBackgroundGeoLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		923A12BDCC694A7BB357EF30 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		613EAC58A7C4448383FCF427 /* PowerManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PowerManagement.m"; path = "at.gofg.sportscomputer.powermanagement/PowerManagement.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		4DBC58D7442E47A68B2D415E /* PowerManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PowerManagement.h"; path = "at.gofg.sportscomputer.powermanagement/PowerManagement.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		4F904B996EFC4032BA8F2CB7 /* PowerManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PowerManagement.m"; path = "cordova-plugin-powermanagement/PowerManagement.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		629FF0B23E744BB0B0B34C17 /* PowerManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PowerManagement.h"; path = "cordova-plugin-powermanagement/PowerManagement.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,8 +297,10 @@
 				2660F5EA071846989EE43610 /* APPBackgroundMode.h */,
 				91B8D379BD184808A673A7DA /* CDVStatusBar.m */,
 				460E171CC17A47C7BB9D4B46 /* CDVStatusBar.h */,
-				C3E523A48F354901ADA7D6ED /* CDVBackgroundGeoLocation.m */,
-				B3582A3B0CAB4A929ADA8369 /* CDVBackgroundGeoLocation.h */,
+				613EAC58A7C4448383FCF427 /* PowerManagement.m */,
+				4DBC58D7442E47A68B2D415E /* PowerManagement.h */,
+				4F904B996EFC4032BA8F2CB7 /* PowerManagement.m */,
+				629FF0B23E744BB0B0B34C17 /* PowerManagement.h */,
 			);
 			name = Plugins;
 			path = SafeDriver/Plugins;
@@ -495,7 +500,8 @@
 				A5A10D49C1764E47A4C0B321 /* CDVDevice.m in Sources */,
 				C5B4CFC3B7854B16894A7B5D /* APPBackgroundMode.m in Sources */,
 				2379934D122146A2BC597BF2 /* CDVStatusBar.m in Sources */,
-				460CD402ABA84842A9ACAD0D /* CDVBackgroundGeoLocation.m in Sources */,
+				DA994B90DDBB456886F1BF9D /* PowerManagement.m in Sources */,
+				C53AE11E1C124A4A93DED4EC /* PowerManagement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

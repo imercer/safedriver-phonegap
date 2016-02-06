@@ -1,16 +1,8 @@
-function onDeviceReady() {
-if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        doStuff(position.coords.latitude, position.coords.longitude);
-  });
+function onError(error) {
+       console.log('no location is available');
+       window.location.assign("nearby/index.html#newzealand")
 }
-
-else {
-    window.location.assign("index.html#newzealand")
-}
-}
-
-document.addEventListener("deviceready", onDeviceReady, false);
+console.log('loaded gpslookup.js');
 
 
 function distance(lat1, lon1, lat2, lon2, unit) {
@@ -29,7 +21,10 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
-function doStuff(mylat, mylong) {
+function doStuff(position) {
+    var mylat = position.coords.latitude;
+    var mylong = position.coords.longitude;
+    console.log(mylat + mylong);
     if (distance(mylat, mylong, "-35.269039", "173.583971", "K") < 130) {
         window.location.assign("nearby/index.html#northland")        
     } else if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
@@ -48,3 +43,14 @@ function doStuff(mylat, mylong) {
         window.location.assign("nearby/index.html#newzealand")        
     }
 }
+
+function onDeviceReady() {
+    console.log('deviceReady');
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(doStuff, onError);
+    } else {
+        console.log('no location is available');
+       window.location.assign("nearby/index.html#newzealand")
+    }
+}
+document.addEventListener("deviceready", onDeviceReady, false);

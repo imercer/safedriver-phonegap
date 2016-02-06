@@ -23,15 +23,6 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
-var playAudio = function (buffer) {
-    var sourceBuffer = context.createBufferSource();
-    sourceBuffer.buffer = buffer;
-    sourceBuffer.connect(context.destination);
-    sourceBuffer.start(context.currentTime);
-};
-
 function loadAudioFile() {
     console.log('loading slowdown sound');
 
@@ -49,22 +40,7 @@ function loadAudioFile() {
         // Play audio
         my_media.play();
 };
-// Silent Play for iOS
-window.addEventListener('touchstart', function() {
 
-	// create empty buffer
-	var buffer = context.createBuffer(1, 1, 22050);
-	var source = context.createBufferSource();
-	source.buffer = buffer;
-
-	// connect to output (your speakers)
-	source.connect(context.destination);
-
-	// play the file
-	source.start(0);
-
-}, false);    
- 
 var count = 0;
 function success(pos) {
   var crd = pos.coords;

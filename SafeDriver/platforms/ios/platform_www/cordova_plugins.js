@@ -291,11 +291,19 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
-        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
-        "pluginId": "cordova-plugin-mauron85-background-geolocation",
+        "file": "plugins/at.gofg.sportscomputer.powermanagement/www/powermanagement.js",
+        "id": "at.gofg.sportscomputer.powermanagement.device",
+        "pluginId": "at.gofg.sportscomputer.powermanagement",
         "clobbers": [
-            "backgroundGeoLocation"
+            "window.powerManagement"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
         ]
     }
 ];
@@ -313,7 +321,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.1",
     "de.appplant.cordova.plugin.background-mode": "0.6.4",
     "cordova-plugin-statusbar": "2.1.0",
-    "cordova-plugin-mauron85-background-geolocation": "0.9.4"
+    "at.gofg.sportscomputer.powermanagement": "1.1.0",
+    "cordova-plugin-powermanagement": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

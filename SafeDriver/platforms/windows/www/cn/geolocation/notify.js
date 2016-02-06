@@ -29,14 +29,6 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
-var playAudio = function (buffer) {
-    var sourceBuffer = context.createBufferSource();
-    sourceBuffer.buffer = buffer;
-    sourceBuffer.connect(context.destination);
-    sourceBuffer.start(context.currentTime);
-};
 function loadAlert(audio) {
     console.log('loading sound' + audio);
 
@@ -54,22 +46,6 @@ function loadAlert(audio) {
         // Play audio
         my_media.play();
 };
-// Silent Play for iOS
-function silentPlayer() {
-    console.log('silentplayer start');
-	// create empty buffer
-	var buffer = context.createBuffer(1, 1, 22050);
-	var source = context.createBufferSource();
-	source.buffer = buffer;
-
-	// connect to output (your speakers)
-	source.connect(context.destination);
-
-	// play the file
-	source.start(0);
-    document.getElementById("enable-banner").className = "hidden";
-
-};    
 
 var xhttp = new XMLHttpRequest();
 var count = 0;

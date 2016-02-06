@@ -339,11 +339,19 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
-        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
-        "pluginId": "cordova-plugin-mauron85-background-geolocation",
+        "file": "plugins/at.gofg.sportscomputer.powermanagement/www/powermanagement.js",
+        "id": "at.gofg.sportscomputer.powermanagement.device",
+        "pluginId": "at.gofg.sportscomputer.powermanagement",
         "clobbers": [
-            "backgroundGeoLocation"
+            "window.powerManagement"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
         ]
     }
 ];

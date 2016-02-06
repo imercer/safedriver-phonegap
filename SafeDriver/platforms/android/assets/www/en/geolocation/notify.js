@@ -1,9 +1,3 @@
-var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-if (iOS == true) {
-    document.getElementById("enable-banner").className = "nothidden";
-}
-
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
@@ -29,15 +23,6 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
-var playAudio = function (buffer) {
-    var sourceBuffer = context.createBufferSource();
-    sourceBuffer.buffer = buffer;
-    sourceBuffer.connect(context.destination);
-    sourceBuffer.start(context.currentTime);
-};
-
 function loadAlert(audio) {
     console.log('loading sound' + audio);
 
@@ -55,32 +40,25 @@ function loadAlert(audio) {
         // Play audio
         my_media.play();
 };
-// Silent Play for iOS
-function silentPlayer() {
-    console.log('silentplayer start');
-	// create empty buffer
-	var buffer = context.createBuffer(1, 1, 22050);
-	var source = context.createBufferSource();
-	source.buffer = buffer;
 
-	// connect to output (your speakers)
-	source.connect(context.destination);
-
-	// play the file
-	source.start(0);
-    document.getElementById("enable-banner").className = "hidden";
-
-};    
 
 var xhttp = new XMLHttpRequest();
 var count = 0;
+var speedcount = 0;
 function success(pos) {
   var crd = pos.coords;
   var mylat = crd.latitude;
   var mylong = crd.longitude;
-  console.log(count);
-  if (count % 100 === 0) {
-      // Address converter
+  var speed = crd.speed * 3.6;
+  console.log('Latitude:' + mylat + 'Longitude:' + mylong + 'Speed:' + speed);
+  if (count % 50 === 0) {
+      /*
+
+ / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
+/ (_ / / -_)/ _ \/ __// _ \/ _  /  / /  / _ \ / _ `/
+\___/  \__/ \___/\__/ \___/\_,_/  /_/  /_//_/ \_, /
+                                             /___/
+      */
       var geocoder = new google.maps.Geocoder();
       var latLng = new google.maps.LatLng(mylat,mylong);
       if (geocoder) {
@@ -188,7 +166,13 @@ function success(pos) {
         }  
   };
   count = count + 1;
-    
+      /*
+  _____             ___
+ / ___/ ___  ___   / _/ ___   ___  ____ ___   ___
+/ (_ / / -_)/ _ \ / _/ / -_) / _ \/ __// -_) (_-<
+\___/  \__/ \___//_/   \__/ /_//_/\__/ \__/ /___/
+
+      */
   if (distance(mylat, mylong, "-36.957576", "174.797595", "K") < 0.025) {
   // Check if in Auckland Airport Motorway
       console.log('Auckland Airport Motorway Junction');
@@ -601,11 +585,210 @@ function success(pos) {
       }    
     } else {
        window.sessionStorage.setItem("geofence","");
-      }  
+       console.log('nothing happened');
+      }
+    /*
+   ____                      __        ___    __             __
+  / __/   ___  ___  ___  ___/ /       / _ |  / / ___   ____ / /_  ___
+ _\ \    / _ \/ -_)/ -_)/ _  /       / __ | / / / -_) / __// __/ (_-<
+/___/   / .__/\__/ \__/ \_,_/       /_/ |_|/_/  \__/ /_/   \__/ /___/
+       /_/
+    */
+
+    console.log('Speed: ' + Math.round(speed) + 'km/h');
+      // document.getElementById("speed").innerHTML = Math.round(speed);
+      // Check if in Central/East AKL metropolitan area 1
+      if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
+          if (crd.speed > target.fifty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+      } else if (distance(mylat, mylong, "-36.674987", "174.867588", "K") < 14) {
+    // Check if in AKL east coast bays metropolitan area 1
+         if (crd.speed > target.fifty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+       } else if (distance(mylat, mylong, "-36.837069", "174.741260", "K") < 2) {
+    // Check if in AKL Harbour Bridge (Nthrn MWY)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+       } else if (distance(mylat, mylong, "-36.860127", "174.760617", "K") < 0.9 || distance(mylat, mylong, "-36.869444", "174.771120", "K") < 1) {
+    // Check if in CentralMotorwayJunction (SH1/SH16)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+     } else if (distance(mylat, mylong, "-36.347948", "174.587621", "K") < 4.2) {
+    // Check if DOME VALLEY (SH1)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+     } else if (distance(mylat, mylong, "-37.216238", "175.057654", "K") < 3.6 || distance(mylat, mylong, "-37.262031", "175.248288", "K") < 8.5) {
+    // Check if Hauraki Plains (SH2)
+         if (crd.speed > target.ninety) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+      } else if (distance(mylat, mylong, "-37.418679", "175.746423", "K") < 3.5) {
+    // Check if KARANGAHEKE GORGE (SH2)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+       } else if (distance(mylat, mylong, "-41.009416", "174.922994", "K") < 3) {
+    // Check if WLG Costal Road (SH1)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+       } else if (distance(mylat, mylong, "-42.464052", "173.541664", "K") < 5.5) {
+    // Check if Kaikoura Costal Road (SH1)
+         if (crd.speed > target.eighty) {
+            if (speedcount % 20 === 0) {
+                speedcount = count + 1;
+                loadAudioFile();
+                console.log('SLOW DOWN');
+
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            count = 0;
+            window.sessionStorage.removeItem("audio");
+
+            navigator.vibrate(0);
+          }
+      }  else {
+            // Generic Speed (100KM/h)
+          if (crd.speed > target.onehundred) {
+            if (speedcount % 20 === 0) {
+                speedcount = speedcount + 1;
+                loadAlert('slowdown');
+                console.log('SLOW DOWN');
+                navigator.vibrate(500);
+            } else {
+                speedcount = speedcount + 1;
+            }
+          } else {
+            speedcount = 0;
+          }
+        }
     }
+
 function error(err) {
   console.warn('ERROR(' + err.code + '): ' + err.message);
 }
+
+target = {
+  onehundred : 28.055555555556,
+  ninety : 25,
+  eighty : 22.222222222222,
+  seventy : 19.444444444444,
+  sixty : 16.666666666667,
+  fifty : 13.888888888889
+};
+
 
 options = {
   enableHighAccuracy: true,
@@ -613,13 +796,15 @@ options = {
   maximumAge: 0
 };
 
-function onDeviceReady() {
+function notifyonDeviceReady() {
+    console.log('deviceready');
+    window.powermanagement.acquire();
     id = navigator.geolocation.watchPosition(success, error, options);
-    cordova.plugins.backgroundMode.enable();
 }
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", notifyonDeviceReady, false);
 
 cordova.plugins.backgroundMode.onactivate = function() {
     console.log('in background');
+    id = navigator.geolocation.watchPosition(success, error, options);
 };
