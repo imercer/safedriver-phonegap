@@ -339,20 +339,70 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/at.gofg.sportscomputer.powermanagement/www/powermanagement.js",
-        "id": "at.gofg.sportscomputer.powermanagement.device",
-        "pluginId": "at.gofg.sportscomputer.powermanagement",
-        "clobbers": [
-            "window.powerManagement"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
         "id": "cordova-plugin-powermanagement.powermanagement",
         "pluginId": "cordova-plugin-powermanagement",
         "clobbers": [
             "window.powermanagement"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
+        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
+        "pluginId": "cordova-plugin-mauron85-background-geolocation",
+        "clobbers": [
+            "backgroundGeoLocation"
+        ]
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
+        "id": "com.unarin.cordova.beacon.underscorejs",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
+        "id": "com.unarin.cordova.beacon.Q",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
+        "id": "com.unarin.cordova.beacon.LocationManager",
+        "pluginId": "com.unarin.cordova.beacon",
+        "merges": [
+            "cordova.plugins"
+        ]
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
+        "id": "com.unarin.cordova.beacon.Delegate",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
+        "id": "com.unarin.cordova.beacon.Region",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
+        "id": "com.unarin.cordova.beacon.Regions",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
+        "id": "com.unarin.cordova.beacon.CircularRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
+        "id": "com.unarin.cordova.beacon.BeaconRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
     }
 ];
 module.exports.metadata = 

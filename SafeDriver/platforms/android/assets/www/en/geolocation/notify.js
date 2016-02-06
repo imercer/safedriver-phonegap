@@ -25,18 +25,32 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 
 function loadAlert(audio) {
     console.log('loading sound' + audio);
-
-    // Play the audio file at url
-        var my_media = new Media('en/geolocation/audio/' + audio + '.mp3',
-            // success callback
-            function () {
-                console.log("playAudio():Audio Success");
-            },
-            // error callback
-            function (err) {
-                console.log("playAudio():Audio Error: " + err);
-            }
-        );
+    if(device.platform.toLowerCase() === "android") {
+        // Play the audio file at url
+                var my_media = new Media('/android_asset/www/en/geolocation/audio/' + audio + '.mp3',
+                    // success callback
+                    function () {
+                        console.log("playAudio():Audio Success");
+                        my_media.release();
+                    },
+                    // error callback
+                    function (err) {
+                        console.log("playAudio():Audio Error: " + err);
+                    }
+                );
+    } else {
+                var my_media = new Media('en/geolocation/audio/' + audio + '.mp3',
+                    // success callback
+                    function () {
+                        console.log("playAudio():Audio Success");
+                        my_media.release();
+                    },
+                    // error callback
+                    function (err) {
+                        console.log("playAudio():Audio Error: " + err);
+                    }
+                );
+    }
         // Play audio
         my_media.play();
 };
@@ -796,6 +810,11 @@ options = {
 };
 
 function notifyonDeviceReady() {
+	cordova.plugins.backgroundMode.setDefaults({
+          title:  "SafeDriver",
+          ticker: "Don't mind me, I'm just working away in the background",
+          text:   "I'm just keeping you safe"
+      })
     console.log('deviceready');
     window.powermanagement.acquire();
     id = navigator.geolocation.watchPosition(success, error, options);

@@ -251,18 +251,60 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/at.gofg.sportscomputer.powermanagement/www/powermanagement.js",
-        "id": "at.gofg.sportscomputer.powermanagement.device",
-        "clobbers": [
-            "window.powerManagement"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
         "id": "cordova-plugin-powermanagement.powermanagement",
         "clobbers": [
             "window.powermanagement"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
+        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
+        "clobbers": [
+            "backgroundGeoLocation"
+        ]
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
+        "id": "com.unarin.cordova.beacon.underscorejs",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
+        "id": "com.unarin.cordova.beacon.Q",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
+        "id": "com.unarin.cordova.beacon.LocationManager",
+        "merges": [
+            "cordova.plugins"
+        ]
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
+        "id": "com.unarin.cordova.beacon.Delegate",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
+        "id": "com.unarin.cordova.beacon.Region",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
+        "id": "com.unarin.cordova.beacon.Regions",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
+        "id": "com.unarin.cordova.beacon.CircularRegion",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
+        "id": "com.unarin.cordova.beacon.BeaconRegion",
+        "runs": true
     }
 ];
 module.exports.metadata = 

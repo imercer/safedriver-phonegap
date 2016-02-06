@@ -6,11 +6,11 @@
 	document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
 		launch();
-		cordova.plugins.backgroundMode.setDefaults({
-          title:  "SafeDriver",
-          ticker: "Don't mind me, I'm just working away in the background",
-          text:   "I'm just keeping you safe"
-      })
+        cordova.plugins.backgroundMode.setDefaults({
+              title:  "SafeDriver",
+              ticker: "You'll still receive SafeDriver alerts",
+              text:   "Keeping you safe on New Zealand Roads"
+          })
 
         cordova.plugins.backgroundMode.enable();
         if (cordova.platformId == 'android') {
@@ -59,6 +59,7 @@
 	if (localStorage.isNotInitialLaunch) {
 		checkLanguage();
 	} else {
+	    cordova.plugins.locationManager.requestAlwaysAuthorization()
 		localStorage.isNotInitialLaunch = 1;
 		checkLanguageInitial();
 	}

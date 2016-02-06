@@ -88,19 +88,27 @@
         "is_top_level": true,
         "variables": {}
     },
-    "at.gofg.sportscomputer.powermanagement": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/boltex/cordova-plugin-powermanagement.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-powermanagement": {
         "source": {
             "type": "registry",
             "id": "cordova-plugin-powermanagement"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-mauron85-background-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-mauron85-background-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.unarin.cordova.beacon": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/petermetz/cordova-plugin-ibeacon.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

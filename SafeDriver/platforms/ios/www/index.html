@@ -59,6 +59,7 @@
 	if (localStorage.isNotInitialLaunch) {
 		checkLanguage();
 	} else {
+	    cordova.plugins.locationManager.requestAlwaysAuthorization()
 		localStorage.isNotInitialLaunch = 1;
 		checkLanguageInitial();
 	}

@@ -31,6 +31,7 @@ function loadAlert(audio) {
                     // success callback
                     function () {
                         console.log("playAudio():Audio Success");
+                        my_media.release();
                     },
                     // error callback
                     function (err) {
@@ -39,15 +40,16 @@ function loadAlert(audio) {
                 );
     } else {
                 var my_media = new Media('en/geolocation/audio/' + audio + '.mp3',
-                        // success callback
-                        function () {
-                            console.log("playAudio():Audio Success");
-                        },
-                        // error callback
-                        function (err) {
-                            console.log("playAudio():Audio Error: " + err);
-                        }
-                    );
+                    // success callback
+                    function () {
+                        console.log("playAudio():Audio Success");
+                        my_media.release();
+                    },
+                    // error callback
+                    function (err) {
+                        console.log("playAudio():Audio Error: " + err);
+                    }
+                );
     }
         // Play audio
         my_media.play();
@@ -808,6 +810,11 @@ options = {
 };
 
 function notifyonDeviceReady() {
+	cordova.plugins.backgroundMode.setDefaults({
+          title:  "SafeDriver",
+          ticker: "You'll still receive SafeDriver alerts",
+          text:   "Keeping you safe on New Zealand Roads"
+      })
     console.log('deviceready');
     window.powermanagement.acquire();
     id = navigator.geolocation.watchPosition(success, error, options);
