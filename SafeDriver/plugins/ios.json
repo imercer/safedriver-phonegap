@@ -39,13 +39,13 @@
         },
         "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     }

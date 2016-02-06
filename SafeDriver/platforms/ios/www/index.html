@@ -6,9 +6,15 @@
 	document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
 		launch();
+		cordova.plugins.backgroundMode.setDefaults({
+          title:  "SafeDriver",
+          ticker: "Don't mind me, I'm just working away in the background",
+          text:   "I'm just keeping you safe"
+      })
+
         cordova.plugins.backgroundMode.enable();
         if (cordova.platformId == 'android') {
-          StatusBar.backgroundColorByHexString("#595959");
+          StatusBar.backgroundColorByHexString("#232323");
         }
         StatusBar.show();
 	}

@@ -585,7 +585,6 @@ function success(pos) {
       }    
     } else {
        window.sessionStorage.setItem("geofence","");
-       console.log('nothing happened');
       }
     /*
    ____                      __        ___    __             __
