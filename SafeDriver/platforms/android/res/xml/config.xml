@@ -47,6 +47,7 @@
     <feature name="LocationManager">
         <param name="android-package" value="com.unarin.cordova.beacon.LocationManager" />
     </feature>
+    <preference name="android-minSdkVersion" value="15" />
     <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
     <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
     <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />

@@ -812,8 +812,8 @@ options = {
 function notifyonDeviceReady() {
 	cordova.plugins.backgroundMode.setDefaults({
           title:  "SafeDriver",
-          ticker: "Don't mind me, I'm just working away in the background",
-          text:   "I'm just keeping you safe"
+          ticker: "You'll still receive SafeDriver alerts",
+          text:   "Keeping you safe on New Zealand Roads"
       })
     console.log('deviceready');
     window.powermanagement.acquire();
