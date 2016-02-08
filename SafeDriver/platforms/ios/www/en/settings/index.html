@@ -15,7 +15,7 @@
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="../css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
     </head>
-    <body >
+    <body onload="getCurrentStatus()">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
               <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
                 <div class="mdl-layout__header-row">
@@ -47,23 +47,102 @@
 <div style="width: 90%; height: 100%; padding-left: 5px; padding-top: 75px; padding-right: 5px; text-align: center">
 <table class="mdl-data-table mdl-js-data-table mdl-data-table- mdl-shadow--2dp" style="width: 100%; height: 100%;">
   <tbody>
-      <tr onclick="window.document.location='notifications.html';">
-        <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">notifications</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change Notification Settings</td>
-        </tr> </a>
-    <tr onclick="window.document.location='file:///android_asset/getstarted.html';">
-      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">language</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change your Language</td>
+    <tr>
+        <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">location_city</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location Based Audio Alerts</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"><label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="LocationAlerts">
+        <input onclick="saveStatus('LocationAlerts')" type="checkbox" id="LocationAlerts" class="mdl-switch__input" checked>
+        <span class="mdl-switch__label"></span>
+    </label>
+    </td>
     </tr>
-    <tr onclick="window.document.location='uiupdate.html';">
-      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">cached</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Force Interface Update</td>
+    <tr>
+        <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">av_timer</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Speed Limit Alerts</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"><label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="SpeedAlerts">
+            <input onclick="saveStatus('SpeedAlerts')" type="checkbox" id="SpeedAlerts" class="mdl-switch__input" checked>
+            <span class="mdl-switch__label"></span>
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">access_alarm</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regular Reminders</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"><label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="RegularReminders">
+            <input onclick="saveStatus('RegularReminders')" type="checkbox" id="RegularReminders" class="mdl-switch__input" checked>
+            <span class="mdl-switch__label"></span>
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">&#xE922;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allow Usage Data Collection</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"><label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="AllowDataCollection">
+            <input onclick="saveStatus('AllowDataCollection')" type="checkbox" id="AllowDataCollection" class="mdl-switch__input" checked>
+            <span class="mdl-switch__label"></span>
+        </label>
+        </td>
     </tr>
     <tr onclick="window.document.location='about.html';">
-      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">info</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About this app</td>
+      <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">info</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About this app</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"></td>
     </tr>
     <tr onclick="window.document.location='mailto:isaac@isaacscomputertips.com?subject=SafeDriver%20app%20feedback&body=Insert%20your%20message%20here.%20If%20you\'re%20reporting%20an%20issue%20please%20state%20the%20issue%20clearly\,%20include%20your%20device%20type%20and%20how%20you%20replicate%20the%20issue.';">
-      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">feedback</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send Feedback</td>
+      <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">feedback</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send Feedback</td>
+        <td class="mdl-data-table__cell--non-numeric" style="width:10%"></td>
     </tr>
   </tbody>
 </table>
     <br>
 <i>Created in Auckland, New Zealand</i>
 </div>
+<script type="application/javascript">
+    function getCurrentStatus() {
+        if (localStorage.LocationAlerts == "disabled") {
+            document.getElementById("LocationAlerts").click();
+        }
+        else{
+            console.log('LocationAlerts:' + localStorage.getItem('LocationAlerts'));
+            console.log('SpeedAlerts:' + localStorage.getItem('SpeedAlerts'));
+            console.log('RegularReminders:' + localStorage.getItem('RegularReminders'));
+            console.log('AllowDataCollection:' + localStorage.getItem('AllowDataCollection'));
+        }
+
+        if (localStorage.SpeedAlerts == "disabled") {
+            document.getElementById("SpeedAlerts").click();
+        }
+        else{
+            console.log('LocationAlerts:' + localStorage.getItem('LocationAlerts'));
+            console.log('SpeedAlerts:' + localStorage.getItem('SpeedAlerts'));
+            console.log('RegularReminders:' + localStorage.getItem('RegularReminders'));
+            console.log('AllowDataCollection:' + localStorage.getItem('AllowDataCollection'));
+         }
+
+        if (localStorage.RegularReminders == "disabled") {
+            document.getElementById("RegularReminders").click();
+        }
+        else{
+            console.log('LocationAlerts:' + localStorage.getItem('LocationAlerts'));
+            console.log('SpeedAlerts:' + localStorage.getItem('SpeedAlerts'));
+            console.log('RegularReminders:' + localStorage.getItem('RegularReminders'));
+            console.log('AllowDataCollection:' + localStorage.getItem('AllowDataCollection'));
+        }
+
+        if (localStorage.AllowDataCollection == "disabled") {
+            document.getElementById("AllowDataCollection").click();
+        }
+        else{
+            console.log('LocationAlerts:' + localStorage.getItem('LocationAlerts'));
+            console.log('SpeedAlerts:' + localStorage.getItem('SpeedAlerts'));
+            console.log('RegularReminders:' + localStorage.getItem('RegularReminders'));
+            console.log('AllowDataCollection:' + localStorage.getItem('AllowDataCollection'));
+        }
+    }
+
+    function saveStatus(box) {
+        console.log('Changing ' + box);
+        if (document.getElementById(box).checked) {
+            localStorage.setItem(box, "enabled");
+            console.log(localStorage.getItem(box));
+        } else {
+            localStorage.setItem(box, "disabled");
+            console.log(localStorage.getItem(box));
+        }
+    }
+</script>

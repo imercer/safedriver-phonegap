@@ -8,7 +8,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
         <service android:enabled="true" android:exported="false" android:name="com.tenforwardconsulting.cordova.bgloc.DistanceFilterLocationService" android:process=":remote" android:stopWithTask="false" />
         <service android:enabled="true" android:exported="false" android:name="com.tenforwardconsulting.cordova.bgloc.FusedLocationService" android:process=":remote" android:stopWithTask="false" />
@@ -27,6 +26,7 @@
                 <action android:name="com.unarin.cordova.beacon.IBeaconPlugin.DID_MONITORING" />
             </intent-filter>
         </service>
+        <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
     </application>
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
     <uses-permission android:name="android.permission.VIBRATE" />

@@ -37,14 +37,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -67,6 +59,14 @@
                         {
                             "xml": "<feature name=\"LocationManager\"><param name=\"ios-package\" value=\"CDVLocationManager\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
+                            "count": 1
                         }
                     ],
                     "/widget": []
@@ -86,11 +86,11 @@
                     ],
                     "UIBackgroundModes": [
                         {
-                            "xml": "<array><string>audio</string></array>",
+                            "xml": "<array><string>location</string></array>",
                             "count": 1
                         },
                         {
-                            "xml": "<array><string>location</string></array>",
+                            "xml": "<array><string>audio</string></array>",
                             "count": 1
                         }
                     ],
@@ -129,12 +129,6 @@
         "cordova-plugin-globalization": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "de.appplant.cordova.plugin.background-mode": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
@@ -146,6 +140,12 @@
         },
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "SafeDriver"
+        },
+        "de.appplant.cordova.plugin.background-mode": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {},
@@ -416,23 +416,6 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
-            "pluginId": "cordova-plugin-device",
-            "clobbers": [
-                "device"
-            ]
-        },
-        {
-            "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
-            "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
-            "pluginId": "de.appplant.cordova.plugin.background-mode",
-            "clobbers": [
-                "cordova.plugins.backgroundMode",
-                "plugin.backgroundMode"
-            ]
-        },
-        {
             "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
             "id": "cordova-plugin-statusbar.statusbar",
             "pluginId": "cordova-plugin-statusbar",
@@ -505,6 +488,23 @@
             "id": "com.unarin.cordova.beacon.BeaconRegion",
             "pluginId": "com.unarin.cordova.beacon",
             "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
+            "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
+            "pluginId": "de.appplant.cordova.plugin.background-mode",
+            "clobbers": [
+                "cordova.plugins.backgroundMode",
+                "plugin.backgroundMode"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -516,11 +516,11 @@
         "cordova-plugin-media": "2.1.0",
         "cordova-plugin-dialogs": "1.2.0",
         "cordova-plugin-globalization": "1.0.2",
-        "cordova-plugin-device": "1.1.1",
-        "de.appplant.cordova.plugin.background-mode": "0.6.4",
         "cordova-plugin-statusbar": "2.1.0",
         "cordova-plugin-powermanagement": "1.0.1",
         "cordova-plugin-mauron85-background-geolocation": "0.9.4",
-        "com.unarin.cordova.beacon": "3.3.0"
+        "com.unarin.cordova.beacon": "3.3.0",
+        "cordova-plugin-device": "1.1.1",
+        "de.appplant.cordova.plugin.background-mode": "0.6.4"
     }
 }

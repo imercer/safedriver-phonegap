@@ -65,7 +65,10 @@ function success(pos) {
   var mylong = crd.longitude;
   var speed = crd.speed * 3.6;
   console.log('Latitude:' + mylat + 'Longitude:' + mylong + 'Speed:' + speed);
-  if (count % 50 === 0) {
+  if (localStorage.getItem('LocationAlerts') == "disabled") {
+          console.log('not alerting based on location, user disabled messages')
+  } else {
+    if (count % 50 === 0) {
       /*
 
  / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
@@ -600,6 +603,7 @@ function success(pos) {
     } else {
        window.sessionStorage.setItem("geofence","");
       }
+    }
     /*
    ____                      __        ___    __             __
   / __/   ___  ___  ___  ___/ /       / _ |  / / ___   ____ / /_  ___
@@ -611,7 +615,10 @@ function success(pos) {
     console.log('Speed: ' + Math.round(speed) + 'km/h');
       // document.getElementById("speed").innerHTML = Math.round(speed);
       // Check if in Central/East AKL metropolitan area 1
-      if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
+      if (localStorage.getItem('SpeedAlerts') == "disabled") {
+        console.log('not alerting based on speed, user disabled messages')
+      } else {
+        if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
           if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -787,6 +794,7 @@ function success(pos) {
             speedcount = 0;
           }
         }
+    }
     }
 
 function error(err) {

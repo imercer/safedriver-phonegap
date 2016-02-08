@@ -266,23 +266,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "id": "cordova-plugin-device.device",
-        "pluginId": "cordova-plugin-device",
-        "clobbers": [
-            "device"
-        ]
-    },
-    {
-        "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
-        "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
-        "pluginId": "de.appplant.cordova.plugin.background-mode",
-        "clobbers": [
-            "cordova.plugins.backgroundMode",
-            "plugin.backgroundMode"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -355,6 +338,23 @@ module.exports = [
         "id": "com.unarin.cordova.beacon.BeaconRegion",
         "pluginId": "com.unarin.cordova.beacon",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
+        "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
+        "pluginId": "de.appplant.cordova.plugin.background-mode",
+        "clobbers": [
+            "cordova.plugins.backgroundMode",
+            "plugin.backgroundMode"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -368,12 +368,12 @@ module.exports.metadata =
     "cordova-plugin-media": "2.1.0",
     "cordova-plugin-dialogs": "1.2.0",
     "cordova-plugin-globalization": "1.0.2",
-    "cordova-plugin-device": "1.1.1",
-    "de.appplant.cordova.plugin.background-mode": "0.6.4",
     "cordova-plugin-statusbar": "2.1.0",
     "cordova-plugin-powermanagement": "1.0.1",
     "cordova-plugin-mauron85-background-geolocation": "0.9.4",
-    "com.unarin.cordova.beacon": "3.3.0"
+    "com.unarin.cordova.beacon": "3.3.0",
+    "cordova-plugin-device": "1.1.1",
+    "de.appplant.cordova.plugin.background-mode": "0.6.4"
 }
 // BOTTOM OF METADATA
 });

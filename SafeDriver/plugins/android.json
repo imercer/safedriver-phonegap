@@ -28,9 +28,6 @@
         "cordova-plugin-globalization": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "de.appplant.cordova.plugin.background-mode": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
@@ -44,6 +41,9 @@
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "com.unarin.cordova.beacon": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
