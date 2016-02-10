@@ -54,17 +54,99 @@ function loadAlert(audio) {
         // Play audio
         my_media.play();
 };
-
-
 var xhttp = new XMLHttpRequest();
 var count = 0;
 var speedcount = 0;
+var availablesound = ['unsealed','drivetoconditions','extratime','pullovertopass','onewaybridges','overtaking','corners','left','pullover'];
+
 function success(pos) {
   var crd = pos.coords;
   var mylat = crd.latitude;
   var mylong = crd.longitude;
   var speed = crd.speed * 3.6;
   console.log('Latitude:' + mylat + 'Longitude:' + mylong + 'Speed:' + speed);
+  if (localStorage.getItem('RegularReminders') == "disabled") {
+            console.log('not alerting RegularReminders, user disabled messages')
+  } else {
+    if (window.sessionStorage.startlat) {
+        var startlat = window.sessionStorage.startlat;
+        var startlong = window.sessionStorage.startlong;
+        var distancefromstart = distance(mylat, mylong, startlat, startlong, "K");
+        console.log(distancefromstart);
+        if (distancefromstart > 5 && distancefromstart < 10) {
+            if (window.sessionStorage.lastdistancealert == "5 to 10") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "5 to 10");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 15 && distancefromstart < 25) {
+            if (window.sessionStorage.lastdistancealert == "15 to 25") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "15 to 25");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 30 && distancefromstart < 40) {
+            if (window.sessionStorage.lastdistancealert == "30 to 40") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "30 to 40");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 45 && distancefromstart < 60) {
+            if (window.sessionStorage.lastdistancealert == "45 to 60") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "45 to 60");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 65 && distancefromstart < 75) {
+            if (window.sessionStorage.lastdistancealert == "65 to 75") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "65 to 75");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 80 && distancefromstart < 90) {
+            if (window.sessionStorage.lastdistancealert == "80 to 90") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "80 to 90");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+            }
+        } else if (distancefromstart > 95) {
+            if (window.sessionStorage.lastdistancealert == "95+") {
+            } else {
+                window.sessionStorage.setItem("lastdistancealert", "95+");
+                var ri = Math.floor(Math.random() * availablesound.length); // Random Index position in the array
+                var chosenalert = availablesound.splice(ri, 1); // Splice out a random element using the ri var
+                console.log(chosenalert);
+                loadAlert(chosenalert);
+                console.log('95km+ Resetting distance and arrays')
+                window.sessionStorage.setItem("startlat", mylat);
+                window.sessionStorage.setItem("startlong", mylong);
+            }
+        } else {
+        }
+    } else {
+        window.sessionStorage.setItem("startlat", mylat);
+        window.sessionStorage.setItem("startlong", mylong);
+    }
+    }
+
   if (localStorage.getItem('LocationAlerts') == "disabled") {
           console.log('not alerting based on location, user disabled messages')
   } else {
@@ -825,6 +907,8 @@ function notifyonDeviceReady() {
       })
     console.log('deviceready');
     window.powermanagement.acquire();
+    window.sessionStorage.setItem("geofence", "blank");
+    console.log(availablesound);
     id = navigator.geolocation.watchPosition(success, error, options);
 }
 
