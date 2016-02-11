@@ -8,12 +8,6 @@
     <string>${PRODUCT_NAME}</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
-    <key>CFBundleIconFile</key>
-    <string>icon.png</string>
-    <key>CFBundleIcons</key>
-    <dict/>
-    <key>CFBundleIcons~ipad</key>
-    <dict/>
     <key>CFBundleIdentifier</key>
     <string>info.scoreonline.DriveSafe</string>
     <key>CFBundleInfoDictionaryVersion</key>
@@ -27,14 +21,8 @@
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleVersion</key>
-    <string>26</string>
+    <string>27</string>
     <key>LSRequiresIPhoneOS</key>
-    <true/>
-    <key>NSMainNibFile</key>
-    <string></string>
-    <key>NSMainNibFile~ipad</key>
-    <string></string>
-    <key>UIRequiresFullScreen</key>
     <true/>
     <key>NSAppTransportSecurity</key>
     <dict>
@@ -42,13 +30,37 @@
       <true/>
     </dict>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>This app requires background location tracking</string>
+    <string>This provides you with audio messages to help keep you safe on the road</string>
     <key>NSLocationWhenInUseUsageDescription</key>
+    <string>It&apos;s best to allow background location use as well, this means that you&apos;ll receive audio messages, even when you&apos;re not using the app</string>
+    <key>NSMainNibFile</key>
+    <string></string>
+    <key>NSMainNibFile~ipad</key>
     <string></string>
     <key>UIBackgroundModes</key>
     <array>
       <string>location</string>
       <string>audio</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>UIInterfaceOrientation</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
   </dict>
 </plist>

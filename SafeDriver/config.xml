@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="170" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="26" version="1.7" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="170" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="27" version="1.7" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
     <author email="isaac@isaacmercer.nz" href="http://isaacmercer.nz">Isaac Mercer</author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="all" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
@@ -116,7 +116,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="ios">
-        <preference name="Orientation" value="all" />
     </platform>
     <gap:config-file parent="/manifest" target="AndroidManifest.xml">
         <uses-permission android:name="android.permission.INTERNET" />

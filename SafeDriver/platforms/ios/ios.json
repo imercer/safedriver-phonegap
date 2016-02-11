@@ -71,21 +71,13 @@
                 "parents": {
                     "NSLocationAlwaysUsageDescription": [
                         {
-                            "xml": "<string>This app would like to scan for iBeacons even when in the background.</string>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<string>This app requires background location tracking</string>",
+                            "xml": "<string>This provides you with audio messages to help keep you safe on the road</string>",
                             "count": 1
                         }
                     ],
                     "NSLocationWhenInUseUsageDescription": [
                         {
-                            "xml": "<string>This app would like to scan for iBeacons while it is in use.</string>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<string />",
+                            "xml": "<string>It's best to allow background location use as well, this means that you'll receive audio messages, even when you're not using the app</string>",
                             "count": 1
                         }
                     ],
