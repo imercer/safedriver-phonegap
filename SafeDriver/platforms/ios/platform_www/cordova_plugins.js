@@ -1,61 +1,69 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
-        "id": "cordova-plugin-geolocation.Coordinates",
-        "pluginId": "cordova-plugin-geolocation",
-        "clobbers": [
-            "Coordinates"
-        ]
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
+        "id": "com.unarin.cordova.beacon.underscorejs",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-        "id": "cordova-plugin-geolocation.PositionError",
-        "pluginId": "cordova-plugin-geolocation",
-        "clobbers": [
-            "PositionError"
-        ]
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
+        "id": "com.unarin.cordova.beacon.Q",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-geolocation/www/Position.js",
-        "id": "cordova-plugin-geolocation.Position",
-        "pluginId": "cordova-plugin-geolocation",
-        "clobbers": [
-            "Position"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
-        "id": "cordova-plugin-geolocation.geolocation",
-        "pluginId": "cordova-plugin-geolocation",
-        "clobbers": [
-            "navigator.geolocation"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
-        "id": "cordova-plugin-vibration.notification",
-        "pluginId": "cordova-plugin-vibration",
+        "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
+        "id": "com.unarin.cordova.beacon.LocationManager",
+        "pluginId": "com.unarin.cordova.beacon",
         "merges": [
-            "navigator.notification",
-            "navigator"
+            "cordova.plugins"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-network-information/www/network.js",
-        "id": "cordova-plugin-network-information.network",
-        "pluginId": "cordova-plugin-network-information",
+        "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
+        "id": "com.unarin.cordova.beacon.Delegate",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
+        "id": "com.unarin.cordova.beacon.Region",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
+        "id": "com.unarin.cordova.beacon.Regions",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
+        "id": "com.unarin.cordova.beacon.CircularRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
+        "id": "com.unarin.cordova.beacon.BeaconRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
         "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
+            "device"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-        "id": "cordova-plugin-network-information.Connection",
-        "pluginId": "cordova-plugin-network-information",
-        "clobbers": [
-            "Connection"
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
         ]
     },
     {
@@ -226,27 +234,35 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "pluginId": "cordova-plugin-media",
+        "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
+        "id": "cordova-plugin-geolocation.Coordinates",
+        "pluginId": "cordova-plugin-geolocation",
         "clobbers": [
-            "window.MediaError"
+            "Coordinates"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "pluginId": "cordova-plugin-media",
+        "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+        "id": "cordova-plugin-geolocation.PositionError",
+        "pluginId": "cordova-plugin-geolocation",
         "clobbers": [
-            "window.Media"
+            "PositionError"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "pluginId": "cordova-plugin-dialogs",
-        "merges": [
-            "navigator.notification"
+        "file": "plugins/cordova-plugin-geolocation/www/Position.js",
+        "id": "cordova-plugin-geolocation.Position",
+        "pluginId": "cordova-plugin-geolocation",
+        "clobbers": [
+            "Position"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
+        "id": "cordova-plugin-geolocation.geolocation",
+        "pluginId": "cordova-plugin-geolocation",
+        "clobbers": [
+            "navigator.geolocation"
         ]
     },
     {
@@ -266,22 +282,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-        "id": "cordova-plugin-statusbar.statusbar",
-        "pluginId": "cordova-plugin-statusbar",
-        "clobbers": [
-            "window.StatusBar"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "pluginId": "cordova-plugin-powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
         "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
         "pluginId": "cordova-plugin-mauron85-background-geolocation",
@@ -290,61 +290,53 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
-        "id": "com.unarin.cordova.beacon.underscorejs",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
-        "id": "com.unarin.cordova.beacon.Q",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
-        "id": "com.unarin.cordova.beacon.LocationManager",
-        "pluginId": "com.unarin.cordova.beacon",
-        "merges": [
-            "cordova.plugins"
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
         ]
     },
     {
-        "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
-        "id": "com.unarin.cordova.beacon.Delegate",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
-        "id": "com.unarin.cordova.beacon.Region",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
-        "id": "com.unarin.cordova.beacon.Regions",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
-        "id": "com.unarin.cordova.beacon.CircularRegion",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
-        "id": "com.unarin.cordova.beacon.BeaconRegion",
-        "pluginId": "com.unarin.cordova.beacon",
-        "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "id": "cordova-plugin-device.device",
-        "pluginId": "cordova-plugin-device",
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
+        "pluginId": "cordova-plugin-media",
         "clobbers": [
-            "device"
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "id": "cordova-plugin-network-information.network",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "id": "cordova-plugin-network-information.Connection",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "id": "cordova-plugin-statusbar.statusbar",
+        "pluginId": "cordova-plugin-statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
         ]
     },
     {
@@ -359,21 +351,6 @@ module.exports = [
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{
-    "cordova-plugin-whitelist": "1.2.1",
-    "cordova-plugin-geolocation": "2.1.0",
-    "cordova-plugin-vibration": "2.1.0",
-    "cordova-plugin-network-information": "1.2.0",
-    "cordova-plugin-file": "4.1.0",
-    "cordova-plugin-media": "2.1.0",
-    "cordova-plugin-dialogs": "1.2.0",
-    "cordova-plugin-globalization": "1.0.2",
-    "cordova-plugin-statusbar": "2.1.0",
-    "cordova-plugin-powermanagement": "1.0.1",
-    "cordova-plugin-mauron85-background-geolocation": "0.9.4",
-    "com.unarin.cordova.beacon": "3.3.0",
-    "cordova-plugin-device": "1.1.1",
-    "de.appplant.cordova.plugin.background-mode": "0.6.4"
-}
+{}
 // BOTTOM OF METADATA
 });

@@ -45,14 +45,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BackgroundGeoLocation\"><param name=\"android-package\" value=\"com.tenforwardconsulting.cordova.bgloc.BackgroundGeolocationPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"LocationManager\"><param name=\"android-package\" value=\"com.unarin.cordova.beacon.LocationManager\" /></feature>",
                             "count": 1
                         },
@@ -66,6 +58,10 @@
                         },
                         {
                             "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundGeoLocation\"><param name=\"android-package\" value=\"com.tenforwardconsulting.cordova.bgloc.BackgroundGeolocationPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -109,6 +105,18 @@
                             "count": 1
                         },
                         {
+                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<uses-permission android:name=\"com.google.android.gms.permission.ACTIVITY_RECOGNITION\" />",
                             "count": 1
                         },
@@ -135,33 +143,9 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
-                            "count": 1
                         }
                     ],
                     "/manifest/application": [
-                        {
-                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.tenforwardconsulting.cordova.bgloc.DistanceFilterLocationService\" android:process=\":remote\" android:stopWithTask=\"false\"></service>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.tenforwardconsulting.cordova.bgloc.FusedLocationService\" android:process=\":remote\" android:stopWithTask=\"false\"></service>",
-                            "count": 1
-                        },
                         {
                             "xml": "<receiver android:name=\"org.altbeacon.beacon.startup.StartupBroadcastReceiver\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /><action android:name=\"android.intent.action.ACTION_POWER_CONNECTED\" /><action android:name=\"android.intent.action.ACTION_POWER_DISCONNECTED\" /></intent-filter></receiver>",
                             "count": 1
@@ -176,6 +160,18 @@
                         },
                         {
                             "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.tenforwardconsulting.cordova.bgloc.DistanceFilterLocationService\" android:process=\":remote\" android:stopWithTask=\"false\"></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.tenforwardconsulting.cordova.bgloc.FusedLocationService\" android:process=\":remote\" android:stopWithTask=\"false\"></service>",
                             "count": 1
                         }
                     ]
@@ -211,12 +207,6 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-mauron85-background-geolocation": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
@@ -224,6 +214,9 @@
             "PACKAGE_NAME": "SafeDriver"
         },
         "de.appplant.cordova.plugin.background-mode": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-mauron85-background-geolocation": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
@@ -465,20 +458,6 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-            "id": "cordova-plugin-powermanagement.powermanagement",
-            "clobbers": [
-                "window.powermanagement"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
-            "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
-            "clobbers": [
-                "backgroundGeoLocation"
-            ]
-        },
-        {
             "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
             "id": "com.unarin.cordova.beacon.underscorejs",
             "runs": true
@@ -533,6 +512,13 @@
             "clobbers": [
                 "cordova.plugins.backgroundMode",
                 "plugin.backgroundMode"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
+            "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
+            "clobbers": [
+                "backgroundGeoLocation"
             ]
         }
     ]

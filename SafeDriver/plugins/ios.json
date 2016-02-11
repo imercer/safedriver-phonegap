@@ -7,49 +7,45 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-powermanagement": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        "com.unarin.cordova.beacon": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-mauron85-background-geolocation": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "com.unarin.cordova.beacon": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        }
-    }
+    "dependent_plugins": {}
 }

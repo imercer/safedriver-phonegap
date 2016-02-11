@@ -1,7 +1,7 @@
 function onDeviceReady() {
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-  doStuff(position.coords.latitude, position.coords.longitude);
+  //doStuff(position.coords.latitude, position.coords.longitude);
   });
 }
 else {

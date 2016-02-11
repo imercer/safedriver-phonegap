@@ -236,20 +236,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
-        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
-        "clobbers": [
-            "backgroundGeoLocation"
-        ]
-    },
-    {
         "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
         "id": "com.unarin.cordova.beacon.underscorejs",
         "runs": true
@@ -304,6 +290,13 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.backgroundMode",
             "plugin.backgroundMode"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
+        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
+        "clobbers": [
+            "backgroundGeoLocation"
         ]
     }
 ];

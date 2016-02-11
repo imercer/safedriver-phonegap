@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="200" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="26" version="2.0" windows-packageVersion="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="170" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="26" version="1.7" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
     <author email="isaac@isaacmercer.nz" href="http://isaacmercer.nz">Isaac Mercer</author>
@@ -23,6 +23,9 @@
     <preference name="StatusBarBackgroundColor" value="#333333" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="SuppressesLongPressGesture" value="true" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -42,6 +45,8 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
+    <gap:plugin name="com.unarin.cordova.beacon" />
+    <gap:plugin name="cordova-plugin-mauron85-background-geolocation" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
