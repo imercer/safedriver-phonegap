@@ -18,7 +18,7 @@
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
-    <preference name="android-installLocation" value="auto" />
+    <preference name="android-installLocation" value="preferExternal" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#333333" />
     <preference name="StatusBarStyle" value="lightcontent" />
