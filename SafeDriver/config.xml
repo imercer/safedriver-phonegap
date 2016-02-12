@@ -23,8 +23,8 @@
     <preference name="StatusBarBackgroundColor" value="#333333" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="AllowInlineMediaPlayback" value="true"/>
-    <preference name="BackupWebStorage" value="none"/>
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="BackupWebStorage" value="none" />
     <preference name="SuppressesLongPressGesture" value="true" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />

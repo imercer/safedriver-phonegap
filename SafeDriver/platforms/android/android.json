@@ -63,6 +63,10 @@
                         {
                             "xml": "<feature name=\"BackgroundGeoLocation\"><param name=\"android-package\" value=\"com.tenforwardconsulting.cordova.bgloc.BackgroundGeolocationPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -217,6 +221,9 @@
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "cordova-plugin-mauron85-background-geolocation": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
@@ -519,6 +526,13 @@
             "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
             "clobbers": [
                 "backgroundGeoLocation"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+            "id": "cordova-plugin-powermanagement.powermanagement",
+            "clobbers": [
+                "window.powermanagement"
             ]
         }
     ]

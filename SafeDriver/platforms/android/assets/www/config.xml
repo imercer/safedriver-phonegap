@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="200" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="26" version="2.0" windows-packageVersion="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="170" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="27" version="1.7" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
     <author email="isaac@isaacmercer.nz" href="http://isaacmercer.nz">Isaac Mercer</author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="all" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
@@ -23,6 +23,9 @@
     <preference name="StatusBarBackgroundColor" value="#333333" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="SuppressesLongPressGesture" value="true" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -113,7 +116,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="ios">
-        <preference name="Orientation" value="all" />
     </platform>
     <gap:config-file parent="/manifest" target="AndroidManifest.xml">
         <uses-permission android:name="android.permission.INTERNET" />
