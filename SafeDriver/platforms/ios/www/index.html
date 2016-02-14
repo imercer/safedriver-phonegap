@@ -4,8 +4,8 @@
     <title>Language Checker</title>
     <script type="text/javascript" type="text/javascript" charset="utf-8">
 	document.addEventListener("deviceready", onDeviceReady, false);
+	var xhttp = new XMLHttpRequest();
 	function onDeviceReady() {
-		launch();
         cordova.plugins.backgroundMode.setDefaults({
               title:  "SafeDriver",
               ticker: "You'll still receive SafeDriver alerts",
@@ -17,6 +17,36 @@
           StatusBar.backgroundColorByHexString("#232323");
         }
         StatusBar.show();
+        var push = PushNotification.init({
+          android: {
+                senderID: "233940449476",
+                "icon": "icon_outline",
+                "iconColor": "#164B56"
+            },
+            ios: {
+                alert: "true",
+                badge: "false",
+                sound: "true",
+                vibration: "true"
+            },
+            windows: {}
+        });
+
+        push.on('registration', function(data) {
+            console.log("registration - " + data.registrationId);
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                  launch();
+                }
+            };
+            xhttp.open("GET", "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, true);
+            xhttp.send();
+        });
+        push.on('error', function(e) {
+            console.error("push error");
+            console.error(e);
+            launch();
+        });
 	}
 
     function checkLanguage() {

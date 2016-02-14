@@ -45,6 +45,9 @@
         },
         "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "phonegap-plugin-push": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
     "dependent_plugins": {

@@ -174,7 +174,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence", "crownrange6");
                             loadAlert('crownrangeextended');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
@@ -184,7 +184,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","kawarau");
                             loadAlert('kgorgeextended');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=KawarauGorge&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=KawarauGorge&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Napier-Taupo Rd") >= 0){
@@ -194,7 +194,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","napiertaupo");
                             loadAlert('napiertaupo');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=NapierTaupo&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NapierTaupo&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Cape Reinga Rd") >= 0){
@@ -204,7 +204,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","CapeReinga");
                             loadAlert('capereinga');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=CapeReinga&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CapeReinga&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
@@ -214,7 +214,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","ngtroad");
                             loadAlert('ngtroad');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=NGTRoad&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NGTRoad&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
@@ -224,7 +224,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","tepakistreamrd");
                             loadAlert('tepakistream');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=tepakistreamrd&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=tepakistreamrd&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Waikato Expy") >= 0){
@@ -236,7 +236,7 @@ function success(pos) {
                             console.log(localStorage.getItem("addressgeofence"));
                             window.localStorage.setItem("addressgeofence","waikatoexpressway");
                             loadAlert('waikatoexpressway');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=WaikatoExpy&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=WaikatoExpy&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Queen Charlotte Dr") >= 0){
@@ -246,7 +246,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","queencharlottedr");
                             loadAlert('queencharlottedr');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=queencharlottedr&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=queencharlottedr&id" + Math.random(), true);
                             xhttp.send();
                       }
                 } else if (address.indexOf("Dunedin Southern Motorway") >= 0){
@@ -256,7 +256,7 @@ function success(pos) {
                       else {
                             window.localStorage.setItem("addressgeofence","dunedinsthmwy");
                             loadAlert('dunedinsthmwy');
-                            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=dunedinsthmwy&id" + Math.random(), true);
+                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=dunedinsthmwy&id" + Math.random(), true);
                             xhttp.send();
                       }
                 }
@@ -282,7 +282,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","airportmwy");
             loadAlert('aklairport');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=AirportMWY&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=AirportMWY&id" + Math.random(), true);
             xhttp.send();
       }
   } else if (distance(mylat, mylong, "-44.775014", "168.006457", "K") < 10) {
@@ -302,7 +302,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","crownrange6");
             loadAlert('wetandicy');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
             xhttp.send();
       }
    } else if (distance(mylat, mylong, "-37.219763", "175.001888", "K") < 0.06) {
@@ -313,7 +313,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","bombay");
             loadAlert('bombay');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Bombays&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Bombays&id" + Math.random(), true);
             xhttp.send();
       }
  } else if (distance(mylat, mylong, "-36.06903", "174.421383", "K") < 2.6) {
@@ -324,7 +324,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","brynderwyn");
             loadAlert('brynderwyns');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=BrynderwynHills&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=BrynderwynHills&id" + Math.random(), true);
             xhttp.send();
       } 
  } else if (distance(mylat, mylong, "-36.86038", "174.76003", "K") < 0.8) {
@@ -335,7 +335,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","cmj");
             loadAlert('cmj');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=AKLCentralMotorwayJunction&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=AKLCentralMotorwayJunction&id" + Math.random(), true);
             xhttp.send();
       }   
    } else if (distance(mylat, mylong, "-36.788", "174.583553", "K") < 0.1) {
@@ -346,7 +346,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","crhwy");
             loadAlert('highriskintersection');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=CoatsvilleRiverheadSH16&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CoatsvilleRiverheadSH16&id" + Math.random(), true);
             xhttp.send();
       }  
    } else if (distance(mylat, mylong, "-44.975896", "168.860648", "K") < 0.05) {
@@ -375,7 +375,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","desertroad");
             loadAlert('desertroad');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=DesertRoad&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=DesertRoad&id" + Math.random(), true);
             xhttp.send();
       } 
      } else if (distance(mylat, mylong, "-45.199407", "168.742583", "K") < 10) {
@@ -386,7 +386,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","devilsstaircase");
             loadAlert('devilsstaircase');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=DevilsStaircase&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=DevilsStaircase&id" + Math.random(), true);
             xhttp.send();
       } 
      } else if (distance(mylat, mylong, "-36.361306", "174.606477", "K") < 6) {
@@ -397,7 +397,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","domevalley");
             loadAlert('domevalley');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=DomeValley&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=DomeValley&id" + Math.random(), true);
             xhttp.send();
       } 
      } else if (distance(mylat, mylong, "-36.903707", "174.811726", "K") < 0.1) {
@@ -408,7 +408,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","ephwy");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=ElersliePamnureHwy&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=ElersliePamnureHwy&id" + Math.random(), true);
             xhttp.send();
       } 
      } else if (distance(mylat, mylong, "-37.088006", "174.93872", "K") < 0.1) {
@@ -419,7 +419,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","drury");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Drury&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Drury&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.888879", "174.797213", "K") < 0.08) {
@@ -430,7 +430,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","greenlane");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Greenlane&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Greenlane&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.734785", "174.717458", "K") < 0.08) {
@@ -441,7 +441,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","greville");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Greville&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Greville&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.830166", "174.746019", "K") < 1.4) {
@@ -452,7 +452,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","harbourbridge");
             loadAlert('aklharbourbridge');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=AKLHarbourBridge&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=AKLHarbourBridge&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-37.246316", "175.199842", "K") < 12) {
@@ -463,7 +463,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","haurakiplains");
             loadAlert('haurakiplains');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=HaurakiPlains&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=HaurakiPlains&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.825806", "174.617203", "K") < 0.01) {
@@ -474,7 +474,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","hobsonville19b");
             loadAlert('motorwayinterchange');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Hobsonville16&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Hobsonville16&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-44.764211", "167.981193", "K") < 1) {
@@ -494,7 +494,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","kaimai");
             loadAlert('kaimai');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=KaimaiRanges&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=KaimaiRanges&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-37.418901", "175.742572", "K") < 3) {
@@ -505,7 +505,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","karangahake");
             loadAlert('karangahake');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Karangahake&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Karangahake&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-44.585636", "169.643528", "K") < 37) {
@@ -516,7 +516,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","lindis");
             loadAlert('lindispass');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=LindisPass&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=LindisPass&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.996038", "174.889909", "K") < 0.25) {
@@ -527,7 +527,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","manukau");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Manukau&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Manukau&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.996038", "174.889909", "K") < 0.25) {
@@ -538,7 +538,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","milford");
             loadAlert('milfordroad');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=MilfordRoad&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=MilfordRoad&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-38.08931", "176.214178", "K") < 0.2) {
@@ -549,7 +549,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","ngongotaharoundabout");
             loadAlert('highriskroundabout');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=NgongotahaRoundabout&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NgongotahaRoundabout&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-35.039759", "173.16903", "K") < 0.25 || distance(mylat, mylong, "-34.536328", "172.76967", "K") < 0.25) {
@@ -560,7 +560,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","ninteymile");
             loadAlert('insurance');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=NinetyMileBeach&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NinetyMileBeach&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-38.08931", "176.214178", "K") < 0.2) {
@@ -571,7 +571,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","ngongotaharoundabout");
             loadAlert('highriskroundabout');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=NgongotahaRoundabout&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NgongotahaRoundabout&id" + Math.random(), true);
             xhttp.send();
       }
      } else if (distance(mylat, mylong, "-36.788177", "174.752794", "K") < 0.08) {
@@ -582,7 +582,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","northcote");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Northcote&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Northcote&id" + Math.random(), true);
             xhttp.send();
       }
 } else if (distance(mylat, mylong, "-36.862476", "174.764413", "K") < 0.016) {
@@ -593,7 +593,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","psonramp");
             loadAlert('mergingtrucks');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=SouthernPortOnramp&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=SouthernPortOnramp&id" + Math.random(), true);
             xhttp.send();
       }
 } else if (distance(mylat, mylong, "-41.284172", "174.005419", "K") < 0.150) {
@@ -604,7 +604,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","pictonwarf");
             loadAlert('pictonwarf');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=PictonWarf&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=PictonWarf&id" + Math.random(), true);
             xhttp.send();
       }
 } else if (distance(mylat, mylong, "-41.109769", "175.253011", "K") < 5) {
@@ -615,7 +615,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","rimutaka");
             loadAlert('rimutakahill');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Rimutaka&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Rimutaka&id" + Math.random(), true);
             xhttp.send();
       }
     } else if (distance(mylat, mylong, "-36.625105", "174.662838", "K") < 0.08) {
@@ -626,7 +626,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","silverdale");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Silverdale&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Silverdale&id" + Math.random(), true);
             xhttp.send();
       }
     } else if (distance(mylat, mylong, "-36.9225", "174.846823", "K") < 0.2) {
@@ -637,7 +637,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","tiptop");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=MtWellingtonHwyCorner&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=MtWellingtonHwyCorner&id" + Math.random(), true);
             xhttp.send();
       }
     } else if (distance(mylat, mylong, "-36.535894", "174.680456", "K") < 0.3) {
@@ -648,7 +648,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","tolltunnels");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=TollRoadTunnels&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=TollRoadTunnels&id" + Math.random(), true);
             xhttp.send();
       }
 } else if (distance(mylat, mylong, "-36.849391", "174.753123", "K") < 0.01) {
@@ -659,7 +659,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","vicpark");
             loadAlert('vicparktunnel');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=VictoriaParkTunnel&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=VictoriaParkTunnel&id" + Math.random(), true);
             xhttp.send();
       }
 } else if (distance(mylat, mylong, "-36.454461", "174.652338", "K") < 4) {
@@ -670,7 +670,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","warkworth");
             loadAlert('warkworth');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=Warkworth&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=Warkworth&id" + Math.random(), true);
             xhttp.send();
       }    
 } else if (distance(mylat, mylong, "-36.871983", "174.687641", "K") < 0.8) {
@@ -681,7 +681,7 @@ function success(pos) {
       else {
             window.localStorage.setItem("geofence","waterview");
             loadAlert('followingdistances');
-            xhttp.open("GET", "http://app.safedriver.org.nz/tracking/area.php?area=WaterviewCauseway&id" + Math.random(), true);
+            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=WaterviewCauseway&id" + Math.random(), true);
             xhttp.send();
       }    
 } else {

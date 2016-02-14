@@ -45,6 +45,9 @@
         },
         "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "phonegap-plugin-push": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {}
