@@ -67,6 +67,18 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CDVWKWebViewEngine\"><param name=\"ios-package\" value=\"CDVWKWebViewEngine\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CordovaWebViewEngine\" value=\"CDVWKWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PowerManagement\"><param name=\"ios-package\" value=\"PowerManagement\" /></feature>",
+                            "count": 1
                         }
                     ],
                     "/widget": []
@@ -145,6 +157,12 @@
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "phonegap-plugin-push": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
@@ -504,6 +522,22 @@
             "pluginId": "phonegap-plugin-push",
             "clobbers": [
                 "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+            "pluginId": "cordova-plugin-wkwebview-engine",
+            "clobbers": [
+                "cordova.exec"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+            "id": "cordova-plugin-powermanagement.powermanagement",
+            "pluginId": "cordova-plugin-powermanagement",
+            "clobbers": [
+                "window.powermanagement"
             ]
         }
     ]

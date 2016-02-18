@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="172" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="28" version="1.7.2" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="174" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="32" version="1.7.4" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
@@ -44,11 +44,11 @@
     <feature name="BackgroundGeoLocation">
         <param name="android-package" value="com.tenforwardconsulting.cordova.bgloc.BackgroundGeolocationPlugin" />
     </feature>
-    <feature name="PowerManagement">
-        <param name="android-package" value="com.simplec.phonegap.plugins.powermanagement.PowerManagement" />
-    </feature>
     <feature name="PushNotification">
         <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
+    </feature>
+    <feature name="PowerManagement">
+        <param name="android-package" value="com.simplec.phonegap.plugins.powermanagement.PowerManagement" />
     </feature>
     <preference name="android-minSdkVersion" value="15" />
     <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi/screen.png" />
@@ -86,6 +86,7 @@
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SuppressesLongPressGesture" value="true" />
+    <preference name="deployment-target" value="9.0" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -118,6 +119,7 @@
     <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173-tile.png" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -127,4 +129,5 @@
     <gap:config-file parent="/manifest" target="AndroidManifest.xml">
         <uses-permission android:name="android.permission.INTERNET" />
     </gap:config-file>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 </widget>

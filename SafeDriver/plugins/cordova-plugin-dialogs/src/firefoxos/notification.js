@@ -34,7 +34,7 @@ function modal(message, callback, title, buttonLabels, domObjects) {
     var modalDocument = modalWindow.document;
 
     modalDocument.write(
-        '<html><head>' +
+        '<html><head><meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'"/>' +
         '<link rel="stylesheet" type="text/css" href="/css/index.css" />' +
         '<link rel="stylesheet" type="text/css" href="/css/notification.css" />' +
         '</head><body></body></html>');

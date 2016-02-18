@@ -907,7 +907,7 @@ function notifyonDeviceReady() {
           text:   "Keeping you safe on New Zealand Roads"
       })
     console.log('deviceready');
-    window.powermanagement.acquire();
+    if (cordova.platformId == 'android') { window.powermanagement.acquire(); }
     window.localStorage.setItem("geofence", "blank");
     window.localStorage.setItem("addressgeofence", "blank");
     console.log(availablesound);

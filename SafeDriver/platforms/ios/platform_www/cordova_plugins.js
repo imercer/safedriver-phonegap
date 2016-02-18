@@ -355,6 +355,22 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+        "pluginId": "cordova-plugin-wkwebview-engine",
+        "clobbers": [
+            "cordova.exec"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
+        ]
     }
 ];
 module.exports.metadata = 

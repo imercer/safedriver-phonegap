@@ -65,11 +65,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
+                            "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
+                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
                             "count": 1
                         }
                     ],
@@ -260,10 +260,13 @@
         "cordova-plugin-mauron85-background-geolocation": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "phonegap-plugin-push": {
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
@@ -569,17 +572,17 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-            "id": "cordova-plugin-powermanagement.powermanagement",
-            "clobbers": [
-                "window.powermanagement"
-            ]
-        },
-        {
             "file": "plugins/phonegap-plugin-push/www/push.js",
             "id": "phonegap-plugin-push.PushNotification",
             "clobbers": [
                 "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+            "id": "cordova-plugin-powermanagement.powermanagement",
+            "clobbers": [
+                "window.powermanagement"
             ]
         }
     ]

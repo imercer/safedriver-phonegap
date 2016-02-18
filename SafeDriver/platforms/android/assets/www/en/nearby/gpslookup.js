@@ -1,5 +1,6 @@
 function onError(error) {
        console.log('no location is available');
+       console.error(error);
        window.location.assign("nearby/index.html#newzealand")
 }
 console.log('loaded gpslookup.js');
@@ -47,7 +48,7 @@ function doStuff(position) {
 function onDeviceReady() {
     console.log('deviceReady');
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(doStuff, onError);
+        navigator.geolocation.getCurrentPosition(doStuff, onError,{timeout:5000, enableHighAccuracy:false});
     } else {
         console.log('no location is available');
        window.location.assign("nearby/index.html#newzealand")

@@ -1,7 +1,12 @@
 <!DOCTYPE HTML>
 <html>
-  <head><script type="text/javascript" src="../../cordova.js"></script>    <script type="text/javascript" src="cordova.js"></script>
+  <head><meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'"/>
+    <meta
+          name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <script type="text/javascript" src="../../cordova.js"></script>    <script type="text/javascript" src="cordova.js"></script>
     <title>Language Checker</title>
+    <script src="shared_assets/js/jquery-1.10.2.js"></script>
     <script type="text/javascript" type="text/javascript" charset="utf-8">
 	document.addEventListener("deviceready", onDeviceReady, false);
 	var xhttp = new XMLHttpRequest();
@@ -17,6 +22,8 @@
           StatusBar.backgroundColorByHexString("#232323");
         }
         StatusBar.show();
+        cordova.plugins.locationManager.requestAlwaysAuthorization();
+
         var push = PushNotification.init({
           android: {
                 senderID: "233940449476",
@@ -25,22 +32,22 @@
             },
             ios: {
                 alert: "true",
-                badge: "false",
-                sound: "true",
-                vibration: "true"
+                badge: "true",
+                sound: "true"
             },
             windows: {}
         });
 
         push.on('registration', function(data) {
             console.log("registration - " + data.registrationId);
-            xhttp.onreadystatechange = function() {
-                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                $.get( "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
+                  console.log( "Data Loaded: " + data );
                   launch();
-                }
-            };
-            xhttp.open("GET", "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, true);
-            xhttp.send();
+                });
+                $( document ).ajaxError(function( event, request, settings ) {
+                  console.warn( "An error occurred when registering for notifications (e:) " + event);
+                  launch();
+                });
         });
         push.on('error', function(e) {
             console.error("push error");
@@ -64,7 +71,7 @@
 				{ window.location.href='kr/kr.html' }
 			  else { window.location.href='en/en.html' };
 		},
-        function () {alert('Error getting language\n');}  
+        function () {window.location.href='en/en.html';}
       );
     }
 	
@@ -83,14 +90,13 @@
 				{ window.location.href='kr/kr.html' }
 			  else { window.location.href='en/welcome/en.html' };
 		},
-        function () {alert('Error getting language\n');}  
+        function () {window.location.href='en/welcome/en.html';}
       );
     }
 	function launch() {
 	if (localStorage.isNotInitialLaunch) {
 		checkLanguage();
 	} else {
-	    cordova.plugins.locationManager.requestAlwaysAuthorization()
 		localStorage.isNotInitialLaunch = 1;
 		checkLanguageInitial();
 	}

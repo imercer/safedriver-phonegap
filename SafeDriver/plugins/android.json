@@ -43,10 +43,13 @@
         "cordova-plugin-mauron85-background-geolocation": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "phonegap-plugin-push": {
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },

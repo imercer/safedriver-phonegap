@@ -300,17 +300,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
-    },
-    {
         "file": "plugins/phonegap-plugin-push/www/push.js",
         "id": "phonegap-plugin-push.PushNotification",
         "clobbers": [
             "PushNotification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "clobbers": [
+            "window.powermanagement"
         ]
     }
 ];
