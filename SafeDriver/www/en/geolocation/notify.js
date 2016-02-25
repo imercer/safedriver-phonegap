@@ -903,8 +903,8 @@ options = {
 function notifyonDeviceReady() {
 	cordova.plugins.backgroundMode.setDefaults({
           title:  "SafeDriver",
-          ticker: "You'll still receive SafeDriver alerts",
-          text:   "Keeping you safe on New Zealand Roads"
+          ticker: "Open the app to receive SafeDriver alerts",
+          text:   "Open SafeDriver to receive safety alerts"
       })
     console.log('deviceready');
     if (cordova.platformId == 'android') { window.powermanagement.acquire(); }
