@@ -22,6 +22,7 @@
         }
         StatusBar.show();
         cordova.plugins.locationManager.requestAlwaysAuthorization();
+        cordova.plugins.notification.local.cancelAll();
 
         var push = PushNotification.init({
           android: {

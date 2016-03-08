@@ -49,12 +49,18 @@
         "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
         "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-app-event": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     }
