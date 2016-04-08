@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="175" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="33" version="1.7.4" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="176" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="34" version="1.7.6" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />
@@ -136,7 +136,7 @@
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SuppressesLongPressGesture" value="true" />
-    <preference name="deployment-target" value="9.0" />
+    <preference name="deployment-target" value="8.0" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
