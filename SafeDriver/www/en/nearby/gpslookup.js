@@ -22,6 +22,7 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
+/*
 function doStuff(position) {
     var mylat = position.coords.latitude;
     var mylong = position.coords.longitude;
@@ -44,7 +45,8 @@ function doStuff(position) {
         window.location.assign("nearby/index.html#newzealand")        
     }
 }
-/*
+
+*/
 function doStuff(position) {
     var mylat = position.coords.latitude;
     var mylong = position.coords.longitude;
@@ -91,7 +93,6 @@ function doStuff(position) {
         window.location.assign("nearby/index.html#newzealand")
     }
 }
-*/
 
 function onDeviceReady() {
     console.log('deviceReady');
