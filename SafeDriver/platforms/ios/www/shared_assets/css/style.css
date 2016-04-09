@@ -6,7 +6,7 @@
     color: #fff;
   }
 .mdl-layout-title {
-    color: #EEE; 
+    color: #EEE;
     font-weight: bold
 }
 .ui-widget.dialog {
@@ -133,6 +133,149 @@
     min-height: 100%;
     min-width: 100%;
     background-image: url('../../shared_assets/images/queenstown.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#dunedin {
+     top: 0;
+     left: 0;
+     min-height: 100%;
+     min-width: 100%;
+     background-image: url('../../shared_assets/images/Dunedin_Railway_Station.jpg');
+ 	background-size: cover;
+ 	background-attachment: fixed;
+     background-repeat: repeat;
+ 	background-position: center center;
+     position: absolute;
+     text-align: center;
+ }
+#nelsonmarlborough {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/IMG_20160129_143346.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#otagosouthland {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/otago.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#bayofplenty {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/IMG_20131002_102234.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#nationalpark {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/tongariro-national-park.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#manawatu {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/manawatu.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#gisborne {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/gisborne.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#hawkesbay {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/hawkesbay.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#taranaki {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/taranaki.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#waikato {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/waikato.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    background-repeat: repeat;
+	background-position: center center;
+    position: absolute;
+    text-align: center;
+}
+#canterbury {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/canterbury.jpg');
 	background-size: cover;
 	background-attachment: fixed;
     background-repeat: repeat;

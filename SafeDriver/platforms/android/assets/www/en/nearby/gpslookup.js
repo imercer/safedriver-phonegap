@@ -22,12 +22,14 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
+/*
 function doStuff(position) {
     var mylat = position.coords.latitude;
     var mylong = position.coords.longitude;
     console.log(mylat + mylong);
-    // Small regions for higher priority
-    if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
+    if (distance(mylat, mylong, "-35.269039", "173.583971", "K") < 130) {
+        window.location.assign("nearby/index.html#northland")        
+    } else if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
         window.location.assign("nearby/index.html#auckland")        
     } else if (distance(mylat, mylong, "-37.783777", "175.269562", "K") < 20) {
         window.location.assign("nearby/index.html#hamilton")        
@@ -35,6 +37,29 @@ function doStuff(position) {
         window.location.assign("nearby/index.html#cni")        
     } else if (distance(mylat, mylong, "-41.291249", "174.767883", "K") < 60) {
         window.location.assign("nearby/index.html#wellington")        
+    } else if (distance(mylat, mylong, "-45.034439", "168.653588", "K") < 150) {
+        window.location.assign("nearby/index.html#queenstown")        
+    } else if (distance(mylat, mylong, "-41.624792", "168.033783", "K") < 300) {
+        window.location.assign("nearby/index.html#westcoast")        
+    } else {
+        window.location.assign("nearby/index.html#newzealand")        
+    }
+}
+
+*/
+function doStuff(position) {
+    var mylat = position.coords.latitude;
+    var mylong = position.coords.longitude;
+    console.log(mylat + mylong);
+    // Small regions for higher priority
+    if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
+        window.location.assign("nearby/index.html#auckland")
+    } else if (distance(mylat, mylong, "-37.783777", "175.269562", "K") < 20) {
+        window.location.assign("nearby/index.html#hamilton")
+    } else if (distance(mylat, mylong, "-38.430343", "176.156148", "K") < 50) {
+        window.location.assign("nearby/index.html#cni")
+    } else if (distance(mylat, mylong, "-41.291249", "174.767883", "K") < 60) {
+        window.location.assign("nearby/index.html#wellington")
     } else if (distance(mylat, mylong, "-45.034439", "168.653588", "K") < 20) {
         window.location.assign("nearby/index.html#queenstown")
     } else if (distance(mylat, mylong, "-45.888096", "170.463871", "K") < 25) {

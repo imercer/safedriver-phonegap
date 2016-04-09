@@ -13,7 +13,7 @@
         <script type="text/javascript" src="../../shared_assets/js/material.min.js"></script>
         <link rel="stylesheet" href="../../shared_assets/css/material.indigo-red.min.css">
         <!-- Material Design icon font -->
-        <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
+        <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js?key=AIzaSyC6dqb5V2rIMW7MeEVMMZnyypd9cDsGFy0"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
     </head>
     <body onload="getCurrentStatus()">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -79,10 +79,10 @@
         </label>
         </td>
     </tr>
-    <tr onclick="window.document.location='about.html';">
+    <!--<tr onclick="window.document.location='about.html';">
       <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">info</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About this app</td>
         <td class="mdl-data-table__cell--non-numeric" style="width:10%"></td>
-    </tr>
+    </tr>-->
     <tr onclick="window.document.location='mailto:isaac@isaacscomputertips.com?subject=SafeDriver%20app%20feedback&body=Insert%20your%20message%20here.%20If%20you\'re%20reporting%20an%20issue%20please%20state%20the%20issue%20clearly\,%20include%20your%20device%20type%20and%20how%20you%20replicate%20the%20issue.';">
       <td class="mdl-data-table__cell--non-numeric" style="width:80%"><i class="material-icons">feedback</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send Feedback</td>
         <td class="mdl-data-table__cell--non-numeric" style="width:10%"></td>
@@ -123,7 +123,6 @@
             console.log('RegularReminders:' + localStorage.getItem('RegularReminders'));
             console.log('AllowDataCollection:' + localStorage.getItem('AllowDataCollection'));
         }
-
         if (localStorage.AllowDataCollection == "disabled") {
             document.getElementById("AllowDataCollection").click();
         }

@@ -24,76 +24,8 @@
         <script type="text/javascript" src="../../shared_assets/js/material.min.js"></script>
         <link rel="stylesheet" href="../../shared_assets/css/material.indigo-red.min.css">
         <!-- Material Design icon font -->
-        <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
-        <style>
-            .ui-dialog {
-                position: fixed;
-            }
-        </style>
-        <script type="text/javascript">
-        var winW = $(window).width() - 25;
-        var winH = $(window).height() - 25;
-        $(function() {
-            $( "#northlanddialog" ).dialog({
-              autoOpen: false,
-              draggable: false,
-              resizable: false,
-              width: winW,
-              height: winH,
-              modal: true
-            });
-            $( "#aucklanddialog" ).dialog({
-                autoOpen: false,
-                draggable: false,
-                resizable: false,
-                width: winW,
-                height: winH,
-                modal: true
-            });
-            $( "#hamiltondialog" ).dialog({
-                autoOpen: false,
-                draggable: false,
-                resizable: false,
-                width: winW,
-                height: winH,
-                modal: true
-            });
-            $( "#cnidialog" ).dialog({
-                autoOpen: false,
-                draggable: false,
-                resizable: false,
-                width: winW,
-                height: winH,
-                modal: true
-            });
-            $( "#wellingtondialog" ).dialog({
-                autoOpen: false,
-                draggable: false,
-                resizable: false,
-                width: winW,
-                height: winH,
-                modal: true
-            });
-            $( "#westcoastdialog" ).dialog({
-              autoOpen: false,
-              draggable: false,
-              resizable: false,
-              width: winW,
-              height: winH,
-              modal: true
-            });
-            $( "#queenstowndialog" ).dialog({
-              autoOpen: false,
-              draggable: false,
-              resizable: false,
-              width: winW,
-              height: winH,
-              modal: true
-            });
-        });
-        </script>
+        <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js?key=AIzaSyC6dqb5V2rIMW7MeEVMMZnyypd9cDsGFy0"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
     </head>
-    <body >
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
               <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
                 <div class="mdl-layout__header-row">
@@ -124,64 +56,7 @@
             <br>
             <br>
             <div class="demo-grid-1 mdl-grid">
- <div id="northland" style="display: none">
-                <div class="region-header-dark"><h1>Northland</h1></div>
-                <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/IMG_20150118_184250.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
-                 </div>
-               <div class="content">
-                        <div class="mdl-grid" style="text-align: center">
-                            <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/Bay-of-Islands.jpg" style="width: 100%"></img><br>Bay of Islands</div>
-                            <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/cape-reinga-northland-novy-zeland-241.jpg" style="width: 100%"></img><br>Cape Reinga</div>
-                            <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/Hokianga_Harbour.jpg" style="width: 100%"></img><br>Hokianga Harbour</div>
-                            <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/350px-Kerikeri_historic_buildings.jpg" style="width: 100%"></img><br>Kerikeri</div>
-                            <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/ninetymile.jpg" style="width: 100%"></img><br>Ninety Mile Beach</div>
-
-                        </div>
-               </div>
-                </div>
-            <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/IMG_20150121_131748.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
-                 </div>
-               <div class="content">
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">Brynderwyn Hills</div>
-                            <div class="mdl-cell mdl-cell--4-col">Ninety Mile Beach</div>
-                        </div>
-               </div>
-                </div>
-                <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/IMG_20150121_112938.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
-                 </div>
-               <div class="content">
-                        <ul>
-                            <li>Many Northland roads are winding and narrow</li>
-                            <li>Main Northland roads are often prone to wet conditions and may close</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Brush up on your One Way rules as many Northland bridges are one way</li>
-                            <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
-                        </ul>
-               </div>
-                </div>
-                <!--<div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/statusnorthland.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
-                 </div>
-               <div class="content">
-                       <i style="color: red">Road Status Unavailable</i>
-               </div>
-                </div>-->
-            </div>
-            </div>
-            <div id="auckland" style="display: none">
+ <div id="auckland" style="display: none">
                 <div class="region-header"><h1>Auckland</h1></div>
                 <!--<div class="card" style="width: 99%;">
                 <div class="image">
@@ -237,7 +112,7 @@
                </div>
                 </div>
             </div>
-        <div id="hamilton" style="display: none">
+ <div id="hamilton" style="display: none">
                 <div class="region-header-dark"><h1>Hamilton</h1></div>
                 <div class="card" style="width: 99%;">
                 <div class="image">
@@ -271,7 +146,7 @@
                </div>
                 </div>
             </div>
-        <div id="cni" style="display: none">
+ <div id="cni" style="display: none">
                 <div class="region-header-dark"><h1>Rotorua & Taupo</h1></div>
                 <div class="card" style="width: 99%;">
                 <div class="image">
@@ -331,8 +206,7 @@
 </div>
                 </div>
             </div>
-</div>
-            <div id="wellington" style="display: none">
+ <div id="wellington" style="display: none">
                 <div class="region-header-dark"><h1>Wellington</h1></div>
                 <div class="card" style="width: 99%;">
                 <div class="image">
@@ -376,63 +250,7 @@
                </div>
                 </div>
             </div>
-            <div id="westcoast" style="display: none">
-                <div class="region-header"><h1>West Coast</h1></div>
-                <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/abeltasman.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
-                 </div>
-               <div class="content">
-                        <div class="mdl-grid" style="text-align: center">
-                            <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Torrent_Bay_3,_New_Zealand.jpg" style="width: 100%"></img><br>Abel Tasman National Park</div>
-                            <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/HigherPointHeaphy.jpg" style="width: 100%"></img><br>Heaphy Track</div>
-                            <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Fox_Glacier_NZ_2.jpg" style="width: 100%"></img><br>Fox Glacier</div>
-                            <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Franz_Josef_glacier.JPG" style="width: 100%"></img><br>Franz Josef Glacier</div>
-                        </div>
-               </div>
-                </div>
-            <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/West-Coast-Paparoas.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
-                 </div>
-               <div class="content">
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell---col">Haast Pass</div>
-                            <div class="mdl-cell mdl-cell---col">Arthur's Pass</div>
-                            <div class="mdl-cell mdl-cell---col">Lewis Pass</div>
-                            <div class="mdl-cell mdl-cell---col">Buller Gorge</div>
-                            <div class="mdl-cell mdl-cell---col">Coastal Road</div>
-                        </div>
-               </div>
-                </div>
-                <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/westcoaststatus.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Important Information</span>
-                 </div>
-               <div class="content">
-                        <ul>
-                            <li>Most West Coast roads are winding, narrow and have steep terrain</li>
-                            <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
-                            <li>Pull over to the side of the road when photographing the scenery</li>
-                            <li>Plan your journey before driving</li>
-                        </ul>
-               </div>
-                </div>
-                <div class="card" style="width: 99%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/westcoaststatus.jpg" style="width: 100%"></img>
-                    <span class="title" style="text-overflow: ellipsis">Road Status</span>
-                 </div>
-               <div class="content">
-                      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAcWc%20OR%20from%3ANZTATOtS" data-widget-id="694380497728774144">Loading Road Status</a>
-<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-               </div>
-                </div>
-            </div>
-                <div id="queenstown" style="display: none">
+ <div id="queenstown" style="display: none">
                 <div class="region-header"><h1>Queenstown</h1></div>
                 <div class="card" style="width: 99%;">
                 <div class="image">
@@ -490,7 +308,583 @@
                </div>
                 </div>
             </div>
-            <div id="newzealand" style="display: none">
+ <div id="dunedin" style="display: none">
+                    <div class="region-header"><h1>Dunedin</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/Taieri_Gorge_train.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Attractions</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Dunedin_Railway_Station.jpg" style="width: 100%"></img><br>Old Dunedin Railway Station</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/cadbury_dunedin.jpg" style="width: 100%"></img><br>Cadbury Chocolate Factory Tour</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/baldwin.jpg" style="width: 100%"></img><br>Baldwin Street</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/otagopeninsula.jpg" style="width: 100%"></img><br>Albatross and Seal Colonies</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Taieri_Gorge_train.jpg" style="width: 100%"></img><br>Taieri Gorge Railway</div>
+
+                            </div>
+                        </div>
+                    </div>
+                 <div class="card" style="width: 99%;">
+                     <div class="image">
+                         <img src="../../shared_assets/images/dunedinmwy.JPG" style="width: 100%"></img>
+                         <span class="title" style="text-overflow: ellipsis">Motorways</span>
+                     </div>
+                     <div class="content">
+                         <ul>
+                             <li>Dunedin motorways have generally speed limit of 100km/h</li>
+                             <li>Some stretches of motorway have a lower speed limit in place</li>
+                             <li>Indicate before changing lanes</li>
+                             <li>Follow the directions of the signs</li>
+                         </ul>
+                     </div>
+                 </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/HaringtonPointRoad1.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Dunedin's roads are generally well developed and travel through built-up areas</li>
+                                <li>Expect traffic and delays during peak periods</li>
+                                <li>Plan your journey before driving</li>
+                                <li>The speed limit in built-up areas is generally 50km/h</li>
+                                <li>During winter months the roads are often subject to icy road conditions</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+<div id="northland" style="display: none">
+                    <div class="region-header-dark"><h1>Northland</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150118_184250.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid" style="text-align: center">
+                                <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/Bay-of-Islands.jpg" style="width: 100%"></img><br>Bay of Islands</div>
+                                <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/cape-reinga-northland-novy-zeland-241.jpg" style="width: 100%"></img><br>Cape Reinga</div>
+                                <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/Hokianga_Harbour.jpg" style="width: 100%"></img><br>Hokianga Harbour</div>
+                                <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/350px-Kerikeri_historic_buildings.jpg" style="width: 100%"></img><br>Kerikeri</div>
+                                <div class="mdl-cell mdl-cell--2-col"><img src="../../shared_assets/images/ninetymile.jpg" style="width: 100%"></img><br>Ninety Mile Beach</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150121_131748.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">Brynderwyn Hills</div>
+                                <div class="mdl-cell mdl-cell--4-col">Ninety Mile Beach</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150121_112938.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Many Northland roads are winding and narrow</li>
+                                <li>Main Northland roads are often prone to wet conditions and may close</li>
+                                <li>Plan your journey before driving</li>
+                                <li>The speed limit in built-up areas is generally 50km/h</li>
+                                <li>Brush up on your One Way rules as many Northland bridges are one way</li>
+                                <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div class="card" style="width: 99%;">
+                    <div class="image">
+                        <img src="../../shared_assets/images/statusnorthland.jpg" style="width: 100%"></img>
+                        <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                     </div>
+                   <div class="content">
+                           <i style="color: red">Road Status Unavailable</i>
+                   </div>
+                    </div>-->
+                </div>
+<div id="nelsonmarlborough" style="display: none">
+                    <div class="region-header-dark"><h1>Nelson & Marlborough</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20160126_152559.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid" style="text-align: center">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/IMG_20160126_152559.jpg" style="width: 100%"></img><br>Nelson Lakes National Park</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/abeltasman.jpg" style="width: 100%"></img><br>Abel Tasman National Park</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Blenheim,_NZ.jpg" style="width: 100%"></img><br>Blenheim</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/westcoastinfo.jpg" style="width: 100%"></img><br>West Coast</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20160126_103756.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">State Highway 6</div>
+                                <div class="mdl-cell mdl-cell--4-col">Queen Charlotte Dr</div>
+                                <div class="mdl-cell mdl-cell--4-col">Kaiteriteri Road</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20160129_143346.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Many roads in this area are winding and narrow</li>
+                                <li>Main roads are often prone to wet conditions and may close</li>
+                                <li>Plan your journey before driving</li>
+                                <li>The speed limit in built-up areas is generally 50km/h</li>
+                                <li>Brush up on your One Way rules as many bridges in this area are one way</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div class="card" style="width: 99%;">
+                    <div class="image">
+                        <img src="../../shared_assets/images/statusnorthland.jpg" style="width: 100%"></img>
+                        <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                     </div>
+                   <div class="content">
+                           <i style="color: red">Road Status Unavailable</i>
+                   </div>
+                    </div>-->
+                </div>
+<div id="otagosouthland" style="display: none">
+                    <div class="region-header-dark"><h1>Otago & Southland</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/Milford-Road.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/milfordsound.jpg" style="width: 100%"></img><br>Milford Sound</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/queenstown.jpg" style="width: 100%"></img><br>Queenstown</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/wanaka.jpg" style="width: 100%"></img><br>Wanaka</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/IMG_20150417_172008.jpg" style="width: 100%"></img><br>Invercargill and Bluff</div>
+                                <div class="mdl-cell mdl-cell--12-col"><img src="../../shared_assets/images/Dunedin_Railway_Station.jpg" style="width: 100%"></img><br><center>Dunedin</center></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150415_120116.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col">Crown Range Road</div>
+                                <div class="mdl-cell mdl-cell--2-col">Milford Road</div>
+                                <div class="mdl-cell mdl-cell--3-col">Queenstown to Invercargill Road</div>
+                                <div class="mdl-cell mdl-cell--2-col">Ski Field Roads</div>
+                                <div class="mdl-cell mdl-cell--2-col">Kawarau Gorge</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150415_114743.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Roads in this area are often narrow, winding and steep</li>
+                                <li>During winter months the roads are often subject to icy road conditions</li>
+                                <li>Avoid driving on mountain passes, if possible, during the winter months</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/IMG_20150415_122517.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                        </div>
+                        <div class="content">
+                            <center>
+                                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAOS" data-widget-id="694380889359282176">Loading Road Status</a>
+                                <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+<div id="bayofplenty" style="display: none">
+                    <div class="region-header"><h1>Bay of Plenty</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/tauranga.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/mt-maunganui-ariel.jpg" style="width: 100%"></img><br>Mt Maunganui & Papamoa</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/tauranga.jpg" style="width: 100%"></img><br>Tauranga</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/rotorua.jpg" style="width: 100%"></img><br>Rotorua</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/IMG_1600.jpg" style="width: 100%"></img><br>Whakatane</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/TEL.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Some roads in this area are narrow, winding and steep</li>
+                                <li>Many roads are well developed, especially through built-up areas</li>
+                                <li>Toll Roads exist in Tauranga</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<div id="manawatu" style="display: none">
+                    <div class="region-header"><h1>Manawatu</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/palmerston-north.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/palmerston-north.jpg" style="width: 100%"></img><br>Palmerston North</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/ohakea.JPG" style="width: 100%"></img><br>RNZAF Base Ohakea</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/whanganui.jpg" style="width: 100%"></img><br>Whanganui</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/foxton.jpg" style="width: 100%"></img><br>Western Beaches</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/gorge.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Some roads in this area are narrow, winding and steep</li>
+                                <li>Many roads are well developed, especially through built-up areas</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<div id="gisborne" style="display: none">
+                    <div class="region-header-dark"><h1>Gisborne</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/eastcape.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/povertybay.jpg" style="width: 100%"></img><br>Poverty Bay</div>
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/hawkesbay-small.jpg" style="width: 100%"></img><br>Hawke's Bay</div>
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/eastcape.jpg" style="width: 100%"></img><br>East Cape</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/gisborne-long.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Some roads in this area are narrow, winding and steep</li>
+                                <li>Many roads are well developed, especially through built-up areas</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<div id="hawkesbay" style="display: none">
+                    <div class="region-header"><h1>Hawke's Bay</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/napier.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/napier.jpg" style="width: 100%"></img><br>Napier</div>
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/havelocknth.jpg" style="width: 100%"></img><br>Havelock North</div>
+                                <div class="mdl-cell mdl-cell--4-col"><img src="../../shared_assets/images/CapeKidnappers.jpg" style="width: 100%"></img><br>Cape Kidnappers</div>
+                                <div class="mdl-cell mdl-cell--12-col" style="text-overflow: ellipsis"><img src="../../shared_assets/images/longplace.jpg" style="width: 100%"></img><br>Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/cyclehawkes.webp" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Some roads in this area are narrow, winding and steep</li>
+                                <li>Many roads are well developed, especially through built-up areas</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                                <li>Plan your journey before driving</li>
+                                <li>The speed limit in built-up areas is generally 50km/h</li>
+                                <li>Brush up on your One Way rules as many bridges in this area are one way</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<div id="nationalpark" style="display: none">
+                    <div class="region-header-dark"><h1>National Park</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/tongariro.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/tongariro.jpg" style="width: 100%"></img><br>Tongariro Crossing</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/ruapehu.jpg" style="width: 100%"></img><br>Mt Ruapehu</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/ohakune.jpg" style="width: 100%"></img><br>Ohakune</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/sh43.jpg" style="width: 100%"></img><br>Forgotten World Highway</div>
+
+                            </div>
+                        </div>
+                    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/desert.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+        </div>
+        <div class="content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col">Forgotten World Highway</div>
+                <div class="mdl-cell mdl-cell--2-col">Desert Road</div>
+                <div class="mdl-cell mdl-cell--3-col">Turangi to Taumaranui Road</div>
+                <div class="mdl-cell mdl-cell--2-col">Central Plateau</div>
+                <div class="mdl-cell mdl-cell--2-col">Parapara Rd</div>
+            </div>
+        </div>
+    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/sh43.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Many Central North Island roads are winding and narrow</li>
+                <li>Central Plateau roads may close due to snow</li>
+                <li>Plan your journey before driving</li>
+                <li>The speed limit in built-up areas is generally 50km/h</li>
+                <li>Ensure you secure your car when parking at tourist attractions</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/Desert%20Road%20closed.JPG" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Road Status</span>
+        </div>
+        <div class="content">
+            <center>
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3ANZTAcni" data-widget-id="718590038422884352">Tweets about from:NZTAcni</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </center>
+        </div>
+    </div>
+                </div>
+<div id="taranaki" style="display: none">
+                    <div class="region-header"><h1>Taranaki</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/egmont.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/egmont.jpg" style="width: 100%"></img><br>Egmont National Park</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/newplymouth.jpg" style="width: 100%"></img><br>New Plymouth</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/whanganui.jpg" style="width: 100%"></img><br>Whanganui</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/sh43.jpg" style="width: 100%"></img><br>Forgotten World Highway</div>
+
+                            </div>
+                        </div>
+                    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/roadtaranaki.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+        </div>
+        <div class="content">
+                <ul>
+                    <li>Some roads in this area are narrow, winding and steep</li>
+                    <li>Many roads are well developed, especially through built-up areas</li>
+                    <li>Pull over to the side of the road when photographing the scenery</li>
+                </ul>
+        </div>
+    </div>
+                </div>
+<div id="waikato" style="display: none">
+    <div class="region-header"><h1>Waikato</h1></div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/Hamilton-City.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+        </div>
+        <div class="content">
+            <div class="mdl-grid" style="text-align: center">
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/GardenPlaceHamilton.jpg" style="width: 100%"></img><br>Hamilton</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/waitomocaves.jpg" style="width: 100%"></img><br>Waitomo Caves</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/waikatoriver.jpg" style="width: 100%"></img><br>Waikato River</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/matamata.jpeg" style="width: 100%"></img><br>Matamata & The Hobbit Set</div>
+            </div>
+        </div>
+    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/Fairfield_Bridge7.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Hamilton City's roads are generally well developed and travel through built-up areas</li>
+                <li>Plan your journey before driving</li>
+                <li>The speed limit in built-up areas is generally 50km/h</li>
+                <li>Many roads outside of Hamilton City are rural roads, often less maintained than the roads found in the built-up areas</li>
+                <li>Watch for farm animals on rural roads</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="canterbury" style="display: none">
+    <div class="region-header"><h1>Canterbury</h1></div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/mtcook.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+        </div>
+        <div class="content">
+            <div class="mdl-grid" style="text-align: center">
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Akaroasmall.jpg" style="width: 100%"></img><br>Akaroa</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/EastTekapo.jpg" style="width: 100%"></img><br>Lake Tekapo</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/mtcook.jpg" style="width: 100%"></img><br>Mount Cook</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/chch.JPG" style="width: 100%"></img><br>Christchurch</div>
+
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/pukaki.jpg" style="width: 100%"></img><br>Central Lakes</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/kaikoura.jpg" style="width: 100%"></img><br>Kaikoura</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/twizel.jpg" style="width: 100%"></img><br>Twizel</div>
+                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/hamnersprings.jpg" style="width: 100%"></img><br>Hanmer Springs</div>
+            </div>
+        </div>
+    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/mtcookhwy.jpeg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Many canterbury roads are winding, narrow and have steep terrain</li>
+                <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                <li>Pull over to the side of the road when photographing the scenery</li>
+                <li>Plan your journey before driving</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card" style="width: 99%;">
+        <div class="image">
+            <img src="../../shared_assets/images/arthurpass.jpg" style="width: 100%"></img>
+            <span class="title" style="text-overflow: ellipsis">Road Status</span>
+        </div>
+        <div class="content">
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAcWc%20OR%20from%3ANZTATOtS" data-widget-id="694380497728774144">Loading Road Status</a>
+            <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+</div>
+<div id="westcoast" style="display: none">
+                    <div class="region-header"><h1>West Coast</h1></div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/abeltasman.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Nearby Locations</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid" style="text-align: center">
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Torrent_Bay_3,_New_Zealand.jpg" style="width: 100%"></img><br>Abel Tasman National Park</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/HigherPointHeaphy.jpg" style="width: 100%"></img><br>Heaphy Track</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Fox_Glacier_NZ_2.jpg" style="width: 100%"></img><br>Fox Glacier</div>
+                                <div class="mdl-cell mdl-cell--3-col"><img src="../../shared_assets/images/Franz_Josef_glacier.JPG" style="width: 100%"></img><br>Franz Josef Glacier</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/West-Coast-Paparoas.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">High Risk Roads</span>
+                        </div>
+                        <div class="content">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell---col">Haast Pass</div>
+                                <div class="mdl-cell mdl-cell---col">Arthur's Pass</div>
+                                <div class="mdl-cell mdl-cell---col">Lewis Pass</div>
+                                <div class="mdl-cell mdl-cell---col">Buller Gorge</div>
+                                <div class="mdl-cell mdl-cell---col">Coastal Road</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/westcoaststatus.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Important Information</span>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Most West Coast roads are winding, narrow and have steep terrain</li>
+                                <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                                <li>Pull over to the side of the road when photographing the scenery</li>
+                                <li>Plan your journey before driving</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 99%;">
+                        <div class="image">
+                            <img src="../../shared_assets/images/westcoaststatus.jpg" style="width: 100%"></img>
+                            <span class="title" style="text-overflow: ellipsis">Road Status</span>
+                        </div>
+                        <div class="content">
+                            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%253ANZTAcWc%20OR%20from%3ANZTATOtS" data-widget-id="694380497728774144">Loading Road Status</a>
+                            <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                    </div>
+                </div>
+
+
+ <!-- Fallback -->
+ <div id="newzealand" style="display: none">
                 <div class="region-header-dark"><h1>New Zealand</h1></div>
                 <div class="card" style="width: 99%;">
                 <div class="image">
@@ -527,143 +921,9 @@
             </div>
     </div>
 </div>
-<!--
-<div id="northlanddialog" title="Northland">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image">
-                    <img src="../../shared_assets/images/IMG_20150119_113441.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Northland</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in Northland:</p>
-                        <ul>
-                            <li>Many Northland roads are winding and narrow</li>
-                            <li>Main Northland roads are often prone to wet conditions and may close</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Brush up on your One Way rules as many Northland bridges are one way</li>
-                            <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="aucklanddialog" title="Auckland">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/auckland.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Auckland</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in Auckland:</p>
-                        <ul>
-                            <li>Auckland's roads are generally well developed and travel through built-up areas</li>
-                            <li>Expect traffic and delays during peak periods</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Use motorways wherever possible</li>
-                        </ul>
-                   <p>If you're going to drive on the motorways this information will also come in handy:</p>
-                        <ul>
-                            <li>Auckland motorways have generally speed limit of 100km/h</li>
-                            <li>Some stretches of motorway have a lower speed limit in place, such as the Auckland Harbour Bridge (80km/h)</li>
-                            <li>Indicate before changing lanes</li>
-                            <li>Follow the directions of the signs</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="hamiltondialog" title="Hamilton">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/Hamilton-City.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Hamilton</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in Hamilton:</p>
-                        <ul>
-                            <li>Hamilton City's roads are generally well developed and travel through built-up areas</li>
-                            <li>Hamilton has many bridges to cross the Waikato River, which travells through the center of the city</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Many roads outside of Hamilton City are rural roads, often less maintained than the roads found in the built-up areas</li>
-                            <li>Watch for farm animals on rural roads</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="cnidialog" title="Central North Island">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/Taupo.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the Central North Island</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in the Central North Island:</p>
-                        <ul>
-                            <li>Many Central North Island roads are winding and narrow</li>
-                            <li>Central Plateau roads may close due to snow</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Ensure you secure your car when parking at tourist attractions</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="wellingtondialog" title="Wellington">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/Wellington_City_at_dusk.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Wellington</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in Wellington:</p>
-                        <ul>
-                            <li>Most Wellington City roads are highly developed</li>
-                            <li>Plan your journey before driving</li>
-                            <li>The speed limit in built-up areas is generally 50km/h</li>
-                            <li>Your rental car agreement may prohibit you from travelling on the Interislander</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="westcoastdialog" title="West Coast">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/Punakaiki_-_looking_south.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the West Coast</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in the West Coast:</p>
-                        <ul>
-                            <li>Most West Coast roads are winding, narrow and have steep terrain</li>
-                            <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
-                            <li>Pull over to the side of the road when photographing the scenery</li>
-                            <li>Plan your journey before driving</li>
-                        </ul>
-               </div>
-                </div>
-</div>
-<div id="queenstowndialog" title="Queenstown">
-                  <div class="card" style="width: 100%; max-width: 100%;">
-                <div class="image" style="text-align: center">
-                    <img src="../../shared_assets/images/queenstown.jpg" style="width: 100%; max-width: 512px"></img>
-                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Queenstown</span>
-                 </div>
-               <div class="content">
-                   <p>Keep the following details in mind when driving in Queenstown:</p>
-                        <ul>
-                            <li>Roads in this area are often narrow, winding and steep</li>
-                            <li>During winter months the roads are often subject to icy road conditions</li>
-                            <li>Avoid driving on mountain passes, if possible, during the winter months</li>
-                            <li>Pull over to the side of the road when photographing the scenery</li>
-                        </ul>
-               </div>
-                </div>
-</div> -->
     </body>
 <script type="text/javascript">
 $(document).ready(function() {
     $(window.location.hash).show();
 });
 </script>
-<script type="text/javascript" src="../drive/welcome.js"></script>

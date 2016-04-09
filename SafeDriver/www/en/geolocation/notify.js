@@ -152,121 +152,123 @@ function success(pos) {
   if (localStorage.getItem('LocationAlerts') == "disabled") {
           console.log('not alerting based on location, user disabled messages')
   } else {
-    if (count % 50 === 0) {
-      /*
+    var multiplier = count % 69;
+    console.log(multiplier);
+    if (multiplier == 0){
+          /*
 
- / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
-/ (_ / / -_)/ _ \/ __// _ \/ _  /  / /  / _ \ / _ `/
-\___/  \__/ \___/\__/ \___/\_,_/  /_/  /_//_/ \_, /
-                                             /___/
-      */
-      var geocoder = new google.maps.Geocoder();
-      var latLng = new google.maps.LatLng(mylat,mylong);
-      if (geocoder) {
-          geocoder.geocode({ 'latLng': latLng}, function (results, status) {
-             if (status == google.maps.GeocoderStatus.OK) {
-                var address = (results[0].formatted_address);
-                console.log(address);
-                if (address.indexOf("Crown Range Rd") >= 0) {
-                      console.log('Crown Range Road');
-                      if (localStorage.getItem("addressgeofence") == "crownrange6") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence", "crownrange6");
-                            loadAlert('crownrangeextended');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
-                      console.log('Kawarau Gorge');
-                      if (localStorage.getItem("addressgeofence") == "kawarau") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","kawarau");
-                            loadAlert('kgorgeextended');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=KawarauGorge&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Napier-Taupo Rd") >= 0){
-                      console.log('NapierTaupo');
-                      if (localStorage.getItem("addressgeofence") == "napiertaupo") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","napiertaupo");
-                            loadAlert('napiertaupo');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NapierTaupo&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Cape Reinga Rd") >= 0){
-                      console.log('CapeReinga');
-                      if (localStorage.getItem("addressgeofence") == "CapeReinga") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","CapeReinga");
-                            loadAlert('capereinga');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CapeReinga&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
-                      console.log('NGTRoad');
-                      if (localStorage.getItem("addressgeofence") == "ngtroad") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","ngtroad");
-                            loadAlert('ngtroad');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NGTRoad&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
-                      console.log('TePakiStreamRd');
-                      if (localStorage.getItem("addressgeofence") == "tepakistreamrd") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","tepakistreamrd");
-                            loadAlert('tepakistream');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=tepakistreamrd&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Waikato Expy") >= 0){
-                      console.log('Waikato Expy');
-                      if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
-                            console.log('sessionStorage is waikatoexpressway');
-                      }
-                      else {
-                            console.log(localStorage.getItem("addressgeofence"));
-                            window.localStorage.setItem("addressgeofence","waikatoexpressway");
-                            loadAlert('waikatoexpressway');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=WaikatoExpy&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Queen Charlotte Dr") >= 0){
-                      console.log('Queen Charlotte Dr - Picton to Havelock');
-                      if (localStorage.getItem("addressgeofence") == "queencharlottedr") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","queencharlottedr");
-                            loadAlert('queencharlottedr');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=queencharlottedr&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                } else if (address.indexOf("Dunedin Southern Motorway") >= 0){
-                      console.log('Dunedin Southern Motorway');
-                      if (localStorage.getItem("addressgeofence") == "dunedinsthmwy") {
-                      }
-                      else {
-                            window.localStorage.setItem("addressgeofence","dunedinsthmwy");
-                            loadAlert('dunedinsthmwy');
-                            xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=dunedinsthmwy&id" + Math.random(), true);
-                            xhttp.send();
-                      }
-                }
-             } else {
-                console.log("Geocoding failed: " + status);
-             }
-          });
-        }  
-  };
-  count = count + 1;
+     / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
+    / (_ / / -_)/ _ \/ __// _ \/ _  /  / /  / _ \ / _ `/
+    \___/  \__/ \___/\__/ \___/\_,_/  /_/  /_//_/ \_, /
+                                                 /___/
+          */
+          var geocoder = new google.maps.Geocoder();
+          var latLng = new google.maps.LatLng(mylat,mylong);
+          if (geocoder) {
+              geocoder.geocode({ 'latLng': latLng}, function (results, status) {
+                 if (status == google.maps.GeocoderStatus.OK) {
+                    var address = (results[0].formatted_address);
+                    console.log(address);
+                    if (address.indexOf("Crown Range Rd") >= 0) {
+                          console.log('Crown Range Road');
+                          if (localStorage.getItem("addressgeofence") == "crownrange6") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence", "crownrange6");
+                                loadAlert('crownrangeextended');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
+                          console.log('Kawarau Gorge');
+                          if (localStorage.getItem("addressgeofence") == "kawarau") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","kawarau");
+                                loadAlert('kgorgeextended');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=KawarauGorge&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Napier-Taupo Rd") >= 0){
+                          console.log('NapierTaupo');
+                          if (localStorage.getItem("addressgeofence") == "napiertaupo") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","napiertaupo");
+                                loadAlert('napiertaupo');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NapierTaupo&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Cape Reinga Rd") >= 0){
+                          console.log('CapeReinga');
+                          if (localStorage.getItem("addressgeofence") == "CapeReinga") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","CapeReinga");
+                                loadAlert('capereinga');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CapeReinga&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
+                          console.log('NGTRoad');
+                          if (localStorage.getItem("addressgeofence") == "ngtroad") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","ngtroad");
+                                loadAlert('ngtroad');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NGTRoad&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
+                          console.log('TePakiStreamRd');
+                          if (localStorage.getItem("addressgeofence") == "tepakistreamrd") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","tepakistreamrd");
+                                loadAlert('tepakistream');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=tepakistreamrd&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Waikato Expy") >= 0){
+                          console.log('Waikato Expy');
+                          if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
+                                console.log('sessionStorage is waikatoexpressway');
+                          }
+                          else {
+                                console.log(localStorage.getItem("addressgeofence"));
+                                window.localStorage.setItem("addressgeofence","waikatoexpressway");
+                                loadAlert('waikatoexpressway');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=WaikatoExpy&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Queen Charlotte Dr") >= 0){
+                          console.log('Queen Charlotte Dr - Picton to Havelock');
+                          if (localStorage.getItem("addressgeofence") == "queencharlottedr") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","queencharlottedr");
+                                loadAlert('queencharlottedr');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=queencharlottedr&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    } else if (address.indexOf("Dunedin Southern Motorway") >= 0){
+                          console.log('Dunedin Southern Motorway');
+                          if (localStorage.getItem("addressgeofence") == "dunedinsthmwy") {
+                          }
+                          else {
+                                window.localStorage.setItem("addressgeofence","dunedinsthmwy");
+                                loadAlert('dunedinsthmwy');
+                                xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=dunedinsthmwy&id" + Math.random(), true);
+                                xhttp.send();
+                          }
+                    }
+                 } else {
+                    console.log("Geocoding failed: " + status);
+                 }
+              });
+            }
+      };
+      count = count + 1;
       /*
   _____             ___
  / ___/ ___  ___   / _/ ___   ___  ____ ___   ___
