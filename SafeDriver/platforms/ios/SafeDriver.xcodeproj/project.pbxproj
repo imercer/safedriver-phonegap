@@ -93,7 +93,7 @@
 		F52ACACB0E8A482C9293F051 /* AppDelegate+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D8127CA3C4E35B368A3BC /* AppDelegate+APPAppEvent.m */; };
 		FA488A30FD4442B3B142F825 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D7F39131294508A89EAD14 /* CoreBluetooth.framework */; };
 		FD9E67494109479195762E36 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A1F1401176410AB62F4A62 /* libsqlite3.tbd */; };
-		672CDB36FF33442385EF3B57 /* PowerManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BAB1708604FEC8208E072 /* PowerManagement.m */; };
+		B7D91AD1F34A448D85A8CF9B /* PowerManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 11107771FB57469CA3F482E8 /* PowerManagement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,8 +254,8 @@
 		FAF2F738FD5C4D92BA4BCA13 /* GCMPubSub.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCMPubSub.h; path = "phonegap-plugin-push/GCM/Headers/GCMPubSub.h"; sourceTree = "<group>"; };
 		FD9A933E93C04B45B3ADA4B1 /* GCMReceiverDelegate.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCMReceiverDelegate.h; path = "phonegap-plugin-push/GCM/Headers/GCMReceiverDelegate.h"; sourceTree = "<group>"; };
 		FE7D8127CA3C4E35B368A3BC /* AppDelegate+APPAppEvent.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+APPAppEvent.m"; path = "cordova-plugin-app-event/AppDelegate+APPAppEvent.m"; sourceTree = "<group>"; };
-		6F6BAB1708604FEC8208E072 /* PowerManagement.m */ = {isa = PBXFileReference; name = "PowerManagement.m"; path = "cordova-plugin-powermanagement/PowerManagement.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		50E6D839C92041BCB6D91BAB /* PowerManagement.h */ = {isa = PBXFileReference; name = "PowerManagement.h"; path = "cordova-plugin-powermanagement/PowerManagement.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		11107771FB57469CA3F482E8 /* PowerManagement.m */ = {isa = PBXFileReference; name = "PowerManagement.m"; path = "cordova-plugin-powermanagement/PowerManagement.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D2F94978506F4E8E9FDEA9A0 /* PowerManagement.h */ = {isa = PBXFileReference; name = "PowerManagement.h"; path = "cordova-plugin-powermanagement/PowerManagement.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,8 +515,8 @@
 				CC44369BE7E143C5987B1D57 /* APPLocalNotificationOptions.h */,
 				A5A70515F83E470B8F547591 /* UIApplication+APPLocalNotification.h */,
 				BCB25264F0864A3FAAD77835 /* UILocalNotification+APPLocalNotification.h */,
-				6F6BAB1708604FEC8208E072 /* PowerManagement.m */,
-				50E6D839C92041BCB6D91BAB /* PowerManagement.h */,
+				11107771FB57469CA3F482E8 /* PowerManagement.m */,
+				D2F94978506F4E8E9FDEA9A0 /* PowerManagement.h */,
 			);
 			name = Plugins;
 			path = SafeDriver/Plugins;
@@ -686,7 +686,7 @@
 				7EF98FE21829487F9B8488FD /* APPLocalNotificationOptions.m in Sources */,
 				119DB39B97694A3FAC2B3B40 /* UIApplication+APPLocalNotification.m in Sources */,
 				C4D86EE4E5B949E585E03823 /* UILocalNotification+APPLocalNotification.m in Sources */,
-				672CDB36FF33442385EF3B57 /* PowerManagement.m in Sources */,
+				B7D91AD1F34A448D85A8CF9B /* PowerManagement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
