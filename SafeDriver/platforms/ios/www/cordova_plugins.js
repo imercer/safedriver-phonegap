@@ -398,6 +398,14 @@ module.exports = [
         "clobbers": [
             "window.powermanagement"
         ]
+    },
+    {
+        "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
+        "id": "cc.fovea.cordova.purchase.InAppPurchase",
+        "pluginId": "cc.fovea.cordova.purchase",
+        "clobbers": [
+            "store"
+        ]
     }
 ];
 module.exports.metadata = 

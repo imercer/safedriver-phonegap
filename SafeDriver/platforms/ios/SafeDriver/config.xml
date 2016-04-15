@@ -80,6 +80,9 @@
     <feature name="PowerManagement">
         <param name="ios-package" value="PowerManagement" />
     </feature>
+    <feature name="InAppPurchase">
+        <param name="ios-package" value="InAppPurchase" />
+    </feature>
     <icon height="60" src="www/res/icon/ios/icon-60.png" width="60" />
     <icon height="120" src="www/res/icon/ios/icon-60@2x.png" width="120" />
     <icon height="180" src="www/res/icon/ios/icon-60@3x.png" width="180" />

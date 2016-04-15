@@ -83,6 +83,10 @@
                         {
                             "xml": "<feature name=\"PowerManagement\"><param name=\"ios-package\" value=\"PowerManagement\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppPurchase\"><param name=\"ios-package\" value=\"InAppPurchase\" /></feature>",
+                            "count": 1
                         }
                     ],
                     "/widget": []
@@ -173,6 +177,9 @@
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-powermanagement": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cc.fovea.cordova.purchase": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
@@ -575,6 +582,14 @@
             "pluginId": "cordova-plugin-powermanagement",
             "clobbers": [
                 "window.powermanagement"
+            ]
+        },
+        {
+            "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
+            "id": "cc.fovea.cordova.purchase.InAppPurchase",
+            "pluginId": "cc.fovea.cordova.purchase",
+            "clobbers": [
+                "store"
             ]
         }
     ]

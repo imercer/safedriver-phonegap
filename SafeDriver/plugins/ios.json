@@ -57,6 +57,9 @@
         },
         "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {

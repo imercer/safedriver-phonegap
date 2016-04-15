@@ -336,6 +336,13 @@ module.exports = [
         "clobbers": [
             "window.powermanagement"
         ]
+    },
+    {
+        "file": "plugins/cc.fovea.cordova.purchase/www/store-android.js",
+        "id": "cc.fovea.cordova.purchase.InAppBillingPlugin",
+        "clobbers": [
+            "store"
+        ]
     }
 ];
 module.exports.metadata = 

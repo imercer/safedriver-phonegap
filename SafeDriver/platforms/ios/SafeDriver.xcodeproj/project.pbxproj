@@ -94,6 +94,10 @@
 		FA488A30FD4442B3B142F825 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D7F39131294508A89EAD14 /* CoreBluetooth.framework */; };
 		FD9E67494109479195762E36 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A1F1401176410AB62F4A62 /* libsqlite3.tbd */; };
 		672CDB36FF33442385EF3B57 /* PowerManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BAB1708604FEC8208E072 /* PowerManagement.m */; };
+		5E0A89516BCD49539ED303D0 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0E2A83F8F406CA4564278 /* InAppPurchase.m */; };
+		93C94D670D97478CA2C983FE /* SKProduct+LocalizedPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD504CA9D454B9AADAC057C /* SKProduct+LocalizedPrice.m */; };
+		68B9D73CE53B49CBA1C0AC7E /* FileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA427453E242319F5CC195 /* FileUtility.m */; };
+		68BB66A5E0EA4E6D934956C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0225D54A04546E6BB573D1A /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +260,13 @@
 		FE7D8127CA3C4E35B368A3BC /* AppDelegate+APPAppEvent.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+APPAppEvent.m"; path = "cordova-plugin-app-event/AppDelegate+APPAppEvent.m"; sourceTree = "<group>"; };
 		6F6BAB1708604FEC8208E072 /* PowerManagement.m */ = {isa = PBXFileReference; name = "PowerManagement.m"; path = "cordova-plugin-powermanagement/PowerManagement.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		50E6D839C92041BCB6D91BAB /* PowerManagement.h */ = {isa = PBXFileReference; name = "PowerManagement.h"; path = "cordova-plugin-powermanagement/PowerManagement.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CBE0E2A83F8F406CA4564278 /* InAppPurchase.m */ = {isa = PBXFileReference; name = "InAppPurchase.m"; path = "cc.fovea.cordova.purchase/InAppPurchase.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6DD504CA9D454B9AADAC057C /* SKProduct+LocalizedPrice.m */ = {isa = PBXFileReference; name = "SKProduct+LocalizedPrice.m"; path = "cc.fovea.cordova.purchase/SKProduct+LocalizedPrice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		27EA427453E242319F5CC195 /* FileUtility.m */ = {isa = PBXFileReference; name = "FileUtility.m"; path = "cc.fovea.cordova.purchase/FileUtility.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A976E4DD979B446BA94D5621 /* InAppPurchase.h */ = {isa = PBXFileReference; name = "InAppPurchase.h"; path = "cc.fovea.cordova.purchase/InAppPurchase.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		ADE6B2EE137C4C6290290338 /* SKProduct+LocalizedPrice.h */ = {isa = PBXFileReference; name = "SKProduct+LocalizedPrice.h"; path = "cc.fovea.cordova.purchase/SKProduct+LocalizedPrice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0A38689EEDB84BC5BDCCBA21 /* FileUtility.h */ = {isa = PBXFileReference; name = "FileUtility.h"; path = "cc.fovea.cordova.purchase/FileUtility.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D0225D54A04546E6BB573D1A /* StoreKit.framework */ = {isa = PBXFileReference; name = "StoreKit.framework"; path = "System/Library/Frameworks/StoreKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +311,7 @@
 				FD9E67494109479195762E36 /* libsqlite3.tbd in Frameworks */,
 				AFD5376CD3DA4E13BF6937EC /* libz.tbd in Frameworks */,
 				E143C4241EC24629B901082E /* WebKit.framework in Frameworks */,
+				68BB66A5E0EA4E6D934956C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,7 @@
 				E8A1F1401176410AB62F4A62 /* libsqlite3.tbd */,
 				442F5F7C91C14977A93DA670 /* libz.tbd */,
 				359A375528454116A870B6A2 /* WebKit.framework */,
+				D0225D54A04546E6BB573D1A /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -517,6 +530,12 @@
 				BCB25264F0864A3FAAD77835 /* UILocalNotification+APPLocalNotification.h */,
 				6F6BAB1708604FEC8208E072 /* PowerManagement.m */,
 				50E6D839C92041BCB6D91BAB /* PowerManagement.h */,
+				CBE0E2A83F8F406CA4564278 /* InAppPurchase.m */,
+				6DD504CA9D454B9AADAC057C /* SKProduct+LocalizedPrice.m */,
+				27EA427453E242319F5CC195 /* FileUtility.m */,
+				A976E4DD979B446BA94D5621 /* InAppPurchase.h */,
+				ADE6B2EE137C4C6290290338 /* SKProduct+LocalizedPrice.h */,
+				0A38689EEDB84BC5BDCCBA21 /* FileUtility.h */,
 			);
 			name = Plugins;
 			path = SafeDriver/Plugins;
@@ -687,6 +706,9 @@
 				119DB39B97694A3FAC2B3B40 /* UIApplication+APPLocalNotification.m in Sources */,
 				C4D86EE4E5B949E585E03823 /* UILocalNotification+APPLocalNotification.m in Sources */,
 				672CDB36FF33442385EF3B57 /* PowerManagement.m in Sources */,
+				5E0A89516BCD49539ED303D0 /* InAppPurchase.m in Sources */,
+				93C94D670D97478CA2C983FE /* SKProduct+LocalizedPrice.m in Sources */,
+				68B9D73CE53B49CBA1C0AC7E /* FileUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
