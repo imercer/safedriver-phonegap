@@ -171,6 +171,8 @@ function success(pos) {
                     console.log(address);
                     if (address.indexOf("Crown Range Rd") >= 0) {
                           console.log('Crown Range Road');
+                          document.getElementById("location").innerHTML = "Crown Range Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "crownrange6") {
                           }
                           else {
@@ -181,6 +183,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
                           console.log('Kawarau Gorge');
+                          document.getElementById("location").innerHTML = "Kawarau Gorge";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions. Keep Left";
                           if (localStorage.getItem("addressgeofence") == "kawarau") {
                           }
                           else {
@@ -191,6 +195,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Napier-Taupo Rd") >= 0){
                           console.log('NapierTaupo');
+                          document.getElementById("location").innerHTML = "Napier-Taupo Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Increase your following distances in wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "napiertaupo") {
                           }
                           else {
@@ -231,6 +237,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Waikato Expy") >= 0){
                           console.log('Waikato Expy');
+                          document.getElementById("location").innerHTML = "Waikato Expressway";
+                          document.getElementById("info-msg").innerHTML = "Watch your speed. Slow down around towns.";
                           if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
                                 console.log('sessionStorage is waikatoexpressway');
                           }

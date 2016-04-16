@@ -171,6 +171,8 @@ function success(pos) {
                     console.log(address);
                     if (address.indexOf("Crown Range Rd") >= 0) {
                           console.log('Crown Range Road');
+                          document.getElementById("location").innerHTML = "Crown Range Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "crownrange6") {
                           }
                           else {
@@ -181,6 +183,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
                           console.log('Kawarau Gorge');
+                          document.getElementById("location").innerHTML = "Kawarau Gorge";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions. Keep Left";
                           if (localStorage.getItem("addressgeofence") == "kawarau") {
                           }
                           else {
@@ -191,6 +195,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Napier-Taupo Rd") >= 0){
                           console.log('NapierTaupo');
+                          document.getElementById("location").innerHTML = "Napier-Taupo Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Increase your following distances in wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "napiertaupo") {
                           }
                           else {
@@ -201,6 +207,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Cape Reinga Rd") >= 0){
                           console.log('CapeReinga');
+                          document.getElementById("location").innerHTML = "Cape Reinga";
+                          document.getElementById("info-msg").innerHTML = "Expect animals on the road and varying weather conditions. Drive to the conditions.";
                           if (localStorage.getItem("addressgeofence") == "CapeReinga") {
                           }
                           else {
@@ -211,6 +219,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
                           console.log('NGTRoad');
+                          document.getElementById("location").innerHTML = "Northern Gateway Toll Road";
+                          document.getElementById("info-msg").innerHTML = "Watch your following distances on Auckland Motorways.";
                           if (localStorage.getItem("addressgeofence") == "ngtroad") {
                           }
                           else {
@@ -221,6 +231,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
                           console.log('TePakiStreamRd');
+                          document.getElementById("location").innerHTML = "Te Paki Stream";
+                          document.getElementById("info-msg").innerHTML = "Keep Left.";
                           if (localStorage.getItem("addressgeofence") == "tepakistreamrd") {
                           }
                           else {
@@ -231,6 +243,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Waikato Expy") >= 0){
                           console.log('Waikato Expy');
+                          document.getElementById("location").innerHTML = "Waikato Expressway";
+                          document.getElementById("info-msg").innerHTML = "Watch your speed. Slow down around towns.";
                           if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
                                 console.log('sessionStorage is waikatoexpressway');
                           }
@@ -243,6 +257,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Queen Charlotte Dr") >= 0){
                           console.log('Queen Charlotte Dr - Picton to Havelock');
+                          document.getElementById("location").innerHTML = "Queen Charlotte Drive";
+                          document.getElementById("info-msg").innerHTML = "Keep Left. Pull over to take photographs. Slow down around corners";
                           if (localStorage.getItem("addressgeofence") == "queencharlottedr") {
                           }
                           else {
@@ -253,6 +269,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Dunedin Southern Motorway") >= 0){
                           console.log('Dunedin Southern Motorway');
+                          document.getElementById("location").innerHTML = "Dunedin Southern Motorway";
+                          document.getElementById("info-msg").innerHTML = "Watch your following distances on Dunedin Motorways.";
                           if (localStorage.getItem("addressgeofence") == "dunedinsthmwy") {
                           }
                           else {
