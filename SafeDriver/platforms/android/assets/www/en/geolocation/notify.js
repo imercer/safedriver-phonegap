@@ -696,8 +696,12 @@ function success(pos) {
 /___/   / .__/\__/ \__/ \_,_/       /_/ |_|/_/  \__/ /_/   \__/ /___/
        /_/
     */
-
     console.log('Speed: ' + Math.round(speed) + 'km/h');
+    if (Math.round(speed) < 1 ) {
+
+    } else {
+        document.getElementById("speed_reading").innerHTML = Math.round(speed);
+
       // document.getElementById("speed").innerHTML = Math.round(speed);
       // Check if in Central/East AKL metropolitan area 1
       if (localStorage.getItem('SpeedAlerts') == "disabled") {
@@ -707,17 +711,18 @@ function success(pos) {
           if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
             count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       } else if (distance(mylat, mylong, "-36.674987", "174.867588", "K") < 14) {
@@ -725,17 +730,18 @@ function success(pos) {
          if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
             count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-36.837069", "174.741260", "K") < 2) {
@@ -743,17 +749,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-36.860127", "174.760617", "K") < 0.9 || distance(mylat, mylong, "-36.869444", "174.771120", "K") < 1) {
@@ -761,17 +767,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
      } else if (distance(mylat, mylong, "-36.347948", "174.587621", "K") < 4.2) {
@@ -779,17 +785,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
      } else if (distance(mylat, mylong, "-37.216238", "175.057654", "K") < 3.6 || distance(mylat, mylong, "-37.262031", "175.248288", "K") < 8.5) {
@@ -797,17 +803,17 @@ function success(pos) {
          if (crd.speed > target.ninety) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       } else if (distance(mylat, mylong, "-37.418679", "175.746423", "K") < 3.5) {
@@ -815,17 +821,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-41.009416", "174.922994", "K") < 3) {
@@ -833,17 +839,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-42.464052", "173.541664", "K") < 5.5) {
@@ -851,17 +857,17 @@ function success(pos) {
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = count + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       }  else {
@@ -871,14 +877,19 @@ function success(pos) {
                 speedcount = speedcount + 1;
                 loadAlert('slowdown');
                 console.log('SLOW DOWN');
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            speedcount = 0;
+            window.sessionStorage.removeItem("audio");
+            document.getElementById("speed_reading").style.color = "whitesmoke";
+            navigator.vibrate(0);
           }
         }
+    }
     }
     }
 

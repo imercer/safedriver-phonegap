@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'"/><script type="text/javascript" src="../../cordova.js"></script><script type="text/javascript">   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-55227067-5', 'auto');   ga('send', 'pageview');  </script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../../shared_assets/css/metro-bootstrap.css"><link rel="stylesheet" href="../../shared_assets/css/style.css"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="../../shared_assets/images/icon.png"/>
+    <script type="text/javascript" src="../../shared_assets/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../shared_assets/js/jquery/jquery.widget.min.js"></script>
+    <script type="text/javascript" src="../../shared_assets/js/materialize.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../shared_assets/css/jquery-ui.css">
+    <script type="text/javascript" src="../../shared_assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../../shared_assets/js/ui/1.11.4/jquery-ui.js"></script>
+    <!-- Material Design Lite -->
+    <script type="text/javascript" src="../../shared_assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="../../shared_assets/css/material.indigo-red.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js?key=AIzaSyC6dqb5V2rIMW7MeEVMMZnyypd9cDsGFy0"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
+</head>
+<body>
+<style type="text/css">
+    #bg, #search-bg {
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url('../../shared_assets/images/dunedin.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    text-align: center;
+    }
+    #bg-blank {
+    top: 0;
+    left: 0;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    bottom: 0;
+    right: 0;
+    }
+    #bg {
+    background-position: center top;
+    }
+
+    #search-container {
+    position: absolute;
+    width: 100%;
+    height: 100%
+    }
+
+    #search-bg {
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+
+    /* Pull the background 70px higher to the same place as #bg's */
+
+    -webkit-filter: blur(4px);
+    filter: url('/media/blur.svg#blur');
+    filter: blur(4px);
+    }
+
+    #search {
+    /* Put this on top of the blurred layer */
+    position: absolute;
+    z-index: 100;
+    padding-left: 20px;
+    background: rgb(0,0,0); /* for IE */
+    background: rgba(0,0,0,0.05);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    }
+
+    @media (max-width: 600px ) {
+    #bg { padding: 10px; }
+    #search-bg { background-position: center -10px; }
+    }
+
+    #speed_reading {
+        padding-top: 1.5%;
+        margin-bottom: 0px;
+        margin-top: -1.5%;
+    }
+    .speed_under {
+        font-size: 1800%;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+    .speed_units {
+    font-size: 30%;
+    font-weight: initial;
+    }
+    .location {
+    font-size: 280%;
+    font-weight: initial;
+    color: whitesmoke;
+    margin-top: -45px;
+    padding-left: 13px;
+    }
+    .footer-msg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 180%;
+    padding-bottom: 01%;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    }
+    .signs {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding-top: 5.6%;
+    padding-right: 2%
+    }
+</style>
+<div id="bg-blank">
+    <div id="search-container">
+        <div id="search-bg"></div>
+        <div id="search">
+            <h1 class="speed_under" id="speed_reading">65<span class="speed_units">km/h</span></h1>
+            <h4 class="location" id="location">Auckland Harbour Bridge</h4>
+            <div class="signs"><img src="../../shared_assets/images/closed.gif"/></div>
+            <span class="footer-msg"> Slow Down around Corners </span>
+        </div>
+    </div>
+</div>
+</body>
