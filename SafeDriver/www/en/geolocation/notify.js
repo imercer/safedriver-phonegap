@@ -715,9 +715,6 @@ function success(pos) {
        /_/
     */
     console.log('Speed: ' + Math.round(speed) + 'km/h');
-    if (Math.round(speed) < 1 ) {
-
-    } else {
         document.getElementById("speed_reading").innerHTML = Math.round(speed);
 
       // document.getElementById("speed").innerHTML = Math.round(speed);
@@ -726,6 +723,7 @@ function success(pos) {
         console.log('not alerting based on speed, user disabled messages')
       } else {
         if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
+            document.getElementById("detail_sign").src="../../shared_assets/images/50kmph.gif";
           if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -745,6 +743,7 @@ function success(pos) {
           }
       } else if (distance(mylat, mylong, "-36.674987", "174.867588", "K") < 14) {
     // Check if in AKL east coast bays metropolitan area 1
+         document.getElementById("detail_sign").src="../../shared_assets/images/50kmph.gif";
          if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -764,6 +763,7 @@ function success(pos) {
           }
        } else if (distance(mylat, mylong, "-36.837069", "174.741260", "K") < 2) {
     // Check if in AKL Harbour Bridge (Nthrn MWY)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -782,6 +782,7 @@ function success(pos) {
           }
        } else if (distance(mylat, mylong, "-36.860127", "174.760617", "K") < 0.9 || distance(mylat, mylong, "-36.869444", "174.771120", "K") < 1) {
     // Check if in CentralMotorwayJunction (SH1/SH16)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -800,6 +801,7 @@ function success(pos) {
           }
      } else if (distance(mylat, mylong, "-36.347948", "174.587621", "K") < 4.2) {
     // Check if DOME VALLEY (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -818,6 +820,7 @@ function success(pos) {
           }
      } else if (distance(mylat, mylong, "-37.216238", "175.057654", "K") < 3.6 || distance(mylat, mylong, "-37.262031", "175.248288", "K") < 8.5) {
     // Check if Hauraki Plains (SH2)
+        document.getElementById("detail_sign").src="../../shared_assets/images/90kmph.gif";
          if (crd.speed > target.ninety) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -836,6 +839,7 @@ function success(pos) {
           }
       } else if (distance(mylat, mylong, "-37.418679", "175.746423", "K") < 3.5) {
     // Check if KARANGAHEKE GORGE (SH2)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -854,6 +858,7 @@ function success(pos) {
           }
        } else if (distance(mylat, mylong, "-41.009416", "174.922994", "K") < 3) {
     // Check if WLG Costal Road (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
@@ -872,6 +877,7 @@ function success(pos) {
           }
        } else if (distance(mylat, mylong, "-42.464052", "173.541664", "K") < 5.5) {
     // Check if Kaikoura Costal Road (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = count + 1;
@@ -907,7 +913,6 @@ function success(pos) {
             navigator.vibrate(0);
           }
         }
-    }
     }
     }
 
