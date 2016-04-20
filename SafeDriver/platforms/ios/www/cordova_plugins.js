@@ -51,6 +51,14 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-3dtouch/www/ThreeDeeTouch.js",
+        "id": "cordova-plugin-3dtouch.ThreeDeeTouch",
+        "pluginId": "cordova-plugin-3dtouch",
+        "clobbers": [
+            "ThreeDeeTouch"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -349,22 +357,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/phonegap-plugin-push/www/push.js",
-        "id": "phonegap-plugin-push.PushNotification",
-        "pluginId": "phonegap-plugin-push",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-        "pluginId": "cordova-plugin-wkwebview-engine",
-        "clobbers": [
-            "cordova.exec"
-        ]
-    },
-    {
         "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
         "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
         "pluginId": "de.appplant.cordova.plugin.local-notification",
@@ -392,16 +384,34 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "pluginId": "cordova-plugin-powermanagement",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "pluginId": "phonegap-plugin-push",
         "clobbers": [
-            "window.powermanagement"
+            "PushNotification"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{}
+{
+    "com.unarin.cordova.beacon": "3.3.0",
+    "cordova-plugin-3dtouch": "1.3.5",
+    "cordova-plugin-app-event": "1.2.0",
+    "cordova-plugin-device": "1.1.1",
+    "cordova-plugin-dialogs": "1.2.0",
+    "cordova-plugin-file": "4.1.0",
+    "cordova-plugin-geolocation": "2.1.0",
+    "cordova-plugin-globalization": "1.0.2",
+    "cordova-plugin-mauron85-background-geolocation": "0.9.4",
+    "cordova-plugin-media": "2.1.0",
+    "cordova-plugin-network-information": "1.2.0",
+    "cordova-plugin-statusbar": "2.1.0",
+    "cordova-plugin-vibration": "2.1.0",
+    "cordova-plugin-whitelist": "1.2.1",
+    "de.appplant.cordova.plugin.background-mode": "0.6.4",
+    "de.appplant.cordova.plugin.local-notification": "0.8.4",
+    "phonegap-plugin-push": "1.5.3"
+}
 // BOTTOM OF METADATA
 });

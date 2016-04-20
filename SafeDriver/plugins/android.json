@@ -46,13 +46,10 @@
         "phonegap-plugin-push": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-wkwebview-engine": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "cordova-plugin-3dtouch": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },

@@ -10,13 +10,13 @@
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
+        "cordova-plugin-3dtouch": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
-        "cordova-plugin-file": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-geolocation": {
@@ -46,21 +46,18 @@
         "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "phonegap-plugin-push": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
-        "cordova-plugin-wkwebview-engine": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     }

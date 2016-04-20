@@ -113,14 +113,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-wkwebview-engine": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-wkwebview-engine"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "de.appplant.cordova.plugin.local-notification": {
         "source": {
             "type": "git",
@@ -138,10 +130,10 @@
         "is_top_level": false,
         "variables": {}
     },
-    "cordova-plugin-powermanagement": {
+    "cordova-plugin-3dtouch": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-powermanagement"
+            "id": "cordova-plugin-3dtouch"
         },
         "is_top_level": true,
         "variables": {}

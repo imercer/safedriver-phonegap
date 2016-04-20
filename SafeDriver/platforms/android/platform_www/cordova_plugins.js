@@ -331,10 +331,10 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
+        "file": "plugins/cordova-plugin-3dtouch/www/ThreeDeeTouch.js",
+        "id": "cordova-plugin-3dtouch.ThreeDeeTouch",
         "clobbers": [
-            "window.powermanagement"
+            "ThreeDeeTouch"
         ]
     }
 ];
