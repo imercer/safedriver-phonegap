@@ -170,6 +170,7 @@ function success(pos) {
                     var address = (results[0].formatted_address);
                     console.log(address);
                     if (address.indexOf("Crown Range Rd") >= 0) {
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Crown Range Road');
                           document.getElementById("location").innerHTML = "Crown Range Road";
                           document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions.";
@@ -182,6 +183,7 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Kawarau Gorge');
                           document.getElementById("location").innerHTML = "Kawarau Gorge";
                           document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions. Keep Left";
@@ -194,6 +196,7 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Napier-Taupo Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/slippery.gif";
                           console.log('NapierTaupo');
                           document.getElementById("location").innerHTML = "Napier-Taupo Road";
                           document.getElementById("info-msg").innerHTML = "Slow down around corners. Increase your following distances in wet conditions.";
@@ -206,6 +209,7 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Cape Reinga Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/animals.gif";
                           console.log('CapeReinga');
                           document.getElementById("location").innerHTML = "Cape Reinga";
                           document.getElementById("info-msg").innerHTML = "Expect animals on the road and varying weather conditions. Drive to the conditions.";
@@ -230,6 +234,7 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/gravel.gif";
                           console.log('TePakiStreamRd');
                           document.getElementById("location").innerHTML = "Te Paki Stream";
                           document.getElementById("info-msg").innerHTML = "Keep Left.";
@@ -256,6 +261,7 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Queen Charlotte Dr") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Queen Charlotte Dr - Picton to Havelock');
                           document.getElementById("location").innerHTML = "Queen Charlotte Drive";
                           document.getElementById("info-msg").innerHTML = "Keep Left. Pull over to take photographs. Slow down around corners";

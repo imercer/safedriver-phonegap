@@ -138,14 +138,6 @@
         "is_top_level": false,
         "variables": {}
     },
-    "cordova-plugin-powermanagement": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-powermanagement"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cc.fovea.cordova.purchase": {
         "source": {
             "type": "registry",
@@ -168,6 +160,14 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-screen-orientation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-powermanagement": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-powermanagement"
         },
         "is_top_level": true,
         "variables": {}

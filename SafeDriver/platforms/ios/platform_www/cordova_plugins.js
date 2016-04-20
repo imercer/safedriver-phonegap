@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
+        "id": "cc.fovea.cordova.purchase.InAppPurchase",
+        "pluginId": "cc.fovea.cordova.purchase",
+        "clobbers": [
+            "store"
+        ]
+    },
+    {
         "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
         "id": "com.unarin.cordova.beacon.underscorejs",
         "pluginId": "com.unarin.cordova.beacon",
@@ -234,6 +242,14 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+        "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+        "pluginId": "cordova-plugin-fullscreen",
+        "clobbers": [
+            "AndroidFullScreen"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
         "id": "cordova-plugin-geolocation.Coordinates",
         "pluginId": "cordova-plugin-geolocation",
@@ -323,6 +339,22 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.ios.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation.ios",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "merges": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -340,28 +372,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+        "pluginId": "cordova-plugin-wkwebview-engine",
+        "clobbers": [
+            "cordova.exec"
+        ]
+    },
+    {
         "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
         "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
         "pluginId": "de.appplant.cordova.plugin.background-mode",
         "clobbers": [
             "cordova.plugins.backgroundMode",
             "plugin.backgroundMode"
-        ]
-    },
-    {
-        "file": "plugins/phonegap-plugin-push/www/push.js",
-        "id": "phonegap-plugin-push.PushNotification",
-        "pluginId": "phonegap-plugin-push",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-        "pluginId": "cordova-plugin-wkwebview-engine",
-        "clobbers": [
-            "cordova.exec"
         ]
     },
     {
@@ -392,24 +416,46 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
         "id": "cordova-plugin-powermanagement.powermanagement",
         "pluginId": "cordova-plugin-powermanagement",
         "clobbers": [
             "window.powermanagement"
         ]
-    },
-    {
-        "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
-        "id": "cc.fovea.cordova.purchase.InAppPurchase",
-        "pluginId": "cc.fovea.cordova.purchase",
-        "clobbers": [
-            "store"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{}
+{
+    "cc.fovea.cordova.purchase": "4.0.0",
+    "com.unarin.cordova.beacon": "3.3.0",
+    "cordova-plugin-app-event": "1.2.0",
+    "cordova-plugin-device": "1.1.1",
+    "cordova-plugin-dialogs": "1.2.0",
+    "cordova-plugin-file": "4.1.0",
+    "cordova-plugin-fullscreen": "1.1.0",
+    "cordova-plugin-geolocation": "2.1.0",
+    "cordova-plugin-globalization": "1.0.2",
+    "cordova-plugin-mauron85-background-geolocation": "0.9.4",
+    "cordova-plugin-media": "2.1.0",
+    "cordova-plugin-network-information": "1.2.0",
+    "cordova-plugin-screen-orientation": "1.4.0",
+    "cordova-plugin-statusbar": "2.1.0",
+    "cordova-plugin-vibration": "2.1.0",
+    "cordova-plugin-whitelist": "1.2.1",
+    "cordova-plugin-wkwebview-engine": "1.0.2",
+    "de.appplant.cordova.plugin.background-mode": "0.6.4",
+    "de.appplant.cordova.plugin.local-notification": "0.8.4",
+    "phonegap-plugin-push": "1.5.3",
+    "cordova-plugin-powermanagement": "1.0.2"
+}
 // BOTTOM OF METADATA
 });

@@ -9,6 +9,10 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"InAppPurchase\"><param name=\"ios-package\" value=\"InAppPurchase\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"LocationManager\"><param name=\"ios-package\" value=\"CDVLocationManager\" /></feature>",
                             "count": 1
                         },
@@ -45,6 +49,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"ios-package\" value=\"YoikScreenOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -61,14 +69,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"CDVWKWebViewEngine\"><param name=\"ios-package\" value=\"CDVWKWebViewEngine\" /></feature>",
                             "count": 1
                         },
@@ -77,32 +77,43 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"LocalNotification\"><param name=\"ios-package\" onload=\"true\" value=\"APPLocalNotification\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"PowerManagement\"><param name=\"ios-package\" value=\"PowerManagement\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppPurchase\"><param name=\"ios-package\" value=\"InAppPurchase\" /></feature>",
-                            "count": 1
                         }
-                    ],
-                    "/widget": []
+                    ]
                 }
             },
             "*-Info.plist": {
                 "parents": {
                     "NSLocationAlwaysUsageDescription": [
                         {
-                            "xml": "<string>This provides you with audio messages to help keep you safe on the road</string>",
+                            "xml": "<string>This app would like to scan for iBeacons even when in the background.</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string>This app requires background location tracking</string>",
                             "count": 1
                         }
                     ],
                     "NSLocationWhenInUseUsageDescription": [
                         {
-                            "xml": "<string>It's best to allow background location use as well, this means that you'll receive audio messages, even when you're not using the app</string>",
+                            "xml": "<string>This app would like to scan for iBeacons while it is in use.</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string />",
                             "count": 1
                         }
                     ],
@@ -125,7 +136,13 @@
         }
     },
     "installed_plugins": {
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "com.unarin.cordova.beacon": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-app-event": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-device": {
@@ -135,6 +152,9 @@
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-geolocation": {
@@ -152,6 +172,9 @@
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
@@ -161,30 +184,32 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "de.appplant.cordova.plugin.background-mode": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
-        "phonegap-plugin-push": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
         "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cordova-plugin-app-event": {
+        "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cc.fovea.cordova.purchase": {
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
+            "id": "cc.fovea.cordova.purchase.InAppPurchase",
+            "pluginId": "cc.fovea.cordova.purchase",
+            "clobbers": [
+                "store"
+            ]
+        },
         {
             "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
             "id": "com.unarin.cordova.beacon.underscorejs",
@@ -419,6 +444,14 @@
             "runs": true
         },
         {
+            "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+            "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+            "pluginId": "cordova-plugin-fullscreen",
+            "clobbers": [
+                "AndroidFullScreen"
+            ]
+        },
+        {
             "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
             "id": "cordova-plugin-geolocation.Coordinates",
             "pluginId": "cordova-plugin-geolocation",
@@ -508,6 +541,22 @@
             ]
         },
         {
+            "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+            "id": "cordova-plugin-screen-orientation.screenorientation",
+            "pluginId": "cordova-plugin-screen-orientation",
+            "clobbers": [
+                "cordova.plugins.screenorientation"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.ios.js",
+            "id": "cordova-plugin-screen-orientation.screenorientation.ios",
+            "pluginId": "cordova-plugin-screen-orientation",
+            "merges": [
+                "cordova.plugins.screenorientation"
+            ]
+        },
+        {
             "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
             "id": "cordova-plugin-statusbar.statusbar",
             "pluginId": "cordova-plugin-statusbar",
@@ -525,28 +574,20 @@
             ]
         },
         {
+            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+            "pluginId": "cordova-plugin-wkwebview-engine",
+            "clobbers": [
+                "cordova.exec"
+            ]
+        },
+        {
             "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
             "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
             "pluginId": "de.appplant.cordova.plugin.background-mode",
             "clobbers": [
                 "cordova.plugins.backgroundMode",
                 "plugin.backgroundMode"
-            ]
-        },
-        {
-            "file": "plugins/phonegap-plugin-push/www/push.js",
-            "id": "phonegap-plugin-push.PushNotification",
-            "pluginId": "phonegap-plugin-push",
-            "clobbers": [
-                "PushNotification"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-            "pluginId": "cordova-plugin-wkwebview-engine",
-            "clobbers": [
-                "cordova.exec"
             ]
         },
         {
@@ -577,20 +618,43 @@
             ]
         },
         {
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "id": "phonegap-plugin-push.PushNotification",
+            "pluginId": "phonegap-plugin-push",
+            "clobbers": [
+                "PushNotification"
+            ]
+        },
+        {
             "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
             "id": "cordova-plugin-powermanagement.powermanagement",
             "pluginId": "cordova-plugin-powermanagement",
             "clobbers": [
                 "window.powermanagement"
             ]
-        },
-        {
-            "file": "plugins/cc.fovea.cordova.purchase/www/store-ios.js",
-            "id": "cc.fovea.cordova.purchase.InAppPurchase",
-            "pluginId": "cc.fovea.cordova.purchase",
-            "clobbers": [
-                "store"
-            ]
         }
-    ]
+    ],
+    "plugin_metadata": {
+        "cc.fovea.cordova.purchase": "4.0.0",
+        "com.unarin.cordova.beacon": "3.3.0",
+        "cordova-plugin-app-event": "1.2.0",
+        "cordova-plugin-device": "1.1.1",
+        "cordova-plugin-dialogs": "1.2.0",
+        "cordova-plugin-file": "4.1.0",
+        "cordova-plugin-fullscreen": "1.1.0",
+        "cordova-plugin-geolocation": "2.1.0",
+        "cordova-plugin-globalization": "1.0.2",
+        "cordova-plugin-mauron85-background-geolocation": "0.9.4",
+        "cordova-plugin-media": "2.1.0",
+        "cordova-plugin-network-information": "1.2.0",
+        "cordova-plugin-screen-orientation": "1.4.0",
+        "cordova-plugin-statusbar": "2.1.0",
+        "cordova-plugin-vibration": "2.1.0",
+        "cordova-plugin-whitelist": "1.2.1",
+        "cordova-plugin-wkwebview-engine": "1.0.2",
+        "de.appplant.cordova.plugin.background-mode": "0.6.4",
+        "de.appplant.cordova.plugin.local-notification": "0.8.4",
+        "phonegap-plugin-push": "1.5.3",
+        "cordova-plugin-powermanagement": "1.0.2"
+    }
 }

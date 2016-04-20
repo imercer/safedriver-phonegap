@@ -73,10 +73,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"InAppBillingPlugin\"><param name=\"android-package\" value=\"com.smartmobilesoftware.inappbilling.InAppBillingPlugin\" /></feature>",
                             "count": 1
                         },
@@ -86,6 +82,10 @@
                         },
                         {
                             "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PowerManagement\"><param name=\"android-package\" value=\"com.simplec.phonegap.plugins.powermanagement.PowerManagement\" /></feature>",
                             "count": 1
                         }
                     ],
@@ -338,9 +338,6 @@
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "cc.fovea.cordova.purchase": {
             "BILLING_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvU6mDtgfmwP7yxVx9y1j5DkI9RdhxFmJUAQFUE05iqrD6YJPCq3L6BeB3xCZ5GmM+3oxXfjQMDcsdhIxfVPF0/pSJ6QHOaLpxDgnXg9yg3xZJLdxUCmpnMDIOBO9etQI+2ltYBfbrMmwnXJLMgII5ufqyJifhaZpk1EYlkc85KS4W2xxPkWcY6wXOhaBi+GrD2oBXJvbtvLtSJWxFZjBLunDcDPwh6FSNxRbsGslnPGbwQqe1UDVxeAGhgul0N4HwZnhWjV8ezLk/Mx4zvAFpAH+D6CTuFEO/V/HQHtOZyUwJP4RFTb1eF5h9YYmp9QB2qUigkSHxvn8X9k36Sm4LQIDAQAB",
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
@@ -349,6 +346,9 @@
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
@@ -685,13 +685,6 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-            "id": "cordova-plugin-powermanagement.powermanagement",
-            "clobbers": [
-                "window.powermanagement"
-            ]
-        },
-        {
             "file": "plugins/cc.fovea.cordova.purchase/www/store-android.js",
             "id": "cc.fovea.cordova.purchase.InAppBillingPlugin",
             "clobbers": [
@@ -717,6 +710,13 @@
             "id": "cordova-plugin-screen-orientation.screenorientation.android",
             "merges": [
                 "cordova.plugins.screenorientation"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+            "id": "cordova-plugin-powermanagement.powermanagement",
+            "clobbers": [
+                "window.powermanagement"
             ]
         }
     ]

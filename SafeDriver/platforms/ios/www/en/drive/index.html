@@ -14,8 +14,129 @@
     <link rel="stylesheet" href="../../shared_assets/css/material.indigo-red.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="../../shared_assets/css/icon.css">           <script type="text/javascript" src="http:////maps.googleapis.com/maps/api/js?key=AIzaSyC6dqb5V2rIMW7MeEVMMZnyypd9cDsGFy0"></script><script type="text/javascript" src="../geolocation/notify.js"></script>
+    <script type="text/javascript">
+document.addEventListener('deviceready', onDeviceReady, false);
+function onDeviceReady () {
+    AndroidFullScreen.isImmersiveModeSupported(yesFunction, noFunction);
+    screen.lockOrientation('landscape');
+    id = navigator.geolocation.watchPosition(doStuff, onError, options);
+}
+function yesFunction()
+{
+    AndroidFullScreen.immersiveMode(successFunction, errorFunction);
+}
+function noFunction(error)
+{
+    AndroidFullScreen.leanMode(successFunction, errorFunction);
+}
+
+
+function successFunction()
+{
+    console.info("It worked!");
+}
+function errorFunction(error)
+{
+    console.error(error);
+}
+
+options = {
+  enableHighAccuracy: false,
+  timeout: 1000,
+  maximumAge: 0
+};
+
+function onError(error) {
+       console.log('no location is available');
+       console.error(error);
+}
+console.log('loaded background updater script');
+
+
+function distance(lat1, lon1, lat2, lon2, unit) {
+	var radlat1 = Math.PI * lat1/180
+	var radlat2 = Math.PI * lat2/180
+	var radlon1 = Math.PI * lon1/180
+	var radlon2 = Math.PI * lon2/180
+	var theta = lon1-lon2
+	var radtheta = Math.PI * theta/180
+	var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+	dist = Math.acos(dist)
+	dist = dist * 180/Math.PI
+	dist = dist * 60 * 1.1515
+	if (unit=="K") { dist = dist * 1.609344 }
+	if (unit=="N") { dist = dist * 0.8684 }
+	return dist
+}
+
+function doStuff(position) {
+    var mylat = position.coords.latitude;
+    var mylong = position.coords.longitude;
+    console.log(mylat + mylong);
+    // Small regions for higher priority
+    if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/auckland.jpg')";
+        console.log('Auckland');
+    } else if (distance(mylat, mylong, "-37.783777", "175.269562", "K") < 20) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/hamilton.jpg')";
+        console.log('Hamilton');
+    } else if (distance(mylat, mylong, "-38.430343", "176.156148", "K") < 50) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/Taupo.jpg')";
+        console.log('Central North Island');
+    } else if (distance(mylat, mylong, "-41.291249", "174.767883", "K") < 60) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/wellington.jpg')";
+        console.log('Wellington');
+    } else if (distance(mylat, mylong, "-45.034439", "168.653588", "K") < 20) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/queenstown.jpg')";
+        console.log('Queenstown');
+    } else if (distance(mylat, mylong, "-45.888096", "170.463871", "K") < 25) {
+       document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/dunedin.jpg')";
+       console.log('Dunedin');
+    } //Larger Regions follow
+    else if (distance(mylat, mylong, "-41.393294", "173.155518", "K") < 125) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/nelson.jpg')";
+        console.log('Nelson');
+    } else if (distance(mylat, mylong, "-46.468133", "167.980957", "K") < 293) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/otago.jpg')";
+        console.log('Otago');
+    } else if (distance(mylat, mylong, "-35.269039", "173.583971", "K") < 130) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/northland.jpg')";
+        console.log('Northland');
+    } else if (distance(mylat, mylong, "-37.40071", "176.698608", "K") < 90) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/bop.jpg')";
+        console.log('Bay of Plenty');
+    } else if (distance(mylat, mylong, "-39.296048", "175.687866", "K") < 56) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/nationalpark.jpg')";
+        console.log('National Park');
+    } else if (distance(mylat, mylong, "-40.283716", "175.297851", "K") < 60) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/manawatu.jpg')";
+        console.log('Manawatu');
+    } else if (distance(mylat, mylong, "-38.333038", "178.444701", "K") < 120) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/gisborne.jpg')";
+        console.log('Gisborne');
+    } else if (distance(mylat, mylong, "-39.859154", "177.242431", "K") < 95) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/hawkesbay.jpg')";
+        console.log('Hawkes Bay');
+    } else if (distance(mylat, mylong, "-39.274789", "174.012451", "K") < 90) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/taranaki.jpg')";
+        console.log('Taranaki');
+    } else if (distance(mylat, mylong, "-38.043765", "175.078125", "K") < 80) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/waikato.jpg')";
+        console.log('Waikato');
+    } else if (distance(mylat, mylong, "-44.497481", "173.380737", "K") < 250) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/canterbury.jpg')";
+        console.log('Canterbury');
+    } else if (distance(mylat, mylong, "-41.624792", "168.033783", "K") < 363) {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/westcoast.jpg')";
+        console.log('West Coast');
+    } else {
+        document.getElementById("search-bg").style.backgroundImage = "url('../../shared_assets/images/NZ-0.jpg')";
+        console.log('Location Unknown');
+    }
+}
+</script>
 </head>
-<body>
+<body scroll="no" style="position: fixed;">
 <style type="text/css">
     #bg, #search-bg {
     background-repeat: no-repeat;
@@ -29,6 +150,7 @@
     background-position: center center;
     position: absolute;
     text-align: center;
+    overflow: hidden;
     }
     #bg-blank {
     top: 0;
@@ -62,6 +184,9 @@
     -webkit-filter: blur(4px);
     filter: url('/media/blur.svg#blur');
     filter: blur(4px);
+    overflow: hidden;
+    transform: scale(1.03);
+
     }
 
     #search {
@@ -75,6 +200,8 @@
     height: 100%;
     top: 0px;
     left: 0px;
+    line-height: 5vw;
+
     }
 
     @media (max-width: 600px ) {
@@ -83,25 +210,27 @@
     }
 
     #speed_reading {
-        padding-top: 1.5%;
-        margin-bottom: 0px;
-        margin-top: -1.5%;
+
     }
     .speed_under {
-        font-size: 1800%;
+        font-size: 20vw;
         font-weight: bold;
         color: whitesmoke;
+    padding-top: 1.5%;
+    margin-bottom: 0px;
+    margin-top: -1.5%;
     }
     .speed_units {
     font-size: 30%;
     font-weight: initial;
+    line-height: 5px;
+
     }
     .location {
-    font-size: 280%;
+    font-size: 3vw;
     font-weight: initial;
     color: whitesmoke;
-    margin-top: -45px;
-    padding-left: 13px;
+    line-height: 3vw;
     }
     .footer-msg {
     position: absolute;
@@ -109,7 +238,7 @@
     right: 0;
     bottom: 0;
     text-align: center;
-    font-size: 180%;
+    font-size: 2vw;
     padding-bottom: 01%;
     color: whitesmoke;
     letter-spacing: 2px;
@@ -121,15 +250,19 @@
     padding-top: 5.6%;
     padding-right: 2%
     }
+    hr {
+    visibility: hidden
+    }
 </style>
+
 <div id="bg-blank">
     <div id="search-container">
         <div id="search-bg"></div>
         <div id="search">
-            <h1 class="speed_under" id="speed_reading">65<span class="speed_units">km/h</span></h1>
-            <h4 class="location" id="location">Auckland Harbour Bridge</h4>
-            <div class="signs"><img src="../../shared_assets/images/closed.gif"/></div>
-            <span class="footer-msg"> Slow Down around Corners </span>
+            <p class="speed_under" style="line-height: 20vw;"><span id="speed_reading">77</span><span class="speed_units">km/h</span><hr>
+            <span class="location" id="location"></span></p>
+            <div class="signs"><img id="detail_sign" style="width: 15vw;" src="../../shared_assets/images/closed.gif"/></div>
+            <span class="footer-msg" id="info-msg"> Slow Down around Corners </span>
         </div>
     </div>
 </div>

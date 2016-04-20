@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
@@ -16,7 +19,7 @@
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cordova-plugin-file": {
+        "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-geolocation": {
@@ -34,6 +37,9 @@
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
@@ -43,27 +49,27 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "de.appplant.cordova.plugin.background-mode": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
-        "phonegap-plugin-push": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
         "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "de.appplant.cordova.plugin.background-mode": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cordova-plugin-powermanagement": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
-        "cc.fovea.cordova.purchase": {
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     }

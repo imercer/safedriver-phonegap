@@ -170,7 +170,10 @@ function success(pos) {
                     var address = (results[0].formatted_address);
                     console.log(address);
                     if (address.indexOf("Crown Range Rd") >= 0) {
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Crown Range Road');
+                          document.getElementById("location").innerHTML = "Crown Range Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "crownrange6") {
                           }
                           else {
@@ -180,7 +183,10 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Kawarau Gorge');
+                          document.getElementById("location").innerHTML = "Kawarau Gorge";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Drive carefully, especially in icy and wet conditions. Keep Left";
                           if (localStorage.getItem("addressgeofence") == "kawarau") {
                           }
                           else {
@@ -190,7 +196,10 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Napier-Taupo Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/slippery.gif";
                           console.log('NapierTaupo');
+                          document.getElementById("location").innerHTML = "Napier-Taupo Road";
+                          document.getElementById("info-msg").innerHTML = "Slow down around corners. Increase your following distances in wet conditions.";
                           if (localStorage.getItem("addressgeofence") == "napiertaupo") {
                           }
                           else {
@@ -200,7 +209,10 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Cape Reinga Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/animals.gif";
                           console.log('CapeReinga');
+                          document.getElementById("location").innerHTML = "Cape Reinga";
+                          document.getElementById("info-msg").innerHTML = "Expect animals on the road and varying weather conditions. Drive to the conditions.";
                           if (localStorage.getItem("addressgeofence") == "CapeReinga") {
                           }
                           else {
@@ -211,6 +223,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
                           console.log('NGTRoad');
+                          document.getElementById("location").innerHTML = "Northern Gateway Toll Road";
+                          document.getElementById("info-msg").innerHTML = "Watch your following distances on Auckland Motorways.";
                           if (localStorage.getItem("addressgeofence") == "ngtroad") {
                           }
                           else {
@@ -220,7 +234,10 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/gravel.gif";
                           console.log('TePakiStreamRd');
+                          document.getElementById("location").innerHTML = "Te Paki Stream";
+                          document.getElementById("info-msg").innerHTML = "Keep Left.";
                           if (localStorage.getItem("addressgeofence") == "tepakistreamrd") {
                           }
                           else {
@@ -231,6 +248,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Waikato Expy") >= 0){
                           console.log('Waikato Expy');
+                          document.getElementById("location").innerHTML = "Waikato Expressway";
+                          document.getElementById("info-msg").innerHTML = "Watch your speed. Slow down around towns.";
                           if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
                                 console.log('sessionStorage is waikatoexpressway');
                           }
@@ -242,7 +261,10 @@ function success(pos) {
                                 xhttp.send();
                           }
                     } else if (address.indexOf("Queen Charlotte Dr") >= 0){
+                          document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
                           console.log('Queen Charlotte Dr - Picton to Havelock');
+                          document.getElementById("location").innerHTML = "Queen Charlotte Drive";
+                          document.getElementById("info-msg").innerHTML = "Keep Left. Pull over to take photographs. Slow down around corners";
                           if (localStorage.getItem("addressgeofence") == "queencharlottedr") {
                           }
                           else {
@@ -253,6 +275,8 @@ function success(pos) {
                           }
                     } else if (address.indexOf("Dunedin Southern Motorway") >= 0){
                           console.log('Dunedin Southern Motorway');
+                          document.getElementById("location").innerHTML = "Dunedin Southern Motorway";
+                          document.getElementById("info-msg").innerHTML = "Watch your following distances on Dunedin Motorways.";
                           if (localStorage.getItem("addressgeofence") == "dunedinsthmwy") {
                           }
                           else {
@@ -696,172 +720,184 @@ function success(pos) {
 /___/   / .__/\__/ \__/ \_,_/       /_/ |_|/_/  \__/ /_/   \__/ /___/
        /_/
     */
-
     console.log('Speed: ' + Math.round(speed) + 'km/h');
+        document.getElementById("speed_reading").innerHTML = Math.round(speed);
+
       // document.getElementById("speed").innerHTML = Math.round(speed);
       // Check if in Central/East AKL metropolitan area 1
       if (localStorage.getItem('SpeedAlerts') == "disabled") {
         console.log('not alerting based on speed, user disabled messages')
       } else {
         if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
+            document.getElementById("detail_sign").src="../../shared_assets/images/50kmph.gif";
           if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
             count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       } else if (distance(mylat, mylong, "-36.674987", "174.867588", "K") < 14) {
     // Check if in AKL east coast bays metropolitan area 1
+         document.getElementById("detail_sign").src="../../shared_assets/images/50kmph.gif";
          if (crd.speed > target.fifty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
             count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-36.837069", "174.741260", "K") < 2) {
     // Check if in AKL Harbour Bridge (Nthrn MWY)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-36.860127", "174.760617", "K") < 0.9 || distance(mylat, mylong, "-36.869444", "174.771120", "K") < 1) {
     // Check if in CentralMotorwayJunction (SH1/SH16)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
      } else if (distance(mylat, mylong, "-36.347948", "174.587621", "K") < 4.2) {
     // Check if DOME VALLEY (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
      } else if (distance(mylat, mylong, "-37.216238", "175.057654", "K") < 3.6 || distance(mylat, mylong, "-37.262031", "175.248288", "K") < 8.5) {
     // Check if Hauraki Plains (SH2)
+        document.getElementById("detail_sign").src="../../shared_assets/images/90kmph.gif";
          if (crd.speed > target.ninety) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       } else if (distance(mylat, mylong, "-37.418679", "175.746423", "K") < 3.5) {
     // Check if KARANGAHEKE GORGE (SH2)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-41.009416", "174.922994", "K") < 3) {
     // Check if WLG Costal Road (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
        } else if (distance(mylat, mylong, "-42.464052", "173.541664", "K") < 5.5) {
     // Check if Kaikoura Costal Road (SH1)
+    document.getElementById("detail_sign").src="../../shared_assets/images/80kmph.gif";
          if (crd.speed > target.eighty) {
             if (speedcount % 20 === 0) {
                 speedcount = count + 1;
-                loadAudioFile();
+                loadAlert('slowdown');
                 console.log('SLOW DOWN');
-
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            count = 0;
             window.sessionStorage.removeItem("audio");
-
+            document.getElementById("speed_reading").style.color = "whitesmoke";
             navigator.vibrate(0);
           }
       }  else {
@@ -871,12 +907,16 @@ function success(pos) {
                 speedcount = speedcount + 1;
                 loadAlert('slowdown');
                 console.log('SLOW DOWN');
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
                 navigator.vibrate(500);
             } else {
                 speedcount = speedcount + 1;
+                document.getElementById("speed_reading").style.color = "#990000"; document.getElementById("info-msg").innerHTML = "SLOW DOWN";
             }
           } else {
-            speedcount = 0;
+            window.sessionStorage.removeItem("audio");
+            document.getElementById("speed_reading").style.color = "whitesmoke";
+            navigator.vibrate(0);
           }
         }
     }

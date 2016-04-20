@@ -331,13 +331,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
-    },
-    {
         "file": "plugins/cc.fovea.cordova.purchase/www/store-android.js",
         "id": "cc.fovea.cordova.purchase.InAppBillingPlugin",
         "clobbers": [
@@ -363,6 +356,13 @@ module.exports = [
         "id": "cordova-plugin-screen-orientation.screenorientation.android",
         "merges": [
             "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "clobbers": [
+            "window.powermanagement"
         ]
     }
 ];
