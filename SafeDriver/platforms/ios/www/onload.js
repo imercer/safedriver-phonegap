@@ -13,7 +13,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
           StatusBar.backgroundColorByHexString("#232323");
         }
         StatusBar.show();
-
+        window.analytics.startTrackerWithId('UA-55227067-7');
         var push = PushNotification.init({
           android: {
                 senderID: "233940449476",

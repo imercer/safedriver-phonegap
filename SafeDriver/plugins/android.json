@@ -51,6 +51,15 @@
         },
         "cordova-plugin-3dtouch": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
     "dependent_plugins": {

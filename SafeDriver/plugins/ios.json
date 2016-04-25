@@ -51,6 +51,15 @@
         },
         "phonegap-plugin-push": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },
     "dependent_plugins": {

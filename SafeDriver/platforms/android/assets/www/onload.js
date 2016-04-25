@@ -1,13 +1,8 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 	var xhttp = new XMLHttpRequest();
 	function onDeviceReady() {
-	ThreeDeeTouch.onHomeIconPressed = function (payload) {
-      console.log("Icon pressed. Type: " + payload.type + ". Title: " + payload.title + ".");
-      if (payload.type == 'status') {
-        document.location = 'en/drive/status.html';
-      } else if (payload.type == 'notifications') {
-        document.location = 'en/settings/index.html';
-      }
+        cordova.plugins.locationManager.requestAlwaysAuthorization();
+        cordova.plugins.notification.local.cancelAll();
         cordova.plugins.backgroundMode.setDefaults({
               title:  "SafeDriver",
               ticker: "Open the app to receive SafeDriver alerts",
@@ -18,7 +13,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
           StatusBar.backgroundColorByHexString("#232323");
         }
         StatusBar.show();
-
+        window.analytics.startTrackerWithId('UA-55227067-7');
         var push = PushNotification.init({
           android: {
                 senderID: "233940449476",
@@ -32,7 +27,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
             },
             windows: {}
         });
-
         push.on('registration', function(data) {
             console.log("registration - " + data.registrationId);
                 $.get( "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
@@ -49,10 +43,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
             console.error(e);
             launch();
         });
-                cordova.plugins.locationManager.requestAlwaysAuthorization();
-        cordova.plugins.notification.local.cancelAll();
 	}
-	}
+
 
     function checkLanguage() {
 	  var en = "en";
