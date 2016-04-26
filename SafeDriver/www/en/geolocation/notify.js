@@ -722,7 +722,7 @@ function success(pos) {
     */
     console.log('Speed: ' + Math.round(speed) + 'km/h');
         document.getElementById("speed_reading").innerHTML = Math.round(speed);
-
+        window.analytics.addCustomDimension('DriverSpeed', Math.round(speed));
       // document.getElementById("speed").innerHTML = Math.round(speed);
       // Check if in Central/East AKL metropolitan area 1
       if (localStorage.getItem('SpeedAlerts') == "disabled") {

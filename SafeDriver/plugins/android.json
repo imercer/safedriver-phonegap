@@ -7,76 +7,76 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-device": {
+        "cc.fovea.cordova.purchase": {
+            "BILLING_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvU6mDtgfmwP7yxVx9y1j5DkI9RdhxFmJUAQFUE05iqrD6YJPCq3L6BeB3xCZ5GmM+3oxXfjQMDcsdhIxfVPF0/pSJ6QHOaLpxDgnXg9yg3xZJLdxUCmpnMDIOBO9etQI+2ltYBfbrMmwnXJLMgII5ufqyJifhaZpk1EYlkc85KS4W2xxPkWcY6wXOhaBi+GrD2oBXJvbtvLtSJWxFZjBLunDcDPwh6FSNxRbsGslnPGbwQqe1UDVxeAGhgul0N4HwZnhWjV8ezLk/Mx4zvAFpAH+D6CTuFEO/V/HQHtOZyUwJP4RFTb1eF5h9YYmp9QB2qUigkSHxvn8X9k36Sm4LQIDAQAB",
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "de.appplant.cordova.plugin.background-mode": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cordova-plugin-mauron85-background-geolocation": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "phonegap-plugin-push": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
         "cordova-plugin-3dtouch": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-google-analytics": {
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-wkwebview-engine": {
-            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
-        },
-        "cc.fovea.cordova.purchase": {
-            "BILLING_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvU6mDtgfmwP7yxVx9y1j5DkI9RdhxFmJUAQFUE05iqrD6YJPCq3L6BeB3xCZ5GmM+3oxXfjQMDcsdhIxfVPF0/pSJ6QHOaLpxDgnXg9yg3xZJLdxUCmpnMDIOBO9etQI+2ltYBfbrMmwnXJLMgII5ufqyJifhaZpk1EYlkc85KS4W2xxPkWcY6wXOhaBi+GrD2oBXJvbtvLtSJWxFZjBLunDcDPwh6FSNxRbsGslnPGbwQqe1UDVxeAGhgul0N4HwZnhWjV8ezLk/Mx4zvAFpAH+D6CTuFEO/V/HQHtOZyUwJP4RFTb1eF5h9YYmp9QB2qUigkSHxvn8X9k36Sm4LQIDAQAB",
+        "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-screen-orientation": {
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-mauron85-background-geolocation": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
         "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "de.appplant.cordova.plugin.background-mode": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
+        },
+        "phonegap-plugin-push": {
+            "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-file": {
+        "cordova-plugin-app-event": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         },
-        "cordova-plugin-app-event": {
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "appinventor.ai_isaac.DriveSafe"
         }
     }

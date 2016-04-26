@@ -59,6 +59,14 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-3dtouch/www/ThreeDeeTouch.js",
+        "id": "cordova-plugin-3dtouch.ThreeDeeTouch",
+        "pluginId": "cordova-plugin-3dtouch",
+        "clobbers": [
+            "ThreeDeeTouch"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -298,6 +306,14 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+        "pluginId": "cordova-plugin-google-analytics",
+        "clobbers": [
+            "analytics"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
         "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
         "pluginId": "cordova-plugin-mauron85-background-geolocation",
@@ -336,6 +352,14 @@ module.exports = [
         "pluginId": "cordova-plugin-network-information",
         "clobbers": [
             "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
         ]
     },
     {
@@ -422,14 +446,6 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
-    },
-    {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "pluginId": "cordova-plugin-powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -437,6 +453,7 @@ module.exports.metadata =
 {
     "cc.fovea.cordova.purchase": "4.0.0",
     "com.unarin.cordova.beacon": "3.3.0",
+    "cordova-plugin-3dtouch": "1.3.5",
     "cordova-plugin-app-event": "1.2.0",
     "cordova-plugin-device": "1.1.1",
     "cordova-plugin-dialogs": "1.2.0",
@@ -444,18 +461,19 @@ module.exports.metadata =
     "cordova-plugin-fullscreen": "1.1.0",
     "cordova-plugin-geolocation": "2.1.0",
     "cordova-plugin-globalization": "1.0.2",
+    "cordova-plugin-google-analytics": "0.8.1",
     "cordova-plugin-mauron85-background-geolocation": "0.9.4",
     "cordova-plugin-media": "2.1.0",
     "cordova-plugin-network-information": "1.2.0",
+    "cordova-plugin-powermanagement": "1.0.3",
     "cordova-plugin-screen-orientation": "1.4.0",
     "cordova-plugin-statusbar": "2.1.0",
     "cordova-plugin-vibration": "2.1.0",
     "cordova-plugin-whitelist": "1.2.1",
-    "cordova-plugin-wkwebview-engine": "1.0.2",
+    "cordova-plugin-wkwebview-engine": "1.0.3",
     "de.appplant.cordova.plugin.background-mode": "0.6.4",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "phonegap-plugin-push": "1.5.3",
-    "cordova-plugin-powermanagement": "1.0.2"
+    "phonegap-plugin-push": "1.5.3"
 }
 // BOTTOM OF METADATA
 });

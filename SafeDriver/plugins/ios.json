@@ -13,6 +13,9 @@
         "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
+        "cordova-plugin-3dtouch": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
@@ -28,6 +31,9 @@
         "cordova-plugin-globalization": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
         "cordova-plugin-mauron85-background-geolocation": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
@@ -35,6 +41,9 @@
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
+        },
+        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "cordova-plugin-screen-orientation": {
@@ -59,9 +68,6 @@
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         },
         "phonegap-plugin-push": {
-            "PACKAGE_NAME": "info.scoreonline.DriveSafe"
-        },
-        "cordova-plugin-powermanagement": {
             "PACKAGE_NAME": "info.scoreonline.DriveSafe"
         }
     },

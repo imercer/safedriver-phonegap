@@ -113,14 +113,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-wkwebview-engine": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-wkwebview-engine"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "de.appplant.cordova.plugin.local-notification": {
         "source": {
             "type": "git",
@@ -156,10 +148,34 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-plugin-3dtouch": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-3dtouch"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-google-analytics": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-google-analytics"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-screen-orientation": {
         "source": {
             "type": "registry",
             "id": "cordova-plugin-screen-orientation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-wkwebview-engine": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-wkwebview-engine"
         },
         "is_top_level": true,
         "variables": {}
