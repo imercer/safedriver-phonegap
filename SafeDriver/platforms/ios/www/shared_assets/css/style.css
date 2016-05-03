@@ -325,3 +325,7 @@
 .mdl-layout__obfuscator {
     position: fixed;
 }
+
+iframe {
+    z-index: 69;
+}
