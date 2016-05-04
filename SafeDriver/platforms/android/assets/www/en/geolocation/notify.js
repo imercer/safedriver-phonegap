@@ -57,6 +57,8 @@ function loadAlert(audio) {
 var xhttp = new XMLHttpRequest();
 var count = 0;
 var speedcount = 0;
+var nominatimxhttp = new XMLHttpRequest();
+var osmxhttp = new XMLHttpRequest;
 
 var availablesound = ['unsealed','drivetoconditions','extratime','pullovertopass','onewaybridges','overtaking','corners','left','pullover'];
 
@@ -152,22 +154,27 @@ function success(pos) {
   if (localStorage.getItem('LocationAlerts') == "disabled") {
           console.log('not alerting based on location, user disabled messages')
   } else {
-    var multiplier = count % 69;
+            /*
+
+       / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
+      / (_ / / -_)/ _ \/ __// _ \/ _  /  / /  / _ \ / _ `/
+      \___/  \__/ \___/\__/ \___/\_,_/  /_/  /_//_/ \_, /
+                                                   /___/
+            */
+    var multiplier = count % 5;
     console.log(multiplier);
     if (multiplier == 0){
-          /*
-
-     / ___/ ___  ___  ____ ___  ___/ /  (_)  ___   ___ _
-    / (_ / / -_)/ _ \/ __// _ \/ _  /  / /  / _ \ / _ `/
-    \___/  \__/ \___/\__/ \___/\_,_/  /_/  /_//_/ \_, /
-                                                 /___/
-          */
-          var geocoder = new google.maps.Geocoder();
-          var latLng = new google.maps.LatLng(mylat,mylong);
-          if (geocoder) {
-              geocoder.geocode({ 'latLng': latLng}, function (results, status) {
-                 if (status == google.maps.GeocoderStatus.OK) {
-                    var address = (results[0].formatted_address);
+        nominatimxhttp.onreadystatechange = function() {
+            if (nominatimxhttp.readyState == 4 && nominatimxhttp.status == 200) {
+                //getSpeedLimit(nominatimxhttp);
+                var rawaddress = nominatimxhttp.responseText;
+                var jsonaddress = JSON.parse(nominatimxhttp.responseText);
+                address = jsonaddress.display_name;
+                getSpeedLimit(jsonaddress.osm_id);
+            }
+        };
+        nominatimxhttp.open("GET", "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + mylat + "&lon=" + mylong + "&zoom=17&addressdetails=0", true); //Lat and Long go here
+        nominatimxhttp.send();
                     console.log(address);
                     if (address.indexOf("Crown Range Rd") >= 0) {
                           document.getElementById("detail_sign").src="../../shared_assets/images/windy.gif";
@@ -287,11 +294,8 @@ function success(pos) {
                           }
                     }
                  } else {
-                    console.log("Geocoding failed: " + status);
-                 }
-              });
-            }
-      };
+                    console.log("Not geocoding, multiplier not matched");
+                 };
       count = count + 1;
       /*
   _____             ___
@@ -720,14 +724,71 @@ function success(pos) {
 /___/   / .__/\__/ \__/ \_,_/       /_/ |_|/_/  \__/ /_/   \__/ /___/
        /_/
     */
+    function getSpeedLimit(osmid) {
+        console.log("OSMID is :" + osmid)
+        osmxhttp.onreadystatechange = function() {
+            if (osmxhttp.readyState == 4 && osmxhttp.status == 200) {
+                    var xmlDoc = osmxhttp.responseXML;
+                    var x = xmlDoc.getElementsByTagName("tag");
+                    for(var i=0; i<x.length; i++) {
+                         var txt = x[i].getAttribute("k");
+                         if (txt  == "maxspeed") {
+                               var value = x[i].getAttribute("v"); //Speed Limit
+                               if (value.indexOf("mph") >= 0){
+                                   value = value.replace(/[^\d.-]/g,'');
+                                   speed_limit = value * 1.60934;
+                               } else {
+                                   speed_limit = value.replace(/[^\d.-]/g,'');
+                               }
+                         }
+                    }
+            }
+        };
+        osmxhttp.open("GET", "https://www.openstreetmap.org/api/0.6/way/" + osmid, true); //Lat and Long go here
+        osmxhttp.send();
+
+    }
     console.log('Speed: ' + Math.round(speed) + 'km/h');
-        document.getElementById("speed_reading").innerHTML = Math.round(speed);
-        window.analytics.addCustomDimension('DriverSpeed', Math.round(speed));
+    document.getElementById("speed_reading").innerHTML = Math.round(speed);
+    console.log('Speed Limit is:' + speed_limit)
+    window.analytics.addCustomDimension('DriverSpeed', Math.round(speed));
       // document.getElementById("speed").innerHTML = Math.round(speed);
       // Check if in Central/East AKL metropolitan area 1
       if (localStorage.getItem('SpeedAlerts') == "disabled") {
         console.log('not alerting based on speed, user disabled messages')
       } else {
+      if (speed_limit) {
+      document.getElementById("speed_limit").innerHTML = speed_limit;
+        if (speed > speed_limit) {
+         if (speedcount % 20 === 0) {
+             speedcount = speedcount + 1;
+             loadAlert('slowdown');
+             console.log('SLOW DOWN');
+
+             navigator.vibrate(500);
+         } else {
+             console.log('Waiting for multiplier');
+             speedcount = speedcount + 1;
+         }
+      } else {
+            speedcount = 0;
+      }
+      } else {
+      if (speed > 100) {
+               if (speedcount % 20 === 0) {
+                   speedcount = speedcount + 1;
+                   loadAlert('slowdown');
+                   console.log('SLOW DOWN');
+                   navigator.vibrate(500);
+               } else {
+                   console.log('Waiting for multiplier');
+                   speedcount = speedcount + 1;
+               }
+            } else {
+                    speedcount = 0;
+            }
+      }
+      /*
         if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
             document.getElementById("detail_sign").src="../../shared_assets/images/50kmph.gif";
           if (crd.speed > target.fifty) {
@@ -902,7 +963,7 @@ function success(pos) {
           }
       }  else {
             // Generic Speed (100KM/h)
-          if (crd.speed > target.onehundred) {
+              if (crd.speed > target.onehundred) {
             if (speedcount % 20 === 0) {
                 speedcount = speedcount + 1;
                 loadAlert('slowdown');
@@ -919,6 +980,7 @@ function success(pos) {
             navigator.vibrate(0);
           }
         }
+        */
     }
     }
 

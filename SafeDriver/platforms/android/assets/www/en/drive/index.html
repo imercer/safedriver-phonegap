@@ -244,11 +244,12 @@ function doStuff(position) {
     letter-spacing: 2px;
     }
     .signs {
-    position: absolute;
+    position: fixed;
     right: 0px;
     top: 0px;
-    padding-top: 5.6%;
-    padding-right: 2%
+    width: 35%;
+    padding-top: 2.6%;
+    padding-right: -6%;
     }
     hr {
     visibility: hidden
@@ -261,7 +262,7 @@ function doStuff(position) {
         <div id="search">
             <p class="speed_under" style="line-height: 20vw;"><span id="speed_reading">77</span><span class="speed_units">km/h</span><hr>
             <span class="location" id="location"></span></p>
-            <div class="signs"><img id="detail_sign" style="width: 15vw;" src="../../shared_assets/images/closed.gif"/></div>
+            <svg class="signs" xmlns="http://www.w3.org/2000/svg" width="8vw" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1420 850" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"><rect id="svgEditorBackground" x="0" y="0" width="1420" height="850" style="fill: none; stroke: none;"/><circle id="e2_circle" cx="574.9533081054688" cy="429.9477844238281" stroke="black" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" r="237.649" fill="red" transform="matrix(0.0158556 1.49678 -1.49678 0.0158556 1311.42 -446.399)"/><circle id="e3_circle" cx="707.8056640625" cy="369.8180236816406" stroke="black" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" r="248.805" fill="white" transform="matrix(1.07918 0 0 1.07918 -82.9815 20.4756)"/><text fill="black" x="530.227" y="465.904" id="speed_limit" style="font-family: Arial; font-size: 300px; font-style: normal; font-weight: bold; text-anchor: middle;" transform="matrix(0.955298 0 0 0.955298 171.867 81.2894)" dy="" dx="">100</text></svg>
             <span class="footer-msg" id="info-msg"> Slow Down around Corners </span>
         </div>
     </div>
