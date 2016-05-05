@@ -176,7 +176,7 @@ function success(pos) {
         nominatimxhttp.open("GET", "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + mylat + "&lon=" + mylong + "&zoom=17&addressdetails=0", true); //Lat and Long go here
         nominatimxhttp.send();
                     console.log(address);
-                    if (address.indexOf("Crown Range Rd") >= 0) {
+                    if (address.indexOf("Crown Range Road") >= 0) {
                           console.log('Crown Range Road');
                           if (localStorage.getItem("addressgeofence") == "crownrange6") {
                           }
@@ -186,7 +186,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CrownRange&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Kawarau Gorge Rd") >= 0){
+                    } else if (address.indexOf("Kawarau Gorge Road") >= 0){
                           console.log('Kawarau Gorge');
                           if (localStorage.getItem("addressgeofence") == "kawarau") {
                           }
@@ -196,7 +196,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=KawarauGorge&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Napier-Taupo Rd") >= 0){
+                    } else if (address.indexOf("Napier Taupo Highway") >= 0){
                           console.log('NapierTaupo');
                           if (localStorage.getItem("addressgeofence") == "napiertaupo") {
                           }
@@ -206,7 +206,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NapierTaupo&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Cape Reinga Rd") >= 0){
+                    } else if (address.indexOf("Cape Reinga Road") >= 0){
                           console.log('CapeReinga');
                           if (localStorage.getItem("addressgeofence") == "CapeReinga") {
                           }
@@ -216,7 +216,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=CapeReinga&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
+                    /*} else if (address.indexOf("Northern Gateway Toll Rd") >= 0){
                           console.log('NGTRoad');
                           if (localStorage.getItem("addressgeofence") == "ngtroad") {
                           }
@@ -226,7 +226,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=NGTRoad&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Te Paki Stream Stream Rd") >= 0){
+                    */} else if (address.indexOf("Te Paki Stream Stream Road") >= 0){
                           console.log('TePakiStreamRd');
                           if (localStorage.getItem("addressgeofence") == "tepakistreamrd") {
                           }
@@ -236,7 +236,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=tepakistreamrd&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Waikato Expy") >= 0){
+                    } else if (address.indexOf("Waikato Expressway") >= 0){
                           console.log('Waikato Expy');
                           if (localStorage.getItem("addressgeofence") == "waikatoexpressway") {
                                 console.log('sessionStorage is waikatoexpressway');
@@ -248,7 +248,7 @@ function success(pos) {
                                 xhttp.open("GET", "http://app.safedriver.nz/tracking/area.php?area=WaikatoExpy&id" + Math.random(), true);
                                 xhttp.send();
                           }
-                    } else if (address.indexOf("Queen Charlotte Dr") >= 0){
+                    } else if (address.indexOf("Queen Charlotte Drive") >= 0){
                           console.log('Queen Charlotte Dr - Picton to Havelock');
                           if (localStorage.getItem("addressgeofence") == "queencharlottedr") {
                           }
@@ -707,17 +707,24 @@ function success(pos) {
             if (osmxhttp.readyState == 4 && osmxhttp.status == 200) {
                     var xmlDoc = osmxhttp.responseXML;
                     var x = xmlDoc.getElementsByTagName("tag");
-                    for(var i=0; i<x.length; i++) {
-                         var txt = x[i].getAttribute("k");
-                         if (txt  == "maxspeed") {
-                               var value = x[i].getAttribute("v"); //Speed Limit
-                               if (value.indexOf("mph") >= 0){
-                                   value = value.replace(/[^\d.-]/g,'');
-                                   speed_limit = value * 1.60934;
-                               } else {
-                                   speed_limit = value.replace(/[^\d.-]/g,'');
-                               }
-                         }
+                    // See if speed is in the response
+                    console.log("Can I find maxspee?" + osmxhttp.responseText.indexOf("maxspeed"));
+                    if (osmxhttp.responseText.indexOf("maxspeed") == -1) {
+                        speed_limit = 100; // Set to 100km/h if not declared
+                        console.log("Manual Speed Limit Set: " + speed_limit)
+                    } else { //Otherwise get the speed and set it as the value
+                        for(var i=0; i<x.length; i++) {
+                             var txt = x[i].getAttribute("k");
+                             if (txt  == "maxspeed") {
+                                   var value = x[i].getAttribute("v"); //Speed Limit
+                                   if (value.indexOf("mph") >= 0){
+                                       value = value.replace(/[^\d.-]/g,'');
+                                       speed_limit = value * 1.60934;
+                                   } else {
+                                       speed_limit = value.replace(/[^\d.-]/g,'');
+                                   }
+                             }
+                        }
                     }
             }
         };
@@ -733,7 +740,7 @@ function success(pos) {
       if (localStorage.getItem('SpeedAlerts') == "disabled") {
         console.log('not alerting based on speed, user disabled messages')
       } else {
-      if (speed_limit) {
+      if (speed_limit > 1) {
         if (speed > speed_limit) {
          if (speedcount % 20 === 0) {
              speedcount = speedcount + 1;
@@ -763,184 +770,6 @@ function success(pos) {
                     speedcount = 0;
             }
       }
-      /*
-        if (distance(mylat, mylong, "-36.813732", "174.884693", "K") < 10) {
-          if (crd.speed > target.fifty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-      } else if (distance(mylat, mylong, "-36.674987", "174.867588", "K") < 14) {
-    // Check if in AKL east coast bays metropolitan area 1
-         if (crd.speed > target.fifty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-       } else if (distance(mylat, mylong, "-36.837069", "174.741260", "K") < 2) {
-    // Check if in AKL Harbour Bridge (Nthrn MWY)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-       } else if (distance(mylat, mylong, "-36.860127", "174.760617", "K") < 0.9 || distance(mylat, mylong, "-36.869444", "174.771120", "K") < 1) {
-    // Check if in CentralMotorwayJunction (SH1/SH16)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-     } else if (distance(mylat, mylong, "-36.347948", "174.587621", "K") < 4.2) {
-    // Check if DOME VALLEY (SH1)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-     } else if (distance(mylat, mylong, "-37.216238", "175.057654", "K") < 3.6 || distance(mylat, mylong, "-37.262031", "175.248288", "K") < 8.5) {
-    // Check if Hauraki Plains (SH2)
-         if (crd.speed > target.ninety) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-      } else if (distance(mylat, mylong, "-37.418679", "175.746423", "K") < 3.5) {
-    // Check if KARANGAHEKE GORGE (SH2)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-       } else if (distance(mylat, mylong, "-41.009416", "174.922994", "K") < 3) {
-    // Check if WLG Costal Road (SH1)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-       } else if (distance(mylat, mylong, "-42.464052", "173.541664", "K") < 5.5) {
-    // Check if Kaikoura Costal Road (SH1)
-         if (crd.speed > target.eighty) {
-            if (speedcount % 20 === 0) {
-                speedcount = count + 1;
-                loadAudioFile();
-                console.log('SLOW DOWN');
-
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            count = 0;
-            window.sessionStorage.removeItem("audio");
-
-            navigator.vibrate(0);
-          }
-      }  else {
-            // Generic Speed (100KM/h)
-              if (crd.speed > target.onehundred) {
-            if (speedcount % 20 === 0) {
-                speedcount = speedcount + 1;
-                loadAlert('slowdown');
-                console.log('SLOW DOWN');
-                navigator.vibrate(500);
-            } else {
-                speedcount = speedcount + 1;
-            }
-          } else {
-            speedcount = 0;
-          }
-        }
-        */
     }
     }
 

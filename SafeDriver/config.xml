@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="182" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="38" version="1.8.2" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="182" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="39" version="1.9" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
     <author email="isaac@isaacmercer.nz" href="http://isaacmercer.nz">Isaac Mercer</author>
