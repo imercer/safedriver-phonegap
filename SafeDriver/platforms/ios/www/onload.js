@@ -18,7 +18,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
           android: {
                 senderID: "233940449476",
                 "icon": "icon_outline",
-                "iconColor": "#164B56"
+                "iconColor": "#164B56",
+                "forceShow": true
             },
             ios: {
                 alert: "true",
@@ -29,14 +30,22 @@ document.addEventListener("deviceready", onDeviceReady, false);
         });
         push.on('registration', function(data) {
             console.log("registration - " + data.registrationId);
-                $.get( "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
+                $.get( "http://safedriver.nz/push/register-test.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
                   console.log( "Data Loaded: " + data );
                   launch();
-                });
+                });ßßß
                 $( document ).ajaxError(function( event, request, settings ) {
                   console.warn( "An error occurred when registering for notifications (e:) " + event);
                   launch();
                 });
+        });
+        push.on('notification', function(data) {
+            alert(data.message);
+            // data.title,
+            // data.count,
+            // data.sound,
+            // data.image,
+            // data.additionalData
         });
         push.on('error', function(e) {
             console.error("push error");
