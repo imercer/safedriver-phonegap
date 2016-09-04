@@ -2,14 +2,14 @@
     "CoreBluetooth.framework": 1,
     "CoreLocation.framework": 3,
     "AudioToolbox.framework": 3,
-    "SystemConfiguration.framework": 2,
-    "CoreData.framework": 1,
-    "libz.dylib": 1,
-    "libsqlite3.dylib": 1,
     "AVFoundation.framework": 1,
+    "SystemConfiguration.framework": 2,
     "CoreTelephony.framework": 1,
-    "WebKit.framework": 1,
+    "WebKit.framework": 2,
     "AddressBook.framework": 1,
     "libsqlite3.tbd": 1,
-    "libz.tbd": 1
+    "libz.tbd": 1,
+    "CoreData.framework": 1,
+    "libz.dylib": 1,
+    "libsqlite3.dylib": 1
 }

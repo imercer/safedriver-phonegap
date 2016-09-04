@@ -290,14 +290,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
-        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
-        "pluginId": "cordova-plugin-google-analytics",
-        "clobbers": [
-            "analytics"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeoLocation.js",
         "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeoLocation",
         "pluginId": "cordova-plugin-mauron85-background-geolocation",
@@ -339,14 +331,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
-        "id": "cordova-plugin-powermanagement.powermanagement",
-        "pluginId": "cordova-plugin-powermanagement",
-        "clobbers": [
-            "window.powermanagement"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -361,14 +345,6 @@ module.exports = [
         "merges": [
             "navigator.notification",
             "navigator"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-        "pluginId": "cordova-plugin-wkwebview-engine",
-        "clobbers": [
-            "cordova.exec"
         ]
     },
     {
@@ -414,6 +390,30 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+        "pluginId": "cordova-plugin-google-analytics",
+        "clobbers": [
+            "analytics"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+        "pluginId": "cordova-plugin-wkwebview-engine",
+        "clobbers": [
+            "cordova.exec"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -427,18 +427,18 @@ module.exports.metadata =
     "cordova-plugin-file": "4.1.0",
     "cordova-plugin-geolocation": "2.1.0",
     "cordova-plugin-globalization": "1.0.2",
-    "cordova-plugin-google-analytics": "0.8.1",
     "cordova-plugin-mauron85-background-geolocation": "0.9.4",
     "cordova-plugin-media": "2.1.0",
     "cordova-plugin-network-information": "1.2.0",
-    "cordova-plugin-powermanagement": "1.0.3",
     "cordova-plugin-statusbar": "2.1.0",
     "cordova-plugin-vibration": "2.1.0",
     "cordova-plugin-whitelist": "1.2.1",
-    "cordova-plugin-wkwebview-engine": "1.0.3",
     "de.appplant.cordova.plugin.background-mode": "0.6.4",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "phonegap-plugin-push": "1.5.3"
+    "phonegap-plugin-push": "1.5.3",
+    "cordova-plugin-google-analytics": "0.8.1",
+    "cordova-plugin-wkwebview-engine": "1.0.3",
+    "cordova-plugin-powermanagement": "1.0.3"
 }
 // BOTTOM OF METADATA
 });

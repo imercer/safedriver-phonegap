@@ -38,9 +38,6 @@
     <feature name="Globalization">
         <param name="ios-package" value="CDVGlobalization" />
     </feature>
-    <feature name="UniversalAnalytics">
-        <param name="ios-package" value="UniversalAnalyticsPlugin" />
-    </feature>
     <feature name="BackgroundGeoLocation">
         <param name="ios-package" value="CDVBackgroundGeoLocation" />
     </feature>
@@ -50,18 +47,12 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
-    <feature name="PowerManagement">
-        <param name="ios-package" value="PowerManagement" />
-    </feature>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" />
         <param name="onload" value="true" />
     </feature>
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
-    </feature>
-    <feature name="CDVWKWebViewEngine">
-        <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
     <feature name="BackgroundMode">
         <param name="ios-package" value="APPBackgroundMode" />
@@ -72,6 +63,15 @@
     </feature>
     <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin" />
+    </feature>
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <feature name="PowerManagement">
+        <param name="ios-package" value="PowerManagement" />
     </feature>
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
