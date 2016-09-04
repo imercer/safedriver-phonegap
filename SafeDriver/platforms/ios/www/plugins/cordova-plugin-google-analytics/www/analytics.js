@@ -5,8 +5,20 @@ UniversalAnalyticsPlugin.prototype.startTrackerWithId = function(id, success, er
   cordova.exec(success, error, 'UniversalAnalytics', 'startTrackerWithId', [id]);
 };
 
+UniversalAnalyticsPlugin.prototype.setAllowIDFACollection = function(enable, success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'setAllowIDFACollection', [enable]);
+};
+
 UniversalAnalyticsPlugin.prototype.setUserId = function(id, success, error) {
   cordova.exec(success, error, 'UniversalAnalytics', 'setUserId', [id]);
+};
+
+UniversalAnalyticsPlugin.prototype.setAnonymizeIp = function(anonymize, success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'setAnonymizeIp', [anonymize]);
+};
+
+UniversalAnalyticsPlugin.prototype.setAppVersion = function(version, success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'setAppVersion', [version]);
 };
 
 /* enables verbose logging */
@@ -14,8 +26,16 @@ UniversalAnalyticsPlugin.prototype.debugMode = function(success, error) {
   cordova.exec(success, error, 'UniversalAnalytics', 'debugMode', []);
 };
 
-UniversalAnalyticsPlugin.prototype.trackView = function(screen, success, error) {
-  cordova.exec(success, error, 'UniversalAnalytics', 'trackView', [screen]);
+UniversalAnalyticsPlugin.prototype.trackMetric = function(key, value, success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'trackMetric', [key, value]);
+};
+
+UniversalAnalyticsPlugin.prototype.trackView = function(screen, campaingUrl, success, error) {
+  if (typeof campaingUrl === 'undefined' || campaingUrl === null) {
+    campaingUrl = '';
+  }
+
+  cordova.exec(success, error, 'UniversalAnalytics', 'trackView', [screen, campaingUrl]);
 };
 
 UniversalAnalyticsPlugin.prototype.addCustomDimension = function(key, value, success, error) {

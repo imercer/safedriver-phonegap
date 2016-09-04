@@ -34,7 +34,7 @@ function modal(message, callback, title, buttonLabels, domObjects) {
     var modalDocument = modalWindow.document;
 
     modalDocument.write(
-        '<html><head><meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'"/>' +
+        '<html><head>' +
         '<link rel="stylesheet" type="text/css" href="/css/index.css" />' +
         '<link rel="stylesheet" type="text/css" href="/css/notification.css" />' +
         '</head><body></body></html>');
@@ -84,12 +84,12 @@ function modal(message, callback, title, buttonLabels, domObjects) {
             result = {
                 input1: '',
                 buttonIndex: 0
-            }
+            };
         }
         mainWindow.setTimeout(function() {
             callback(result);
         }, 10);
-    };
+    }
     modalWindow.addEventListener('unload', onUnload, false);
 
     // call callback and destroy modal
@@ -110,7 +110,7 @@ function modal(message, callback, title, buttonLabels, domObjects) {
           }
           response = response || labelIndex;
           callback(response);
-        }
+        };
     }
 }
 

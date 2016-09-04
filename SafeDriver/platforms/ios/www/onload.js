@@ -3,12 +3,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
         cordova.plugins.locationManager.requestAlwaysAuthorization();
         cordova.plugins.notification.local.cancelAll();
-        cordova.plugins.backgroundMode.setDefaults({
-              title:  "SafeDriver",
-              ticker: "Open the app to receive SafeDriver alerts",
-              text:   "Open SafeDriver to receive safety alerts"
-          })
         cordova.plugins.backgroundMode.enable();
+        cordova.plugins.backgroundMode.setDefaults({
+            title:  'SafeDriver is running...',
+            text:   'Open SafeDriver to receive safety messages.',
+            ticker: 'SafeDriver is still running',
+          })
         if (cordova.platformId == 'android') {
           StatusBar.backgroundColorByHexString("#232323");
         }

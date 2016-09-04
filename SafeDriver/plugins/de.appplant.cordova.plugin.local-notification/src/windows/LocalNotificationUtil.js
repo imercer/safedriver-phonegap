@@ -427,7 +427,7 @@ document.addEventListener('activated', function (e) {
     exports.fireEvent(repeating ? 'clear' : 'cancel', notification);
 }, false);
 
-// App is running in background
+// SafeDriver is running...
 document.addEventListener('pause', function () {
     exports.isInBackground = true;
 }, false);

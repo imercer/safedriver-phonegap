@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="190" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="39" version="1.9" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="191" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="40" version="1.9.1" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -22,6 +22,9 @@
         <param name="ios-package" value="ThreeDeeTouch" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="BackgroundMode">
+        <param name="ios-package" value="APPBackgroundMode" />
+    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -38,14 +41,21 @@
     <feature name="Globalization">
         <param name="ios-package" value="CDVGlobalization" />
     </feature>
-    <feature name="BackgroundGeoLocation">
-        <param name="ios-package" value="CDVBackgroundGeoLocation" />
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="BackgroundGeolocation">
+        <param name="ios-package" value="CDVBackgroundGeolocation" />
+        <param name="onload" value="true" />
     </feature>
     <feature name="Media">
         <param name="ios-package" value="CDVSound" />
     </feature>
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="PowerManagement">
+        <param name="ios-package" value="PowerManagement" />
     </feature>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" />
@@ -54,8 +64,8 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
-    <feature name="BackgroundMode">
-        <param name="ios-package" value="APPBackgroundMode" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
     <feature name="LocalNotification">
         <param name="ios-package" onload="true" value="APPLocalNotification" />
@@ -63,15 +73,6 @@
     </feature>
     <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin" />
-    </feature>
-    <feature name="UniversalAnalytics">
-        <param name="ios-package" value="UniversalAnalyticsPlugin" />
-    </feature>
-    <feature name="CDVWKWebViewEngine">
-        <param name="ios-package" value="CDVWKWebViewEngine" />
-    </feature>
-    <feature name="PowerManagement">
-        <param name="ios-package" value="PowerManagement" />
     </feature>
     <name>SafeDriver</name>
     <description>Drive Safe on New Zealand Roads.</description>
@@ -149,6 +150,21 @@
     <splash height="1242" src="www/res/screen/ios/Default-Landscape-736h.png" width="2208" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <config-file parent="NSLocationAlwaysUsageDescription" platform="ios" target="*-Info.plist">
+        <string>SafeDriver needs background location access to provide you with info while driving.</string>
+    </config-file>
+    <config-file parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
+        <string>SafeDriver needs your location to provide you with info about your current area. To enable messsages while driving please allow 'always' usage.</string>
+    </config-file>
+    <config-file parent="NSAppTransportSecurity" platform="ios" target="*-Info.plist">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true />
+        </dict>
+    </config-file>
+    <config-file parent="UIRequiresFullScreen" platform="ios" target="*-Info.plist">
+        <false />
+    </config-file>
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
@@ -164,7 +180,6 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="all" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
@@ -176,10 +191,10 @@
     <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="preferExternal" />
     <preference name="StatusBarBackgroundColor" value="#333333" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="deployment-target" value="8.0" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="orientation" value="all" />
 </widget>
