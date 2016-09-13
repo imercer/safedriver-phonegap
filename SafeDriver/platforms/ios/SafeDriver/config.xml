@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="191" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="40" version="1.9.1" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-packageName="appinventor.ai_isaac.DriveSafe" android-versionCode="194" id="io.cordova.helloCordova" ios-CFBundleIdentifier="info.scoreonline.DriveSafe" ios-CFBundleVersion="45" version="1.9.4" windows-packageVersion="1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -154,7 +154,10 @@
         <string>SafeDriver needs background location access to provide you with info while driving.</string>
     </config-file>
     <config-file parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
-        <string>SafeDriver needs your location to provide you with info about your current area. To enable messsages while driving please allow 'always' usage.</string>
+        <string>SafeDriver needs your location to provide you with info about your current area. To enable messages while driving please allow 'always' usage.</string>
+    </config-file>
+    <config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist">
+        <string>SafeDriver needs to access bluetooth to access beacons which will provide you with info when location services are unavailable.</string>
     </config-file>
     <config-file parent="NSAppTransportSecurity" platform="ios" target="*-Info.plist">
         <dict>

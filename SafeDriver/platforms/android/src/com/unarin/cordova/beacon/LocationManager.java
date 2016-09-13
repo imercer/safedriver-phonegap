@@ -287,7 +287,7 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
                 }
             });
 
-            //builder.show();
+         //   builder.show();
 
         } catch (final IllegalAccessException e) {
             Log.w(TAG, "IllegalAccessException while checking for ACCESS_COARSE_LOCATION:", e);

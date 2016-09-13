@@ -21,7 +21,7 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.9.1</string>
+    <string>1.9.4</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleURLTypes</key>
@@ -36,7 +36,7 @@
       </dict>
     </array>
     <key>CFBundleVersion</key>
-    <string>40</string>
+    <string>45</string>
     <key>GCM_SENDER_ID</key>
     <string>233940449476</string>
     <key>IS_GCM_ENABLED</key>
@@ -48,10 +48,12 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>SafeDriver needs to access bluetooth to access beacons which will provide you with info when location services are unavailable.</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>SafeDriver needs background location access to provide you with info while driving.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>SafeDriver needs your location to provide you with info about your current area. To enable messsages while driving please allow 'always' usage.</string>
+    <string>SafeDriver needs your location to provide you with info about your current area. To enable messages while driving please allow 'always' usage.</string>
     <key>NSMainNibFile</key>
     <string/>
     <key>NSMainNibFile~ipad</key>

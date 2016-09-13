@@ -14,6 +14,19 @@ document.addEventListener("deviceready", onDeviceReady, false);
         }
         StatusBar.show();
         window.analytics.startTrackerWithId('UA-55227067-7');
+        ThreeDeeTouch.configureQuickActions([
+            {
+              type: 'status', // optional, but can be used in the onHomeIconPressed callback
+              title: 'Road Status', // mandatory
+              iconType: 'Location' // optional
+            },
+            {
+              type: 'notifications',
+              title: 'Notifications',
+              subtitle: 'notification settings',
+              iconType: 'Alarm'
+            }
+          ]);
         var push = PushNotification.init({
           android: {
                 senderID: "233940449476",
@@ -27,6 +40,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
             },
             windows: {}
         });
+          push.on('notification', function(data) {
+              navigator.notification.beep(1);
+              navigator.vibrate(1000);
+              navigator.notification.alert(data.message, statusRedirect(), "Road Status Message");
+          });
         push.on('registration', function(data) {
             console.log("registration - " + data.registrationId);
                 $.get( "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
@@ -43,6 +61,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
             console.error(e);
             launch();
         });
+
 	}
 
 
@@ -91,3 +110,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		checkLanguageInitial();
 	}
 	}
+	function statusRedirect() {
+        window.location.href = "en/drive/status.html";
+    }
