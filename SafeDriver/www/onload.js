@@ -1,5 +1,6 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 	var xhttp = new XMLHttpRequest();
+	 $.ajaxSetup({ timeout: 5000 });
 	function onDeviceReady() {
         cordova.plugins.locationManager.requestAlwaysAuthorization();
         cordova.plugins.notification.local.cancelAll();
@@ -47,6 +48,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
           });
         push.on('registration', function(data) {
             console.log("registration - " + data.registrationId);
+            localStorage.setItem('pushid', data.registrationId);
                 $.get( "http://safedriver.nz/push/register.php?deviceToken=" + data.registrationId + "&platform=" + cordova.platformId, function( data ) {
                   console.log( "Data Loaded: " + data );
                   launch();

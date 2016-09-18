@@ -50,47 +50,177 @@ function doStuff(position) {
 function doStuff(position) {
     var mylat = position.coords.latitude;
     var mylong = position.coords.longitude;
-    console.log(mylat + mylong);
+    console.log(mylat + ',' + mylong);
+    $.ajaxSetup({ timeout: 5000 });
     // Small regions for higher priority
     if (distance(mylat, mylong, "-36.870686", "174.777946", "K") < 75) {
-        window.location.assign("nearby/index.html#auckland")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=auckland", function( data ) {
+              console.log( "Push Registered for Auckland: " + data );
+              window.location.assign("nearby/index.html#auckland")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + even);
+              window.location.assign("nearby/index.html#auckland")
+            });
     } else if (distance(mylat, mylong, "-37.783777", "175.269562", "K") < 20) {
-        window.location.assign("nearby/index.html#hamilton")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=hamilton", function( data ) {
+              console.log( "Push Registered for Hamilton: " + data );
+              window.location.assign("nearby/index.html#hamilton")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#hamilton")
+            });
     } else if (distance(mylat, mylong, "-38.430343", "176.156148", "K") < 50) {
-        window.location.assign("nearby/index.html#cni")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=cni", function( data ) {
+              console.log( "Push Registered for Central North Island: " + data );
+              window.location.assign("nearby/index.html#cni")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#cni")
+            });
     } else if (distance(mylat, mylong, "-41.291249", "174.767883", "K") < 60) {
-        window.location.assign("nearby/index.html#wellington")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=wellington", function( data ) {
+              console.log( "Push Registered for Wellington: " + data );
+              window.location.assign("nearby/index.html#wellington")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#wellington")
+            });
     } else if (distance(mylat, mylong, "-45.034439", "168.653588", "K") < 20) {
-        window.location.assign("nearby/index.html#queenstown")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=queenstown", function( data ) {
+              console.log( "Push Registered for Queenstown: " + data );
+              window.location.assign("nearby/index.html#queenstown")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#queenstown")
+            });
     } else if (distance(mylat, mylong, "-45.888096", "170.463871", "K") < 25) {
-            window.location.assign("nearby/index.html#dunedin")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=dunedin", function( data ) {
+              console.log( "Push Registered for Dunedin: " + data );
+              window.location.assign("nearby/index.html#dunedin")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#dunedin")
+            });
     } //Larger Regions follow
     else if (distance(mylat, mylong, "-41.393294", "173.155518", "K") < 125) {
-        window.location.assign("nearby/index.html#nelsonmarlborough")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=nelsonmarlborough", function( data ) {
+              console.log( "Push Registered for Nelson & Marlborough: " + data );
+              window.location.assign("nearby/index.html#nelsonmarlborough")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#nelsonmarlborough")
+            });
     } else if (distance(mylat, mylong, "-46.468133", "167.980957", "K") < 293) {
         window.location.assign("nearby/index.html#otagosouthland")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=otagosouthland", function( data ) {
+              console.log( "Push Registered for Otago & Southland: " + data );
+              window.location.assign("nearby/index.html#otagosouthland")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#otagosouthland")
+            });
     } else if (distance(mylat, mylong, "-35.269039", "173.583971", "K") < 130) {
-        window.location.assign("nearby/index.html#northland")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=northland", function( data ) {
+              console.log( "Push Registered for Northland: " + data );
+              window.location.assign("nearby/index.html#northland")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#northland")
+            });
     } else if (distance(mylat, mylong, "-37.40071", "176.698608", "K") < 90) {
-        window.location.assign("nearby/index.html#bayofplenty")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=bayofplenty", function( data ) {
+              console.log( "Push Registered for Bay of Plenty: " + data );
+              window.location.assign("nearby/index.html#bayofplenty")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#bayofplenty")
+            });
     } else if (distance(mylat, mylong, "-39.296048", "175.687866", "K") < 56) {
-        window.location.assign("nearby/index.html#nationalpark")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=nationalpark", function( data ) {
+              console.log( "Push Registered for National Park: " + data );
+              window.location.assign("nearby/index.html#nationalpark")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#nationalpark")
+            });
     } else if (distance(mylat, mylong, "-40.283716", "175.297851", "K") < 60) {
-        window.location.assign("nearby/index.html#manawatu")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=manawatu", function( data ) {
+              console.log( "Push Registered for Manawatu: " + data );
+              window.location.assign("nearby/index.html#manawatu")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#manawatu")
+            });
     } else if (distance(mylat, mylong, "-38.333038", "178.444701", "K") < 120) {
-        window.location.assign("nearby/index.html#gisborne")
+         $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=gisborne", function( data ) {
+              console.log( "Push Registered for Gisborne: " + data );
+              window.location.assign("nearby/index.html#gisborne")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#gisborne")
+            });
     } else if (distance(mylat, mylong, "-39.859154", "177.242431", "K") < 95) {
-        window.location.assign("nearby/index.html#hawkesbay")
+        $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=hawkesbay", function( data ) {
+              console.log( "Push Registered for Hawkes Bay: " + data );
+              window.location.assign("nearby/index.html#hawkesbay")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#hawkesbay")
+            });
     } else if (distance(mylat, mylong, "-39.274789", "174.012451", "K") < 90) {
-        window.location.assign("nearby/index.html#taranaki")
+        $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=taranaki", function( data ) {
+              console.log( "Push Registered for Taranaki: " + data );
+              window.location.assign("nearby/index.html#taranaki")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#taranaki")
+            });
     } else if (distance(mylat, mylong, "-38.043765", "175.078125", "K") < 80) {
-        window.location.assign("nearby/index.html#waikato")
+        $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=waikato", function( data ) {
+              console.log( "Push Registered for Waikato: " + data );
+              window.location.assign("nearby/index.html#waikato")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#waikato")
+            });
     } else if (distance(mylat, mylong, "-44.497481", "173.380737", "K") < 250) {
-        window.location.assign("nearby/index.html#canterbury")
+        $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=canterbury", function( data ) {
+              console.log( "Push Registered for Canterbury: " + data );
+              window.location.assign("nearby/index.html#canterbury")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#canterbury")
+            });
     } else if (distance(mylat, mylong, "-41.624792", "168.033783", "K") < 363) {
-        window.location.assign("nearby/index.html#westcoast")
+        $.get( "http://safedriver.nz/push/register.php?deviceToken=" + localStorage.pushid + "&platform=" + cordova.platformId + "&region=westcoast", function( data ) {
+              console.log( "Push Registered for West Coast: " + data );
+              window.location.assign("nearby/index.html#westcoast")
+            });
+            $( document ).ajaxError(function( event, request, settings ) {
+              console.warn( "An error occurred when registering for notifications (e:) " + event);
+              window.location.assign("nearby/index.html#westcoast")
+            });
     } else {
+    console.log(distance(mylat, mylong, "-44.497481", "173.380737", "K"));
         window.location.assign("nearby/index.html#newzealand")
+
     }
 }
 
